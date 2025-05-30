@@ -1,0 +1,6 @@
+ANIMAL IMAGES	CS-	BL	how PLEASANT did these make you feel?	5
+TOOL IMAGES	CS+	BL	how PLEASANT did these make you feel?	4
+ANIMAL IMAGES	CS-	BL	how ANXIOUS did these make you feel?	1
+TOOL IMAGES	CS+	BL	how ANXIOUS did these make you feel?	2
+SMALL CROSS in-between images	FIX	BL	how PLEASANT did these make you feel?	4
+SMALL CROSS in-between images	FIX	BL	how ANXIOUS did these make you feel?	2

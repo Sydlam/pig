@@ -1,0 +1,34 @@
+//Conditional Branch Demo
+// These conditionals added to ViewPoint version 2.8.4.502
+// * Note that the positions of ROI #1 and #2 can be automatically changed for each image,
+//  by saving "Image ROI" specification files associated with each image.
+//  Here we assume that the ROI #1 is the "Good" one, and #2 is the "Bad" one.
+//
+stateSpaceInit
+//
+stateMode	0
+ stateLabel		"State #0"
+ stateEntryCommand	{ if {MaxDurationROI_EQ_ 1} {stateJump 3}; if {MaxDurationROI_EQ_ 2} {stateJump 4} }
+ stateKeyPress	0 0
+ stateKeyPress	3 3 		// test Good
+ stateKeyPress	4 4 		// test Bad
+ stateTimeOut	0.5 0 	// LOOP: this will perform the above check every half second!
+//
+stateMode	3
+ stateLabel		"State #3 = GOOD"
+ stateEntryCommand	{ stimulus_LoadImageFile "Black.bmp" ; midiNote 5 6 4 }
+ stateTimeOut	2 5
+//
+stateMode	4
+ stateLabel		"State #4 = BAD"
+ stateEntryCommand	{ stimulus_LoadImageFile "White.bmp" ; midiNote 4 6 4 }
+ stateTimeOut	2 5
+//
+stateMode	5
+ stateLabel		"State #5 = Reset"
+ stateEntryCommand	{ clearRoiData }
+ stateTimeOut	0 0
+//
+stateDump
+stateEngine On
+END

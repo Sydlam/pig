@@ -1,0 +1,6 @@
+ANIMAL IMAGES	CS-	EXT	how PLEASANT did these make you feel?	1
+TOOL IMAGES	CS+	EXT	how PLEASANT did these make you feel?	2
+ANIMAL IMAGES	CS-	EXT	how ANXIOUS did these make you feel?	3
+TOOL IMAGES	CS+	EXT	how ANXIOUS did these make you feel?	2
+SMALL CROSS in-between images	FIX	EXT	how ANXIOUS did THIS make you feel?	1
+SMALL CROSS in-between images	FIX	EXT	how PLEASANT did THIS make you feel?	3

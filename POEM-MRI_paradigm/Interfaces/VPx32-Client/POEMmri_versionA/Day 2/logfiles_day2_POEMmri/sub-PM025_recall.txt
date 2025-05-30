@@ -1,0 +1,23 @@
+versionA	recall	t_001	CS-	CS-_001	animal_001	RECALL_CS-		stims/animals/armadillo.jpg	4050
+versionA	recall	t_002	CS+	CS+_001	tool_001	RECALL_CS+		stims/tools/boxinggloves.jpg	13200
+versionA	recall	t_003	CS+	CS+_002	tool_002	RECALL_CS+		stims/tools/ladle.jpg	22350
+versionA	recall	t_004	CS-	CS-_002	animal_002	RECALL_CS-		stims/animals/bowerbird.jpg	32000
+versionA	recall	t_005	CS+	CS+_003	tool_003	RECALL_CS+		stims/tools/shoppingbag.jpg	42150
+versionA	recall	t_001	CS-	CS-_001	animal_001	RECALL_CS-	3	stims/animals/armadillo.jpg	4033
+versionA	recall	t_002	CS+	CS+_001	tool_001	RECALL_CS+	3	stims/tools/boxinggloves.jpg	13133
+versionA	recall	t_003	CS+	CS+_002	tool_002	RECALL_CS+	3	stims/tools/ladle.jpg	22733
+versionA	recall	t_004	CS-	CS-_002	animal_002	RECALL_CS-	3	stims/animals/bowerbird.jpg	32333
+versionA	recall	t_005	CS+	CS+_003	tool_003	RECALL_CS+	3	stims/tools/shoppingbag.jpg	42433
+versionA	recall	t_006	CS-	CS-_003	animal_003	RECALL_CS-	3	stims/animals/echidna.jpg	51533
+versionA	recall	t_007	CS+	CS+_004	tool_004	RECALL_CS+	3	stims/tools/necktie.jpg	61633
+versionA	recall	t_008	CS+	CS+_005	tool_005	RECALL_CS+	3	stims/tools/coffeegrinder.jpg	70733
+versionA	recall	t_009	CS-	CS-_004	animal_004	RECALL_CS-	3	stims/animals/clownfish.jpg	80334
+versionA	recall	t_010	CS-	CS-_005	animal_005	RECALL_CS-	3	stims/animals/goat.jpg	90434
+versionA	recall	t_011	CS+	CS+_006	tool_006	RECALL_CS+	3	stims/tools/stapler.jpg	99533
+versionA	recall	t_012	CS-	CS-_006	animal_006	RECALL_CS-	3	stims/animals/snail.jpg	109133
+ANIMAL IMAGES	CS-	recall	how PLEASANT did these make you feel?	3
+TOOL IMAGES	CS+	recall	how PLEASANT did these make you feel?	3
+ANIMAL IMAGES	CS-	recall	how ANXIOUS did these make you feel?	3
+TOOL IMAGES	CS+	recall	how ANXIOUS did these make you feel?	3
+SMALL CROSS in-between images	FIX	recall	how ANXIOUS did THIS make you feel?	1
+SMALL CROSS in-between images	FIX	recall	how PLEASANT did THIS make you feel?	1

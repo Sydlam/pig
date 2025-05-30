@@ -1,0 +1,14 @@
+versionB	EXTrecall	t_001	CS+	CS+_001	animal_001	RECALL_CS+	2	stims/animals/snail.jpg	17015
+versionB	EXTrecall	t_002	CS-	CS-_001	tool_001	RECALL_CS-	3	stims/tools/stapler.jpg	28138
+versionB	EXTrecall	t_003	CS+	CS+_002	animal_002	RECALL_CS+	1	stims/animals/goat.jpg	39272
+versionB	EXTrecall	t_004	CS+	CS+_003	animal_003	RECALL_CS+	1	stims/animals/clownfish.jpg	49898
+versionB	EXTrecall	t_005	CS-	CS-_002	tool_002	RECALL_CS-	3	stims/tools/coffeegrinder.jpg	60021
+versionB	EXTrecall	t_006	CS-	CS-_003	tool_003	RECALL_CS-	3	stims/tools/necktie.jpg	70153
+versionB	EXTrecall	t_007	CS+	CS+_004	animal_004	RECALL_CS+	2	stims/animals/echidna.jpg	80770
+versionB	EXTrecall	t_008	CS-	CS-_004	tool_004	RECALL_CS-	1	stims/tools/shoppingbag.jpg	90892
+versionB	EXTrecall	t_009	CS+	CS+_005	animal_005	RECALL_CS+	1	stims/animals/bowerbird.jpg	100997
+versionB	EXTrecall	t_010	CS-	CS-_005	tool_005	RECALL_CS-	3	stims/tools/ladle.jpg	112100
+valence_EXTrecall_CS-	rating/EXTrecall_tools.jpg	CS-	1
+arousal_EXTrecall_CS-	rating/EXTrecall_tools.jpg	CS-	3
+valence_EXTrecall_CS+	rating/EXTrecall_animals.jpg	CS+	4
+arousal_EXTrecall_CS+	rating/EXTrecall_animals.jpg	CS+	3

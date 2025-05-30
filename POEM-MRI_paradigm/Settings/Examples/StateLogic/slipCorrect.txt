@@ -1,0 +1,4 @@
+stimwind_AutoShowOnCalibrate Yes
+calibrationSlipCorrection 5
+//
+END

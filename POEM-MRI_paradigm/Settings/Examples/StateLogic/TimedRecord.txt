@@ -1,0 +1,40 @@
+//		TimedRecord
+//		2017 (c) Arrington Research, Inc.  2017-March-08
+//
+//
+//==============================================================
+//
+fkey_Cmd 12 { stateEngine Toggle; midiNote 9 6 4 }
+//
+ttl_Cmd +1  { stateJump 1 }  
+//
+// Remeber, the TTL_Cmd is only triggered on a voltage change (transition).
+// When Digital-I/O line #1 changes from 0V to +5V, the CLI command is issued.
+// You can use the CLI command:  ttl_simulate +1
+// to simulate that ViewPoint~Voltage has sent a +1 signal.
+//
+// The above assignment of commands to an 
+//  fkey-press and a TTL voltage-transition are done immediatly; 
+// however, the execution of the commands are deferred 
+//  until the fkey is pressed or a voltage rise on line #1 is detected.
+//
+//==============================================================
+stateSpaceInit
+//
+stateMode	0
+ stateLabel		"State #0 = Idle ... "
+ stateEntryCommand	{ say "Idling ..." }
+//-----------------------------------------------------
+stateMode	1
+ stateLabel		"State #1 = Timed Recording ..."
+ stateEntryCommand	{ dataFile_NewUnique; midiNote 5 6 4 }
+ stateExitCommand	{ dataFile_Close; midiNote 4 6 4  }
+ stateTimeOut 		2.53	0	// After 2.53 seconds, jump to state #1
+//
+//==============================================================
+//
+//
+stateDump		// Prints all the state information into the History window.
+stateJump 0	// Move to the "idle" state..
+stateEngine On
+END

@@ -1,0 +1,16 @@
+// This file associates CLP command strings with TTL channel voltage changes. 
+// Note: +N indicates a voltage rise, -N indicates a voltage fall.
+// Deferred commands should be inside curly braces.
+// Multiple commands can be separated with semicolons.
+//
+ttl_cmd 	+1 { calibration_snap }
+ttl_cmd 	-1 { historyReport "> ttl ch 1 LO" }
+ttl_cmd 	+2 { videoFreeze ON }
+ttl_cmd 	-2 { videoFreeze OFF }
+ttl_cmd 	+3 { dataFile_NewUnique }
+ttl_cmd 	-3 { dataFile_Close }
+ttl_cmd 	+4 { dataFile_Pause }
+ttl_cmd 	-4 { dataFile_Resume }
+//
+ttl_out_quality 0 VPX_QUALITY_PupilOnlyIsGood
+END

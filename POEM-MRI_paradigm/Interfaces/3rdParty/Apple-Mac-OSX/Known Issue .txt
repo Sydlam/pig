@@ -1,0 +1,7 @@
+In 
+	vpx_GetComponentVelocity.m
+
+Change:  
+   [eye,null,ComponentVelocity]=...
+to: 
+   [null,ComponentVelocity]=...

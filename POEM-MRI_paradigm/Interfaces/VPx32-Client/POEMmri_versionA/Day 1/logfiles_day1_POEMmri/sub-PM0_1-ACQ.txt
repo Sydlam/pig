@@ -1,0 +1,4 @@
+ANIMAL IMAGES	CS-	ACQ	how PLEASANT did these make you feel?	5
+TOOL IMAGES	CS+	ACQ	how PLEASANT did these make you feel?	5
+ANIMAL IMAGES	CS-	ACQ	how ANXIOUS did these make you feel?	1
+TOOL IMAGES	CS+	ACQ	how ANXIOUS did these make you feel?	1

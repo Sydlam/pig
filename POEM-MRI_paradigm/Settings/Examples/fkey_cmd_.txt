@@ -1,0 +1,6 @@
+// Deferred commands should be inside curly braces.
+// Multiple commands can be separated with semicolons.
+//
+fkey_cmd 	 9 { calibration_snap }
+fkey_cmd 	10 { calibration_SelectIndex NEXT }
+END

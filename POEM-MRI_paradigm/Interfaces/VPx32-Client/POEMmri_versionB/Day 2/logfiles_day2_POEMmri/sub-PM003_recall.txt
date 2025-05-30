@@ -1,0 +1,12 @@
+versionB	recall	t_001	CS-	CS-_001	tool_001	RECALL_CS-	3	stims/tools/stapler.jpg	4034
+versionB	recall	t_002	CS+	CS+_001	animal_001	RECALL_CS+	1	stims/animals/snail.jpg	13667
+versionB	recall	t_003	CS-	CS-_002	tool_002	RECALL_CS-	2	stims/tools/coffeegrinder.jpg	23301
+versionB	recall	t_004	CS+	CS+_002	animal_002	RECALL_CS+	1	stims/animals/goat.jpg	33434
+versionB	recall	t_005	CS+	CS+_003	animal_003	RECALL_CS+	1	stims/animals/clownfish.jpg	42567
+versionB	recall	t_006	CS-	CS-_003	tool_003	RECALL_CS-	3	stims/tools/necktie.jpg	51701
+versionB	recall	t_007	CS+	CS+_004	animal_004	RECALL_CS+	2	stims/animals/echidna.jpg	61834
+versionB	recall	t_008	CS-	CS-_004	tool_004	RECALL_CS-	3	stims/tools/shoppingbag.jpg	71967
+versionB	recall	t_009	CS+	CS+_005	animal_005	RECALL_CS+	3	stims/animals/bowerbird.jpg	81117
+versionB	recall	t_010	CS-	CS-_005	tool_005	RECALL_CS-	3	stims/tools/ladle.jpg	90751
+versionB	recall	t_011	CS-	CS-_006	tool_006	RECALL_CS-	3	stims/tools/boxinggloves.jpg	100901
+versionB	recall	t_012	CS+	CS+_006	animal_006	RECALL_CS+	3	stims/animals/armadillo.jpg	110034

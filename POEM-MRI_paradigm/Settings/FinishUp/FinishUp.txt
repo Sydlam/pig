@@ -1,0 +1,7 @@
+//// The double forward slashes at the start of a line 'comment-out' that line.
+//// Remove them if you want that command line to execute when ViewPoint finishes.
+//
+// launchApp "C:/Windows/notepad.exe" "Settings/FinishUp/finishUp_Intro.rtf"
+// systemOpen "CopyData.bat"
+//
+END

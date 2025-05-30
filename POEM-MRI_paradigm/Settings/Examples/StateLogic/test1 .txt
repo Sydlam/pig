@@ -1,0 +1,12 @@
+stimulus_LoadImageFile gray.bmp
+// make sure that you have set up the ROI and saved the image ROI
+pictureList_Init
+pictureList_AddName "pref1.bmp"  
+pictureList_AddName "pref2.bmp"
+pictureList_AddName "pref3.bmp"
+pictureList_AddName "end.bmp"
+pictureList_EndAction "stateJump 7" // when end of picture list comes, goto state#7
+//
+calibration_PresentationOrder Random
+//
+end

@@ -1,0 +1,14 @@
+Additional documentation for various interfaces can be found inside individual folders in:  
+	~ViewPoint/Interfaces/
+
+For example:
+	~ViewPoint/Interfaces/3rdParty/Windows/E-Prime/ViewPoint_E-Prime Guide .pdf
+	~ViewPoint/Interfaces/3rdParty/Windows/MATLAB/ViewPoint EyeTracker Toolbox .pdf
+	~ViewPoint/Interfaces/3rdParty/Windows/NBS-Presentation/
+	~ViewPoint/Interfaces/3rdParty/Windows/Python/
+	~ViewPoint/Interfaces/3rdParty/Windows/LabView/
+	etc.
+
+
+
+

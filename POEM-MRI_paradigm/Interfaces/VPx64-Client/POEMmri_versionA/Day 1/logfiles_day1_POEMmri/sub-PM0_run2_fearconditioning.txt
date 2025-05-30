@@ -1,0 +1,73 @@
+versionA	fearconditioning	b6_01	b4_01	t_001	CS+	CS+_001	tool_001	OLD_ACQ_CS+	YES_US	1	44603	stims/tools/weedeater.jpg
+versionA	fearconditioning	b6_01	b4_01	t_002	CS-	CS-_001	animal_001	OLD_ACQ_CS-	noUS	2	stims/animals/mink.jpg	55206
+versionA	fearconditioning	b6_01	b4_01	t_003	CS-	CS-_002	animal_002	OLD_ACQ_CS-	noUS	3	stims/animals/turkey.jpg	66736
+versionA	fearconditioning	b6_01	b4_01	t_004	CS+	CS+_002	tool_002	OLD_ACQ_CS+	noUS	1	stims/tools/routerplane.jpg	78269
+versionA	fearconditioning	b6_01	b4_01	t_005	CS-	CS-_003	animal_003	SIM_ACQ_a_CS-	noUS	2	stims/animals/seahorse_simA.jpg	88802
+versionA	fearconditioning	b6_01	b4_01	t_006	CS+	CS+_003	tool_003	OLD_ACQ_CS+	YES_US	2	101335	stims/tools/thermometer.jpg
+versionA	fearconditioning	b6_01	b4_01	t_007	CS-	CS-_004	animal_004	SIM_ACQ_a_CS-	noUS	1	stims/animals/shrimp_simA.jpg	111868
+versionA	fearconditioning	b6_01	b4_01	t_008	CS+	CS+_004	tool_004	SIM_ACQ_a_CS+	YES_US	1	123334	stims/tools/neckpillow_simA.jpg
+versionA	fearconditioning	b6_01	b4_02	t_009	CS-	CS-_005	animal_005	OLD_ACQ_CS-	noUS	2	stims/animals/partridge.jpg	135801
+versionA	fearconditioning	b6_01	b4_02	t_010	CS+	CS+_005	tool_005	OLD_ACQ_CS+	noUS	1	stims/tools/mallet.jpg	146267
+versionA	fearconditioning	b6_01	b4_02	t_011	CS-	CS-_006	animal_006	OLD_ACQ_CS-	noUS	2	stims/animals/duck.jpg	157734
+versionA	fearconditioning	b6_01	b4_02	t_012	CS+	CS+_006	tool_006	SIM_ACQ_a_CS+	noUS	3	stims/tools/hockeystick_simA.jpg	168200
+versionA	fearconditioning	b6_02	b4_02	t_013	CS-	CS-_007	animal_007	SIM_ACQ_a_CS-	noUS	1	stims/animals/frog_simA.jpg	180600
+versionA	fearconditioning	b6_02	b4_02	t_014	CS-	CS-_008	animal_008	SIM_ACQ_a_CS-	noUS	2	stims/animals/fox_simA.jpg	193134
+versionA	fearconditioning	b6_02	b4_02	t_015	CS+	CS+_007	tool_007	SIM_ACQ_a_CS+	YES_US	3	204533	stims/tools/funnel_simA.jpg
+versionA	fearconditioning	b6_02	b4_02	t_016	CS-	CS-_009	animal_009	OLD_ACQ_CS-	noUS	1	stims/animals/mahimahi.jpg	215066
+versionA	fearconditioning	b6_02	b4_03	t_017	CS+	CS+_008	tool_008	SIM_ACQ_a_CS+	YES_US	2	226599	stims/tools/paperlantern_simA.jpg
+versionA	fearconditioning	b6_02	b4_03	t_018	CS+	CS+_009	tool_009	OLD_ACQ_CS+	noUS	3	stims/tools/lawnmower.jpg	237199
+versionA	fearconditioning	b6_02	b4_03	t_019	CS-	CS-_010	animal_010	SIM_ACQ_a_CS-	noUS	1	stims/animals/hawk_simA.jpg	249732
+versionA	fearconditioning	b6_02	b4_03	t_020	CS+	CS+_010	tool_010	OLD_ACQ_CS+	YES_US	3	262198	stims/tools/measuringcups.jpg
+versionA	fearconditioning	b6_02	b4_03	t_021	CS-	CS-_011	animal_011	SIM_ACQ_a_CS-	noUS	2	stims/animals/cat_simA.jpg	272731
+versionA	fearconditioning	b6_02	b4_03	t_022	CS-	CS-_012	animal_012	SIM_ACQ_a_CS-	noUS	2	stims/animals/bat_simA.jpg	284198
+versionA	fearconditioning	b6_02	b4_03	t_023	CS+	CS+_011	tool_011	SIM_ACQ_a_CS+	noUS	3	stims/tools/allenwrench_simA.jpg	296665
+versionA	fearconditioning	b6_02	b4_03	t_024	CS-	CS-_013	animal_013	OLD_ACQ_CS-	noUS	1	stims/animals/catfish.jpg	309131
+versionA	fearconditioning	b6_03	b4_04	t_025	CS+	CS+_012	tool_012	SIM_ACQ_a_CS+	noUS	3	stims/tools/lantern_simA.jpg	320597
+versionA	fearconditioning	b6_03	b4_04	t_026	CS+	CS+_013	tool_013	SIM_ACQ_a_CS+	YES_US	2	332063	stims/tools/thimble_simA.jpg
+versionA	fearconditioning	b6_03	b4_04	t_027	CS-	CS-_014	animal_014	OLD_ACQ_CS-	noUS	2	stims/animals/waterdragon.jpg	343596
+versionA	fearconditioning	b6_03	b4_04	t_028	CS-	CS-_015	animal_015	SIM_ACQ_a_CS-	noUS	1	stims/animals/camel_simA.jpg	354063
+versionA	fearconditioning	b6_03	b4_04	t_029	CS+	CS+_014	tool_014	SIM_ACQ_a_CS+	noUS	3	stims/tools/ipod_simA.jpg	365529
+versionA	fearconditioning	b6_03	b4_04	t_030	CS-	CS-_016	animal_016	OLD_ACQ_CS-	noUS	3	stims/animals/brown_bear.jpg	375996
+versionA	fearconditioning	b6_03	b4_04	t_031	CS-	CS-_017	animal_017	SIM_ACQ_a_CS-	noUS	2	stims/animals/pig_simA.jpg	388395
+versionA	fearconditioning	b6_03	b4_04	t_032	CS+	CS+_015	tool_015	OLD_ACQ_CS+	YES_US	3	399929	stims/tools/typewriter.jpg
+versionA	fearconditioning	b6_03	b4_05	t_033	CS-	CS-_018	animal_018	SIM_ACQ_a_CS-	noUS	1	stims/animals/elephant_simA.jpg	410462
+versionA	fearconditioning	b6_03	b4_05	t_034	CS-	CS-_019	animal_019	OLD_ACQ_CS-	noUS	2	stims/animals/sheep.jpg	420995
+versionA	fearconditioning	b6_03	b4_05	t_035	CS+	CS+_016	tool_016	SIM_ACQ_a_CS+	YES_US	3	433461	stims/tools/jumprope_simA.jpg
+versionA	fearconditioning	b6_03	b4_05	t_036	CS-	CS-_020	animal_020	OLD_ACQ_CS-	noUS	2	stims/animals/ant.jpg	444061
+versionA	fearconditioning	b6_04	b4_05	t_037	CS+	CS+_017	tool_017	SIM_ACQ_a_CS+	noUS	2	stims/tools/cowboyboot_simA.jpg	454528
+versionA	fearconditioning	b6_04	b4_05	t_038	CS+	CS+_018	tool_018	OLD_ACQ_CS+	noUS	2	stims/tools/fan.jpg	465994
+versionA	fearconditioning	b6_04	b4_05	t_039	CS+	CS+_019	tool_019	OLD_ACQ_CS+	YES_US	2	477527	stims/tools/spoon.jpg
+versionA	fearconditioning	b6_04	b4_05	t_040	CS-	CS-_021	animal_021	SIM_ACQ_a_CS-	noUS	3	stims/animals/giraffe_simA.jpg	489993
+versionA	fearconditioning	b6_04	b4_06	t_041	CS+	CS+_020	tool_020	OLD_ACQ_CS+	noUS		stims/tools/vegetablepeeler.jpg	502393
+versionA	fearconditioning	b6_04	b4_06	t_042	CS-	CS-_022	animal_022	SIM_ACQ_a_CS-	noUS	1	stims/animals/butterfly_simA.jpg	512926
+versionA	fearconditioning	b6_04	b4_06	t_043	CS+	CS+_021	tool_021	OLD_ACQ_CS+	noUS	3	stims/tools/sander.jpg	525393
+versionA	fearconditioning	b6_04	b4_06	t_044	CS+	CS+_022	tool_022	SIM_ACQ_a_CS+	YES_US	2	536859	stims/tools/lunchtray_simA.jpg
+versionA	fearconditioning	b6_04	b4_06	t_045	CS-	CS-_023	animal_023	OLD_ACQ_CS-	noUS		stims/animals/mouse.jpg	549392
+versionA	fearconditioning	b6_04	b4_06	t_046	CS-	CS-_024	animal_024	OLD_ACQ_CS-	noUS	3	stims/animals/seal.jpg	560859
+versionA	fearconditioning	b6_04	b4_06	t_047	CS+	CS+_023	tool_023	SIM_ACQ_a_CS+	noUS		stims/tools/glasses_simA.jpg	573325
+versionA	fearconditioning	b6_04	b4_06	t_048	CS+	CS+_024	tool_024	OLD_ACQ_CS+	YES_US	2	583791	stims/tools/measuringdevice.jpg
+versionA	fearconditioning	b6_01	b4_01	t_001	CS+	CS+_001	tool_001	OLD_ACQ_CS+	YES_US	2	205910	stims/tools/weedeater.jpg
+versionA	fearconditioning	b6_01	b4_01	t_001	CS+	CS+_001	tool_001	OLD_ACQ_CS+	YES_US	1	11137	stims/tools/weedeater.jpg
+versionA	fearconditioning	b6_01	b4_01	t_002	CS-	CS-_001	animal_001	OLD_ACQ_CS-	noUS	2	stims/animals/mink.jpg	21371
+versionA	fearconditioning	b6_01	b4_01	t_003	CS-	CS-_002	animal_002	OLD_ACQ_CS-	noUS	1	stims/animals/turkey.jpg	32487
+versionA	fearconditioning	b6_01	b4_01	t_001	CS+	CS+_001	tool_001	OLD_ACQ_CS+	YES_US	2	11731	stims/tools/weedeater.jpg
+versionA	fearconditioning	b6_01	b4_01	t_001	CS+	CS+_001	tool_001	OLD_ACQ_CS+	YES_US		12891	stims/tools/weedeater.jpg
+versionA	fearconditioning	b6_01	b4_01	t_001	CS+	CS+_001	tool_001	OLD_ACQ_CS+	YES_US	1	30810	stims/tools/weedeater.jpg
+versionA	fearconditioning	b6_01	b4_01	t_002	CS-	CS-_001	animal_001	OLD_ACQ_CS-	noUS		stims/animals/mink.jpg	40960
+versionA	fearconditioning	b6_01	b4_01	t_003	CS-	CS-_002	animal_002	OLD_ACQ_CS-	noUS		stims/animals/turkey.jpg	53060
+versionA	fearconditioning	b6_01	b4_01	t_001	CS+	CS+_001	tool_001	OLD_ACQ_CS+	YES_US		11580	stims/tools/weedeater.jpg
+versionA	fearconditioning	b6_01	b4_01	t_002	CS-	CS-_001	animal_001	OLD_ACQ_CS-	noUS		stims/animals/mink.jpg	21730
+versionA	fearconditioning	b6_01	b4_01	t_003	CS-	CS-_002	animal_002	OLD_ACQ_CS-	noUS		stims/animals/turkey.jpg	32830
+versionA	fearconditioning	b6_01	b4_01	t_004	CS+	CS+_002	tool_002	OLD_ACQ_CS+	noUS		stims/tools/routerplane.jpg	42930
+versionA	fearconditioning	b6_01	b4_01	t_005	CS-	CS-_003	animal_003	SIM_ACQ_a_CS-	noUS		stims/animals/seahorse_simA.jpg	55047
+versionA	fearconditioning	b6_01	b4_01	t_006	CS+	CS+_003	tool_003	OLD_ACQ_CS+	YES_US		67164	stims/tools/thermometer.jpg
+versionA	fearconditioning	b6_01	b4_01	t_007	CS-	CS-_004	animal_004	SIM_ACQ_a_CS-	noUS		stims/animals/shrimp_simA.jpg	77330
+versionA	fearconditioning	b6_01	b4_01	t_008	CS+	CS+_004	tool_004	SIM_ACQ_a_CS+	YES_US		89447	stims/tools/neckpillow_simA.jpg
+versionA	fearconditioning	b6_01	b4_02	t_009	CS-	CS-_005	animal_005	OLD_ACQ_CS-	noUS		stims/animals/partridge.jpg	101614
+versionA	fearconditioning	b6_01	b4_02	t_010	CS+	CS+_005	tool_005	OLD_ACQ_CS+	noUS		stims/tools/mallet.jpg	112730
+versionA	fearconditioning	b6_01	b4_02	t_011	CS-	CS-_006	animal_006	OLD_ACQ_CS-	noUS		stims/animals/duck.jpg	123847
+versionA	fearconditioning	b6_01	b4_02	t_012	CS+	CS+_006	tool_006	SIM_ACQ_a_CS+	noUS		stims/tools/hockeystick_simA.jpg	135964
+versionA	fearconditioning	b6_02	b4_02	t_013	CS-	CS-_007	animal_007	SIM_ACQ_a_CS-	noUS		stims/animals/frog_simA.jpg	147080
+versionA	fearconditioning	b6_01	b4_01	t_001	CS+	CS+_001	tool_001	OLD_ACQ_CS+	YES_US		14659	stims/tools/weedeater.jpg
+versionA	fearconditioning	b6_01	b4_01	t_002	CS-	CS-_001	animal_001	OLD_ACQ_CS-	noUS		stims/animals/mink.jpg	25809
+versionA	fearconditioning	b6_01	b4_01	t_003	CS-	CS-_002	animal_002	OLD_ACQ_CS-	noUS		stims/animals/turkey.jpg	35909

@@ -1,0 +1,22 @@
+// file: CountersDemo.txt
+// Conformity: ViewPoint version 2.8.4.503
+// ------------------------------------------------------------------
+counterZeroAction 0      { say "counter #0 has value==0" }
+counterModulusAction 0 3 { say "counter #0 mod 3" }
+//
+fkey_cmd 1 { counterSet 0 3 }      // set counter[0] to value=3
+fkey_cmd 2 { counterAdjust 0 +1 }  // increment
+fkey_cmd 3 { counterAdjust 0 -2 }  // subtract 2 from current value
+fkey_cmd 4 { if { counterIs_EQ_ 0 4 } { say "counter#0 equals 4" } }
+fkey_cmd 5 { if { counterIs_MOD_ 0 5} { say "counter#0 is mod 5" } }
+// ------------------------------------------------------------------
+END	
+
+
+// Note: counterZeroAction and counterModulusAction are deprecated
+// in favor of 
+//	if { counterIs_EQ_  0 4 } { ifConditional } { elseConditional }
+//	if { counterIs_MOD_ 0 3 } { ifConditional } { elseConditional }
+// because it offers many more control possibilities, because multiple 
+// modulus test can be made with differerent values, and it is less
+// dangerous, because it does not persist ouside of the stateLogic

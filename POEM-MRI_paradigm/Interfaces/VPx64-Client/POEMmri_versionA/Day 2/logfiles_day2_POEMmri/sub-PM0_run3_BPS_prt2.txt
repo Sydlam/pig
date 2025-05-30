@@ -1,0 +1,12 @@
+versionA	BPS_prt2	block01	tool	CS+	OLD	noUS	1	1876	OLD_ACQ_CS+	stims/tools/vegetablepeeler.jpg	35390
+versionA	BPS_prt2	block01	tool	CS+	NEW	noUS	2	1657	NEW_BPS_CS+	stims/tools/blackboard.jpg	41794
+versionA	BPS_prt2	block01	tool	CS+	OLD	noUS	1	1138	OLD_EXT_CS+	stims/tools/toaster.jpg	48264
+versionA	BPS_prt2	block01	animal	CS-	OLD	noUS	2	940	OLD_EXT_CS-	stims/animals/aardvark.jpg	55693
+versionA	BPS_prt2	block01	tool	CS+	NEW	noUS	1	1143	NEW_BPS_CS+	stims/tools/tubeflaring.jpg	62095
+versionA	BPS_prt2	block01	animal	CS-	NEW	noUS	2	1047	NEW_BPS_CS-	stims/animals/ostrich.jpg	68486
+versionA	BPS_prt2	block01	animal	CS-	OLD	noUS	1	618	OLD_BL_CS-	stims/animals/quail.jpg	74931
+versionA	BPS_prt2	block01	tool	CS+	NEW	noUS	2	1748	NEW_BPS_CS+	stims/tools/screwdriver.jpg	82294
+versionA	BPS_prt2	block01	tool	CS+	OLD	noUS		0	OLD_BL_CS+	stims/tools/plow.jpg	89687
+versionA	BPS_prt2	block01	animal	CS-	OLD	noUS		0	OLD_BL_CS-	stims/animals/herculesbeetle.jpg	96021
+versionA	BPS_prt2	block01	tool	CS+	OLD	noUS	2	1509	OLD_EXT_CS+	stims/tools/paintbrush.jpg	102382
+versionA	BPS_prt2	block01	animal	CS-	NEW	noUS		0	NEW_BPS_CS-	stims/animals/horse.jpg	108766

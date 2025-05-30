@@ -1,0 +1,17 @@
+[Object0]
+Name=Block1
+WindowState=0
+Left=0
+Top=0
+Width=804
+Height=533
+[Object1]
+Name=Block2
+WindowState=0
+Left=26
+Top=26
+Width=808
+Height=504
+[Object2]
+Name=Block3
+WindowState=2

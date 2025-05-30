@@ -1,0 +1,38 @@
+**** IMPORTANT CHANGES & NOTES to StateEngine and Parser **** 
+
+---------------------------------------------------------------
+2017-Apr-05		ViewPoint version: 2.9.5.128	
+
+	* ttl_cmd 99 { say "EdgeTrigger" }
+This is now provided to respond to an edge trigger detected by ViewPoint~Voltage.
+
+---------------------------------------------------------------
+2016-Aug-18		ViewPoint version: 2.9.5.115
+
+	* old CLI 'stateCommand' is replaced by new 'stateEntryCommand'
+	* added new CLI 'stateExitCommand'
+
+---------------------------------------------------------------
+2009-Jan-10		ViewPoint version: 2.8.3.4502
+
+	* stateSpaceInit first perfoms a "stateEngine Off", so this no longer needs to be specified.
+	* conditional branch added: if { testBool } { ifTrueCmd }, e.g.:
+		{ if {MaxDurationROI_EQ_ 1} {stateJump 3}; if {MaxDurationROI_EQ_ 2} {stateJump 4} }
+
+---------------------------------------------------------------
+2008-Nov-10		ViewPoint version: 2.8.3.489
+
+	* Keypresses are no longer converted to upper case, but are now case sensitive.
+	* Delayed evaluation now must be delimited by braces '{'  and '}'; NOT double quotes as before.
+	* Text strings and only text strings (e.g. file names, historyReport text) must be in double quotes ("text");
+	* Multiple commands, separated by the semicolon character, may be put on a single line.
+	* Fixed a bug that evaluated {xxx;yyy} in reverse order; these are now done in the correct order.
+
+General Notes:
+
+	* Must start with command: stateSpaceInit.
+	* pad pictureList with blank last image, 
+		because pictureList_ShowNext at last image will trigger the pictureList_EndAction immediately.
+	* The image file names are by default relative to the folder: ViewPoint/Images/
+		unless a setPath cmd has changed this.
+		For example, Misc/045.bmp specifies: ViewPoint/Images/Misc/045.bmp

@@ -1,0 +1,6 @@
+ANIMAL IMAGES	CS+	EXTrecall	how PLEASANT did these make you feel?	3
+TOOL IMAGES	CS-	EXTrecall	how PLEASANT did these make you feel?	3
+ANIMAL IMAGES	CS+	EXTrecall	how ANXIOUS did these make you feel?	1
+TOOL IMAGES	CS-	EXTrecall	how ANXIOUS did these make you feel?	1
+SMALL CROSS in-between images	FIX	EXTrecall	how ANXIOUS did THIS make you feel?	1
+SMALL CROSS in-between images	FIX	EXTrecall	how PLEASANT did THIS make you feel?	3

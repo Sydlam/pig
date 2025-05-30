@@ -1,0 +1,18 @@
+versionD	recall	t_001	CS-	CS-_001	tool_001	RECALL_CS-	2	stims/tools/coffeegrinder.jpg	4033
+versionD	recall	t_002	CS+	CS+_001	animal_001	RECALL_CS+	3	stims/animals/bowerbird.jpg	13133
+versionD	recall	t_003	CS+	CS+_002	animal_002	RECALL_CS+	3	stims/animals/echidna.jpg	22233
+versionD	recall	t_004	CS-	CS-_002	tool_002	RECALL_CS-	3	stims/tools/ladle.jpg	32333
+versionD	recall	t_005	CS+	CS+_003	animal_003	RECALL_CS+	2	stims/animals/snail.jpg	42433
+versionD	recall	t_006	CS-	CS-_003	tool_003	RECALL_CS-	3	stims/tools/stapler.jpg	52050
+versionD	recall	t_007	CS+	CS+_004	animal_004	RECALL_CS+	2	stims/animals/armadillo.jpg	61667
+versionD	recall	t_008	CS+	CS+_005	animal_005	RECALL_CS+	1	stims/animals/clownfish.jpg	71767
+versionD	recall	t_009	CS-	CS-_004	tool_004	RECALL_CS-	3	stims/tools/boxinggloves.jpg	81367
+versionD	recall	t_010	CS+	CS+_006	animal_006	RECALL_CS+	3	stims/animals/goat.jpg	90467
+versionD	recall	t_011	CS-	CS-_005	tool_005	RECALL_CS-	3	stims/tools/shoppingbag.jpg	100567
+versionD	recall	t_012	CS-	CS-_006	tool_006	RECALL_CS-	3	stims/tools/necktie.jpg	110184
+ANIMAL IMAGES	CS+	recall	how PLEASANT did these make you feel?	4
+TOOL IMAGES	CS-	recall	how PLEASANT did these make you feel?	4
+ANIMAL IMAGES	CS+	recall	how ANXIOUS did these make you feel?	2
+TOOL IMAGES	CS-	recall	how ANXIOUS did these make you feel?	1
+SMALL CROSS in-between images	FIX	recall	how ANXIOUS did THIS make you feel?	2
+SMALL CROSS in-between images	FIX	recall	how PLEASANT did THIS make you feel?	3

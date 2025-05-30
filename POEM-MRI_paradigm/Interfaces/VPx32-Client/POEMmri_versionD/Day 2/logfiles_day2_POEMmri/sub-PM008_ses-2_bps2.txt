@@ -1,0 +1,72 @@
+versionD	bps2	block01	tool	CS-	NEW	noUS	2	1347	NEW_CS-	stims/tools/camera.jpg	4050	2
+versionD	bps2	block01	tool	CS-	OLD	noUS	1	1224	OLD_ACQ_CS-	stims/tools/spoon.jpg	14250	1
+versionD	bps2	block01	tool	CS-	OLD	noUS	1	2696	OLD_BL_CS-	stims/tools/typewriter.jpg	23466	2
+versionD	bps2	block01	animal	CS+	OLD	YES_US	1	1384	OLD_ACQ_CS+	stims/animals/herculesbeetle.jpg	32650	1
+versionD	bps2	block01	tool	CS-	SIM	noUS	2	2088	SIM_EXT_b_CS-	stims/tools/paperclip_simB.jpg	41833	
+versionD	bps2	block01	animal	CS+	NEW	noUS	1	2954	NEW_CS+	stims/animals/reindeer.jpg	51016	1
+versionD	bps2	block01	animal	CS+	NEW	noUS	2	2493	NEW_CS+	stims/animals/ostrich.jpg	60183	1
+versionD	bps2	block01	tool	CS-	NEW	noUS	2	1511	NEW_CS-	stims/tools/viceclamp.jpg	70383	1
+versionD	bps2	block01	tool	CS-	NEW	noUS	2	1309	NEW_CS-	stims/tools/keys.jpg	80550	1
+versionD	bps2	block01	animal	CS+	OLD	noUS	2	1551	OLD_EXT_CS+	stims/animals/skunk.jpg	89750	1
+versionD	bps2	block01	tool	CS-	OLD	noUS	2	2799	OLD_BL_CS-	stims/tools/squeegee.jpg	99950	2
+versionD	bps2	block01	tool	CS-	OLD	noUS	1	2293	OLD_EXT_CS-	stims/tools/paintbrush.jpg	109133	1
+versionD	bps2	block01	animal	CS+	OLD	noUS	1	1309	OLD_BL_CS+	stims/animals/marmot.jpg	119333	1
+versionD	bps2	block01	animal	CS+	SIM	noUS	2	2298	SIM_BL_a_CS+	stims/animals/kangaroo_simB.jpg	129533	2
+versionD	bps2	block01	tool	CS-	OLD	noUS	2	1416	OLD_EXT_CS-	stims/tools/sander.jpg	139700	1
+versionD	bps2	block01	animal	CS+	OLD	noUS	2	1830	OLD_ACQ_CS+	stims/animals/ant.jpg	148900	
+versionD	bps2	block01	animal	CS+	SIM	noUS	2	3803	SIM_EXT_a_CS+	stims/animals/redpanda_simB.jpg	158067	2
+versionD	bps2	block01	tool	CS-	SIM	noUS	1	1067	SIM_EXT_b_CS-	stims/tools/magnifyingglass_simB.jpg	167250	2
+versionD	bps2	block01	animal	CS+	SIM	noUS	2	3371	SIM_EXT_a_CS+	stims/animals/seahorse_simB.jpg	177434	2
+versionD	bps2	block01	tool	CS-	SIM	noUS	2	1984	SIM_ACQ_b_CS-	stims/tools/allenwrench_simB.jpg	187617	2
+versionD	bps2	block01	animal	CS+	NEW	noUS	1	1442	NEW_CS+	stims/animals/sparrow.jpg	197784	1
+versionD	bps2	block01	animal	CS+	SIM	noUS	1	3604	SIM_BL_a_CS+	stims/animals/slug_simB.jpg	206984	2
+versionD	bps2	block01	tool	CS-	OLD	noUS	1	1403	OLD_ACQ_CS-	stims/tools/shoehorn.jpg	217167	2
+versionD	bps2	block01	animal	CS+	SIM	YES_US	2	2190	SIM_ACQ_a_CS+	stims/animals/bison_simB.jpg	226350	1
+versionD	bps2	block01	tool	CS-	SIM	noUS	2	1454	SIM_BL_b_CS-	stims/tools/rake_simB.jpg	236567	1
+versionD	bps2	block01	animal	CS+	NEW	noUS	2	1888	NEW_CS+	stims/animals/dog.jpg	245750	1
+versionD	bps2	block01	tool	CS-	SIM	noUS	1	1601	SIM_ACQ_b_CS-	stims/tools/lighterbic_simB.jpg	254950	1
+versionD	bps2	block01	tool	CS-	NEW	noUS	1	3791	NEW_CS-	stims/tools/treadmill.jpg	264134	2
+versionD	bps2	block01	animal	CS+	NEW	noUS	2	1507	NEW_CS+	stims/animals/monkey.jpg	273334	2
+versionD	bps2	block01	animal	CS+	OLD	noUS	2	1739	OLD_EXT_CS+	stims/animals/mahimahi.jpg	282534	2
+versionD	bps2	block01	tool	CS-	NEW	noUS	1	1281	NEW_CS-	stims/tools/wheelbarrow.jpg	292734	1
+versionD	bps2	block01	animal	CS+	OLD	noUS	2	1958	OLD_BL_CS+	stims/animals/mole.jpg	301917	2
+versionD	bps2	block01	tool	CS-	NEW	noUS	2	1162	NEW_CS-	stims/tools/smartphone.jpg	312117	
+versionD	bps2	block01	animal	CS+	NEW	noUS	2	828	NEW_CS+	stims/animals/koi.jpg	322301	2
+versionD	bps2	block01	animal	CS+	SIM	noUS	2	1146	SIM_ACQ_a_CS+	stims/animals/giraffe_simB.jpg	332501	2
+versionD	bps2	block01	tool	CS-	SIM	noUS	2	3067	SIM_BL_b_CS-	stims/tools/testtube_simB.jpg	342701	
+versionD	bps2	block02	tool	CS-	SIM	noUS	1	2039	SIM_ACQ_b_CS-	stims/tools/barstool_simB.jpg	351867	1
+versionD	bps2	block02	tool	CS-	OLD	noUS	1	2761	OLD_EXT_CS-	stims/tools/toaster.jpg	361051	2
+versionD	bps2	block02	animal	CS+	SIM	noUS	2	2798	SIM_ACQ_a_CS+	stims/animals/tiger_simB.jpg	371234	
+versionD	bps2	block02	animal	CS+	SIM	noUS	2	1724	SIM_EXT_a_CS+	stims/animals/penguin_simB.jpg	380417	2
+versionD	bps2	block02	animal	CS+	SIM	YES_US	1	2300	SIM_ACQ_a_CS+	stims/animals/cow_simB.jpg	389601	2
+versionD	bps2	block02	tool	CS-	SIM	noUS	1	1236	SIM_EXT_b_CS-	stims/tools/funnel_simB.jpg	398784	1
+versionD	bps2	block02	animal	CS+	OLD	noUS	2	1232	OLD_BL_CS+	stims/animals/duck.jpg	408984	2
+versionD	bps2	block02	animal	CS+	OLD	noUS	1	1602	OLD_BL_CS+	stims/animals/turkey.jpg	418184	2
+versionD	bps2	block02	tool	CS-	OLD	noUS	2	2538	OLD_BL_CS-	stims/tools/mallet.jpg	428367	2
+versionD	bps2	block02	tool	CS-	NEW	noUS	1	1453	NEW_CS-	stims/tools/screwdriver.jpg	438551	2
+versionD	bps2	block02	tool	CS-	SIM	noUS	1	1040	SIM_BL_b_CS-	stims/tools/baseball_simB.jpg	447734	2
+versionD	bps2	block02	animal	CS+	NEW	noUS	2	1381	NEW_CS+	stims/animals/rosechafer.jpg	457934	1
+versionD	bps2	block02	tool	CS-	NEW	noUS	1	2326	NEW_CS-	stims/tools/tubeflaring.jpg	467118	1
+versionD	bps2	block02	animal	CS+	SIM	noUS	1	2854	SIM_BL_a_CS+	stims/animals/orca_simB.jpg	476318	2
+versionD	bps2	block02	tool	CS-	SIM	noUS	1	3956	SIM_ACQ_b_CS-	stims/tools/lantern_simB.jpg	485518	2
+versionD	bps2	block02	tool	CS-	NEW	noUS	2	933	NEW_CS-	stims/tools/microwave.jpg	494718	1
+versionD	bps2	block02	tool	CS-	OLD	noUS	2	1992	OLD_ACQ_CS-	stims/tools/ropeandpulley.jpg	503901	2
+versionD	bps2	block02	animal	CS+	NEW	noUS	2	898	NEW_CS+	stims/animals/dolphin.jpg	513101	1
+versionD	bps2	block02	animal	CS+	NEW	noUS	1	958	NEW_CS+	stims/animals/cranebug.jpg	523285	1
+versionD	bps2	block02	tool	CS-	NEW	noUS	2	728	NEW_CS-	stims/tools/spraybottle.jpg	532468	1
+versionD	bps2	block02	tool	CS-	NEW	noUS	2	2760	NEW_CS-	stims/tools/ladder.jpg	542651	2
+versionD	bps2	block02	animal	CS+	NEW	noUS	2	3737	NEW_CS+	stims/animals/horse.jpg	552834	2
+versionD	bps2	block02	animal	CS+	SIM	noUS	2	1649	SIM_EXT_a_CS+	stims/animals/fox_simB.jpg	563018	1
+versionD	bps2	block02	tool	CS-	OLD	noUS	2	1077	OLD_BL_CS-	stims/tools/faxmachine.jpg	573201	2
+versionD	bps2	block02	animal	CS+	OLD	YES_US	2	2703	OLD_ACQ_CS+	stims/animals/gerbil.jpg	582385	
+versionD	bps2	block02	tool	CS-	SIM	noUS	2	1182	SIM_EXT_b_CS-	stims/tools/travelmug_simB.jpg	591568	2
+versionD	bps2	block02	animal	CS+	OLD	noUS	1	2821	OLD_EXT_CS+	stims/animals/sheep.jpg	601768	
+versionD	bps2	block02	tool	CS-	OLD	noUS	2	1141	OLD_EXT_CS-	stims/tools/measuringcups.jpg	610951	2
+versionD	bps2	block02	tool	CS-	OLD	noUS	2	2777	OLD_ACQ_CS-	stims/tools/plunger.jpg	620151	1
+versionD	bps2	block02	animal	CS+	NEW	noUS	2	2396	NEW_CS+	stims/animals/moth.jpg	630351	1
+versionD	bps2	block02	tool	CS-	SIM	noUS	2	1850	SIM_BL_b_CS-	stims/tools/neckpillow_simB.jpg	640535	2
+versionD	bps2	block02	animal	CS+	OLD	noUS	2	1018	OLD_EXT_CS+	stims/animals/hummingbird.jpg	650735	1
+versionD	bps2	block02	animal	CS+	NEW	noUS	1	2623	NEW_CS+	stims/animals/pigeon.jpg	659918	2
+versionD	bps2	block02	tool	CS-	NEW	noUS	2	870	NEW_CS-	stims/tools/blackboard.jpg	670118	2
+versionD	bps2	block02	animal	CS+	OLD	noUS	1	1508	OLD_ACQ_CS+	stims/animals/canary.jpg	679285	1
+versionD	bps2	block02	animal	CS+	SIM	noUS	1	1666	SIM_BL_a_CS+	stims/animals/hawk_simB.jpg	689485	1

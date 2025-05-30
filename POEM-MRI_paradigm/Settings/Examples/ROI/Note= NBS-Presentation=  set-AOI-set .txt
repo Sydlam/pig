@@ -1,0 +1,17 @@
+
+-----------------------------
+NBS PRESENTATION
+
+Some interfaces, for example Presentation, 
+send integers to specify region of interest groups,
+or in Presentation vernacular "set AOI set".
+ 
+ViewPoint provides an interface by converting this 
+into a CLI command: "settingsFile_load 'ROI/N.txt' ", 
+where N is the integer specified, 
+and the folder ROI is the folder: ViewPoint/Settings/ROI/
+
+-----------------------------
+WARNING:  ROI #0 is deprecated and should not be used.
+
+

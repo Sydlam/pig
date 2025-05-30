@@ -1,0 +1,5 @@
+stimulus_LoadImageFile "Orientations/000.bmp"
+//
+END
+
+

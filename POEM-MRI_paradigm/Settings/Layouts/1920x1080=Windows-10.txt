@@ -1,0 +1,44 @@
+//----------------------------------------
+//  ViewPoint EyeTracker : Settings/Layout/1920×1080=Windows-10.txt
+//----------------------------------------
+setWindow	Main	FREE 
+setWindow	Main	SHOW 
+moveWindow	Main	0	0	1920	1080
+setWindow TorsionB HIDE 
+setWindow TorsionA HIDE 
+setWindow CalibrationImage HIDE 
+setWindow Info HIDE 
+setWindow	EyeSpace	CHILD 
+setWindow	EyeSpace	SHOW 
+moveWindow	EyeSpace	1	274	360	458
+setWindow	Controls	CHILD 
+setWindow	Controls	SHOW 
+moveWindow	Controls	360	274	360	458
+setWindow	History	CHILD 
+setWindow	History	SHOW 
+moveWindow	History	0	859	720	178
+setWindow	PenPlot	CHILD 
+setWindow	PenPlot	SHOW 
+moveWindow	PenPlot	1266	0	653	1037
+setWindow	Events	CHILD 
+setWindow	Events	SHOW 
+moveWindow	Events	1	731	719	129
+setWindow	EyeA	CHILD 
+setWindow	EyeA	SHOW 
+moveWindow	EyeA	1	0	360	275
+setWindow	EyeB	CHILD 
+setWindow	EyeB	SHOW 
+moveWindow	EyeB	360	0	360	275
+setWindow	GazeSpace	CHILD 
+setWindow	GazeSpace	SHOW 
+moveWindow	GazeSpace	719	0	548	437
+setWindow	Status	CHILD 
+setWindow	Status	SHOW 
+moveWindow	Status	719	436	548	345
+setWindow	KeyPad	CHILD 
+setWindow	KeyPad	SHOW 
+moveWindow	KeyPad	719	780	548	257
+setWindow Observer HIDE 
+setWindow Geometry HIDE 
+setWindow Histogram HIDE 
+END	

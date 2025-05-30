@@ -1,0 +1,24 @@
+//
+settingsFileList_Init 
+//
+settingsFileList_AddName "StateLists/Orientations/state_fixation_.txt"
+settingsFileList_AddName "StateLists/Orientations/state_135_.txt"
+settingsFileList_AddName "StateLists/Orientations/state_fixation_.txt"
+settingsFileList_AddName "StateLists/Orientations/state_catch_.txt"
+settingsFileList_AddName "StateLists/Orientations/state_fixation_.txt"
+settingsFileList_AddName "StateLists/Orientations/state_270_.txt"
+settingsFileList_AddName "StateLists/Orientations/state_fixation_.txt"
+settingsFileList_AddName "StateLists/Orientations/state_000_.txt"
+settingsFileList_AddName "StateLists/Orientations/state_fixation_.txt"
+settingsFileList_AddName "StateLists/Orientations/state_135_.txt"
+//
+settingsFileList_SequenceSeconds 	2.5
+settingsFileList_AutoSequence 	ON
+//
+setROI_Selection -1
+// this will set the ROI to locked, so none are highlighted
+//
+dataFile_NewName  "OrientationData.wks"
+//
+END
+

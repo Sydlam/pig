@@ -1,0 +1,54 @@
+versionC	ACQ	b6_01	b4_01	t_001	CS+	CS+_001	tool_001	OLD_ACQ_CS+	noUS	3	stims/tools/routerplane.jpg	4050
+versionC	ACQ	b6_01	b4_01	t_002	CS-	CS-_001	animal_001	OLD_ACQ_CS-	noUS	2	stims/animals/mink.jpg	15184
+versionC	ACQ	b6_01	b4_01	t_003	CS+	CS+_002	tool_002	SIM_ACQ_a_CS+	YES_US	2	stims/tools/baseball_simA.jpg	26300
+versionC	ACQ	b6_01	b4_01	t_004	CS-	CS-_002	animal_002	OLD_ACQ_CS-	noUS	2	stims/animals/flea.jpg	36467
+versionC	ACQ	b6_01	b4_01	t_005	CS-	CS-_003	animal_003	SIM_ACQ_a_CS-	noUS	2	stims/animals/bird_simA.jpg	47600
+versionC	ACQ	b6_01	b4_01	t_006	CS+	CS+_003	tool_003	SIM_ACQ_a_CS+	noUS	2	stims/tools/testtube_simA.jpg	56717
+versionC	ACQ	b6_01	b4_01	t_007	CS+	CS+_004	tool_004	OLD_ACQ_CS+	YES_US	1	stims/tools/jumpercables.jpg	67834
+versionC	ACQ	b6_01	b4_01	t_008	CS-	CS-_004	animal_004	SIM_ACQ_a_CS-	noUS	3	stims/animals/goose_simA.jpg	79000
+versionC	ACQ	b6_01	b4_02	t_009	CS+	CS+_005	tool_005	OLD_ACQ_CS+	YES_US	1	stims/tools/edger.jpg	90100
+versionC	ACQ	b6_01	b4_02	t_010	CS-	CS-_005	animal_005	SIM_ACQ_a_CS-	noUS	2	stims/animals/shrimp_simA.jpg	100267
+versionC	ACQ	b6_01	b4_02	t_011	CS+	CS+_006	tool_006	SIM_ACQ_a_CS+	noUS	1	stims/tools/rake_simA.jpg	111384
+versionC	ACQ	b6_01	b4_02	t_012	CS-	CS-_006	animal_006	SIM_ACQ_a_CS-	noUS	3	stims/animals/elephant_simA.jpg	120500
+versionC	ACQ	b6_02	b4_02	t_013	CS-	CS-_007	animal_007	OLD_ACQ_CS-	noUS	3	stims/animals/herculesbeetle.jpg	130617
+versionC	ACQ	b6_02	b4_02	t_014	CS+	CS+_007	tool_007	SIM_ACQ_a_CS+	YES_US	2	stims/tools/gardenhose_simA.jpg	141733
+versionC	ACQ	b6_02	b4_02	t_015	CS-	CS-_008	animal_008	OLD_ACQ_CS-	noUS	3	stims/animals/partridge.jpg	150900
+versionC	ACQ	b6_02	b4_02	t_016	CS+	CS+_008	tool_008	OLD_ACQ_CS+	noUS	1	stims/tools/sander.jpg	160017
+versionC	ACQ	b6_02	b4_03	t_017	CS-	CS-_009	animal_009	OLD_ACQ_CS-	noUS	3	stims/animals/prayingmantis.jpg	171117
+versionC	ACQ	b6_02	b4_03	t_018	CS+	CS+_009	tool_009	SIM_ACQ_a_CS+	YES_US	3	stims/tools/cowboyboot_simA.jpg	180233
+versionC	ACQ	b6_02	b4_03	t_019	CS+	CS+_010	tool_010	SIM_ACQ_a_CS+	noUS	3	stims/tools/broom_simA.jpg	190400
+versionC	ACQ	b6_02	b4_03	t_020	CS-	CS-_010	animal_010	SIM_ACQ_a_CS-	noUS	3	stims/animals/otter_simA.jpg	199517
+versionC	ACQ	b6_02	b4_03	t_021	CS-	CS-_011	animal_011	OLD_ACQ_CS-	noUS	3	stims/animals/mahimahi.jpg	209633
+versionC	ACQ	b6_02	b4_03	t_022	CS+	CS+_011	tool_011	OLD_ACQ_CS+	YES_US	1	stims/tools/typewriter.jpg	220750
+versionC	ACQ	b6_02	b4_03	t_023	CS-	CS-_012	animal_012	SIM_ACQ_a_CS-	noUS	3	stims/animals/seahorse_simA.jpg	230917
+versionC	ACQ	b6_02	b4_03	t_024	CS+	CS+_012	tool_012	OLD_ACQ_CS+	noUS	3	stims/tools/paintroller.jpg	240033
+versionC	ACQ	b6_03	b4_04	t_025	CS+	CS+_013	tool_013	OLD_ACQ_CS+	YES_US	3	stims/tools/padlock.jpg	251150
+versionC	ACQ	b6_03	b4_04	t_026	CS-	CS-_013	animal_013	OLD_ACQ_CS-	noUS	3	stims/animals/finch.jpg	260317
+versionC	ACQ	b6_03	b4_04	t_027	CS+	CS+_014	tool_014	SIM_ACQ_a_CS+	noUS	3	stims/tools/netscoop_simA.jpg	269417
+versionC	ACQ	b6_03	b4_04	t_028	CS-	CS-_014	animal_014	SIM_ACQ_a_CS-	noUS	3	stims/animals/butterfly_simA.jpg	279533
+versionC	ACQ	b6_03	b4_04	t_029	CS+	CS+_015	tool_015	OLD_ACQ_CS+	noUS	3	stims/tools/reflexhammer.jpg	290650
+versionC	ACQ	b6_03	b4_04	t_030	CS-	CS-_015	animal_015	SIM_ACQ_a_CS-	noUS	3	stims/animals/cat_simA.jpg	299767
+versionC	ACQ	b6_03	b4_04	t_031	CS+	CS+_016	tool_016	OLD_ACQ_CS+	noUS	1	stims/tools/extensioncord.jpg	309883
+versionC	ACQ	b6_03	b4_04	t_032	CS-	CS-_016	animal_016	SIM_ACQ_a_CS-	noUS	3	stims/animals/cow_simA.jpg	320000
+versionC	ACQ	b6_03	b4_05	t_033	CS+	CS+_017	tool_017	SIM_ACQ_a_CS+	YES_US	3	stims/tools/barstool_simA.jpg	331100
+versionC	ACQ	b6_03	b4_05	t_034	CS-	CS-_017	animal_017	SIM_ACQ_a_CS-	noUS	3	stims/animals/orangutan_simA.jpg	341283
+versionC	ACQ	b6_03	b4_05	t_035	CS+	CS+_018	tool_018	SIM_ACQ_a_CS+	noUS	3	stims/tools/neckpillow_simA.jpg	351383
+versionC	ACQ	b6_03	b4_05	t_036	CS-	CS-_018	animal_018	OLD_ACQ_CS-	noUS	3	stims/animals/llama.jpg	360500
+versionC	ACQ	b6_04	b4_05	t_037	CS+	CS+_019	tool_019	SIM_ACQ_a_CS+	YES_US	3	stims/tools/gradcap_simA.jpg	369617
+versionC	ACQ	b6_04	b4_05	t_038	CS-	CS-_019	animal_019	SIM_ACQ_a_CS-	noUS	3	stims/animals/kangaroo_simA.jpg	378800
+versionC	ACQ	b6_04	b4_05	t_039	CS+	CS+_020	tool_020	OLD_ACQ_CS+	YES_US	1	stims/tools/fan.jpg	389917
+versionC	ACQ	b6_04	b4_05	t_040	CS-	CS-_020	animal_020	OLD_ACQ_CS-	noUS	3	stims/animals/canary.jpg	400083
+versionC	ACQ	b6_04	b4_06	t_041	CS+	CS+_021	tool_021	OLD_ACQ_CS+	noUS	1	stims/tools/ropeandpulley.jpg	410200
+versionC	ACQ	b6_04	b4_06	t_042	CS-	CS-_021	animal_021	OLD_ACQ_CS-	noUS	3	stims/animals/hummingbird.jpg	420333
+versionC	ACQ	b6_04	b4_06	t_043	CS+	CS+_022	tool_022	OLD_ACQ_CS+	YES_US	2	stims/tools/vegetablepeeler.jpg	430450
+versionC	ACQ	b6_04	b4_06	t_044	CS-	CS-_022	animal_022	OLD_ACQ_CS-	noUS	3	stims/animals/gerbil.jpg	441617
+versionC	ACQ	b6_04	b4_06	t_045	CS-	CS-_023	animal_023	OLD_ACQ_CS-	noUS	3	stims/animals/hyena.jpg	452733
+versionC	ACQ	b6_04	b4_06	t_046	CS+	CS+_023	tool_023	SIM_ACQ_a_CS+	noUS	3	stims/tools/envelope_simA.jpg	461850
+versionC	ACQ	b6_04	b4_06	t_047	CS-	CS-_024	animal_024	SIM_ACQ_a_CS-	noUS	3	stims/animals/rabbitt_simA.jpg	470967
+versionC	ACQ	b6_04	b4_06	t_048	CS+	CS+_024	tool_024	SIM_ACQ_a_CS+	YES_US	2	stims/tools/lantern_simA.jpg	481083
+ANIMAL IMAGES	CS-	ACQ	how PLEASANT did these make you feel?	4
+TOOL IMAGES	CS+	ACQ	how PLEASANT did these make you feel?	3
+ANIMAL IMAGES	CS-	ACQ	how ANXIOUS did these make you feel?	1
+TOOL IMAGES	CS+	ACQ	how ANXIOUS did these make you feel?	4
+SMALL CROSS in-between images	FIX	ACQ	how ANXIOUS did THIS make you feel?	1
+SMALL CROSS in-between images	FIX	ACQ	how PLEASANT did THIS make you feel?	1

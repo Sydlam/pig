@@ -1,0 +1,97 @@
+LIBRARY	VPX_InterApp_32
+EXPORTS
+   vpxs_SendCommandString
+   vpxs_GetStatus
+   vpxs_SetPupilCentroid2
+   vpxs_GetPupilCentroid2
+   vpxs_SetGlintCentroid2
+   vpxs_GetGlintCentroid2
+   vpxs_SetPupilOvalRect
+   vpxs_GetPupilOvalRect
+   vpxs_SetPupilOvalRect2
+   vpxs_GetPupilOvalRect2
+   vpxs_SetPupilPoint
+   vpxs_GetPupilPoint
+   vpxs_SetPupilPoint2
+   vpxs_GetPupilPoint2
+   vpxs_SetGlintPoint
+   vpxs_GetGlintPoint
+   vpxs_SetGlintPoint2
+   vpxs_GetGlintPoint2
+   vpxs_SetDiffVector
+   vpxs_GetDiffVector
+   vpxs_SetDiffVector2
+   vpxs_GetDiffVector2
+   vpxs_SetGazePoint
+   vpxs_GetGazePoint
+   vpxs_SetGazePoint2
+   vpxs_GetGazePoint2
+   vpxs_SetGazePointSmoothed2
+   vpxs_GetGazePointSmoothed2
+   vpxs_SetGazeAngle2
+   vpxs_GetGazeAngle2
+   vpxs_SetGazeAngleSmoothed2
+   vpxs_GetGazeAngleSmoothed2
+   vpxs_SetPupilSize
+   vpxs_GetPupilSize
+   vpxs_SetPupilSize2
+   vpxs_GetPupilSize2
+   vpxs_SetDrift2
+   vpxs_GetDrift2
+   vpxs_SetTotalVelocity
+   vpxs_GetTotalVelocity
+   vpxs_SetTotalVelocity2
+   vpxs_GetTotalVelocity2
+   vpxs_SetComponentVelocity
+   vpxs_GetComponentVelocity
+   vpxs_SetComponentVelocity2
+   vpxs_GetComponentVelocity2
+   vpxs_SetFixationDuration
+   vpxs_SetFixationDuration2
+   vpxs_GetFixationDuration
+   vpxs_SetFixationSeconds2
+   vpxs_GetFixationSeconds2
+   vpxs_SetROI_InCode
+   vpxs_GetROI_InCode
+   vpxs_SetROI_InCode2
+   vpxs_GetROI_InCode2
+   vpxs_SetTorsion
+   vpxs_GetTorsion
+   vpxs_SetTorsion2
+   vpxs_GetTorsion2
+   vpxs_SetPupilAspectRatio
+   vpxs_GetPupilAspectRatio
+   vpxs_SetPupilAspectRatio2
+   vpxs_GetPupilAspectRatio2
+   vpxs_SetDataTime2
+   vpxs_GetDataTime2
+   vpxs_GetDataDeltaTime2
+   vpxs_SetStoreTime2
+   vpxs_GetStoreTime2
+   vpxs_GetStoreDeltaTime2
+   vpxs_SetDataQuality2
+   vpxs_GetDataQuality2
+   vpxs_SetHeadPositionAngle
+   vpxs_GetHeadPositionAngle
+   vpxs_SetMeasuredViewingDistance
+   vpxs_GetMeasuredViewingDistance
+   vpxs_SetMeasuredScreenSize
+   vpxs_GetMeasuredScreenSize
+   vpxs_GetCursorPosition
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   

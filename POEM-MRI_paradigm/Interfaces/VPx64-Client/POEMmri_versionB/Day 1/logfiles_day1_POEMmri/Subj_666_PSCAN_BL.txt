@@ -1,0 +1,4 @@
+valence_BL_CS+	rating/BL_tools.jpg	CS+	1
+arousal_BL_CS+	rating/BL_tools.jpg	CS+	2
+valence_BL_CS-	rating/BL_animals.jpg	CS-	1
+arousal_BL_CS-	rating/BL_animals.jpg	CS-	3

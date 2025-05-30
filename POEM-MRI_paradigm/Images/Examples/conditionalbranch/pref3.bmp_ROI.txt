@@ -1,0 +1,4 @@
+setROI_AllOff
+setROI_RealRect	1	 0.002	 0.002	 0.500	 0.998	Rectangle
+setROI_RealRect	2	 0.500	 0.000	 0.996	 0.998	Rectangle
+END

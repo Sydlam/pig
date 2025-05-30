@@ -1,0 +1,52 @@
+versionA	EXT	b6_01	b4_01	t_001	CS-	CS-_001	animal_001	SIM_EXT_a_CS-	2	stims/animals/cassowary_simA.jpg	35073
+versionA	EXT	b6_01	b4_01	t_002	CS+	CS+_001	tool_001	OLD_EXT_CS+	3	stims/tools/blower.jpg	45606
+versionA	EXT	b6_01	b4_01	t_003	CS+	CS+_002	tool_002	SIM_EXT_a_CS+	1	stims/tools/hairdryer_simA.jpg	56072
+versionA	EXT	b6_01	b4_01	t_004	CS-	CS-_002	animal_002	OLD_EXT_CS-	3	stims/animals/aardvark.jpg	67606
+versionA	EXT	b6_01	b4_01	t_005	CS+	CS+_003	tool_003	SIM_EXT_a_CS+	2	stims/tools/barrel_simA.jpg	78145
+versionA	EXT	b6_01	b4_01	t_006	CS+	CS+_004	tool_004	OLD_EXT_CS+	1	stims/tools/workbench.jpg	89738
+versionA	EXT	b6_01	b4_01	t_007	CS-	CS-_003	animal_003	SIM_EXT_a_CS-	2	stims/animals/orangutan_simA.jpg	102406
+versionA	EXT	b6_01	b4_01	t_008	CS-	CS-_004	animal_004	OLD_EXT_CS-		stims/animals/canary.jpg	114072
+versionA	EXT	b6_01	b4_02	t_009	CS+	CS+_005	tool_005	SIM_EXT_a_CS+		stims/tools/netscoop_simA.jpg	125738
+versionA	EXT	b6_01	b4_02	t_010	CS-	CS-_005	animal_005	SIM_EXT_a_CS-		stims/animals/tiger_simA.jpg	137204
+versionA	EXT	b6_01	b4_02	t_011	CS+	CS+_006	tool_006	SIM_EXT_a_CS+		stims/tools/baseball_simA.jpg	149604
+versionA	EXT	b6_01	b4_02	t_012	CS+	CS+_007	tool_007	SIM_EXT_a_CS+		stims/tools/cheesegrater_simA.jpg	161070
+versionA	EXT	b6_02	b4_02	t_013	CS-	CS-_006	animal_006	SIM_EXT_a_CS-		stims/animals/lobster_simA.jpg	172537
+versionA	EXT	b6_02	b4_02	t_014	CS-	CS-_007	animal_007	SIM_EXT_a_CS-		stims/animals/rabbitt_simA.jpg	185004
+versionA	EXT	b6_02	b4_02	t_015	CS+	CS+_008	tool_008	OLD_EXT_CS+		stims/tools/squeegee.jpg	197470
+versionA	EXT	b6_02	b4_02	t_016	CS+	CS+_009	tool_009	OLD_EXT_CS+		stims/tools/toaster.jpg	209936
+versionA	EXT	b6_02	b4_03	t_017	CS-	CS-_008	animal_008	SIM_EXT_a_CS-		stims/animals/turtle_simA.jpg	220402
+versionA	EXT	b6_02	b4_03	t_018	CS-	CS-_009	animal_009	SIM_EXT_a_CS-		stims/animals/goose_simA.jpg	230869
+versionA	EXT	b6_02	b4_03	t_019	CS+	CS+_010	tool_010	SIM_EXT_a_CS+		stims/tools/magnifyingglass_simA.jpg	242336
+versionA	EXT	b6_02	b4_03	t_020	CS+	CS+_011	tool_011	OLD_EXT_CS+		stims/tools/monkeywrench.jpg	254802
+versionA	EXT	b6_02	b4_03	t_021	CS-	CS-_010	animal_010	OLD_EXT_CS-		stims/animals/hyena.jpg	266335
+versionA	EXT	b6_02	b4_03	t_022	CS+	CS+_012	tool_012	OLD_EXT_CS+		stims/tools/bucket.jpg	276801
+versionA	EXT	b6_02	b4_03	t_023	CS+	CS+_013	tool_013	OLD_EXT_CS+		stims/tools/paintbrush.jpg	287277
+versionA	EXT	b6_02	b4_03	t_024	CS-	CS-_011	animal_011	SIM_EXT_a_CS-		stims/animals/macaw_simA.jpg	298801
+versionA	EXT	b6_03	b4_04	t_025	CS-	CS-_012	animal_012	OLD_EXT_CS-		stims/animals/rhino.jpg	309267
+versionA	EXT	b6_03	b4_04	t_026	CS+	CS+_014	tool_014	OLD_EXT_CS+		stims/tools/airpump.jpg	319740
+versionA	EXT	b6_03	b4_04	t_027	CS-	CS-_013	animal_013	SIM_EXT_a_CS-		stims/animals/crab_simA.jpg	330200
+versionA	EXT	b6_03	b4_04	t_028	CS+	CS+_015	tool_015	OLD_EXT_CS+		stims/tools/jumpercables.jpg	342733
+versionA	EXT	b6_03	b4_04	t_029	CS+	CS+_016	tool_016	SIM_EXT_a_CS+		stims/tools/paperclip_simA.jpg	353200
+versionA	EXT	b6_03	b4_04	t_030	CS-	CS-_014	animal_014	OLD_EXT_CS-		stims/animals/cricket.jpg	364733
+versionA	EXT	b6_03	b4_04	t_031	CS-	CS-_015	animal_015	OLD_EXT_CS-		stims/animals/llama.jpg	376199
+versionA	EXT	b6_03	b4_04	t_032	CS+	CS+_017	tool_017	SIM_EXT_a_CS+		stims/tools/toolbox_simA.jpg	387732
+versionA	EXT	b6_03	b4_05	t_033	CS+	CS+_018	tool_018	SIM_EXT_a_CS+		stims/tools/testtube_simA.jpg	398199
+versionA	EXT	b6_03	b4_05	t_034	CS-	CS-_016	animal_016	OLD_EXT_CS-		stims/animals/marmot.jpg	410671
+versionA	EXT	b6_03	b4_05	t_035	CS-	CS-_017	animal_017	SIM_EXT_a_CS-		stims/animals/goldfish_simA.jpg	421132
+versionA	EXT	b6_03	b4_05	t_036	CS+	CS+_019	tool_019	OLD_EXT_CS+		stims/tools/padlock.jpg	431598
+versionA	EXT	b6_04	b4_05	t_037	CS-	CS-_018	animal_018	OLD_EXT_CS-		stims/animals/zebra.jpg	444064
+versionA	EXT	b6_04	b4_05	t_038	CS-	CS-_019	animal_019	OLD_EXT_CS-		stims/animals/finch.jpg	456531
+versionA	EXT	b6_04	b4_05	t_039	CS+	CS+_020	tool_020	SIM_EXT_a_CS+		stims/tools/spork_simA.jpg	469064
+versionA	EXT	b6_04	b4_05	t_040	CS-	CS-_020	animal_020	SIM_EXT_a_CS-		stims/animals/kangaroo_simA.jpg	481530
+versionA	EXT	b6_04	b4_06	t_041	CS+	CS+_021	tool_021	OLD_EXT_CS+		stims/tools/extensioncord.jpg	492997
+versionA	EXT	b6_04	b4_06	t_042	CS-	CS-_021	animal_021	OLD_EXT_CS-		stims/animals/carp.jpg	505463
+versionA	EXT	b6_04	b4_06	t_043	CS+	CS+_022	tool_022	OLD_EXT_CS+		stims/tools/edger.jpg	517929
+versionA	EXT	b6_04	b4_06	t_044	CS-	CS-_022	animal_022	OLD_EXT_CS-		stims/animals/skunk.jpg	529396
+versionA	EXT	b6_04	b4_06	t_045	CS+	CS+_023	tool_023	SIM_EXT_a_CS+		stims/tools/broom_simA.jpg	541862
+versionA	EXT	b6_04	b4_06	t_046	CS+	CS+_024	tool_024	SIM_EXT_a_CS+		stims/tools/axe_simA.jpg	552329
+versionA	EXT	b6_04	b4_06	t_047	CS-	CS-_023	animal_023	OLD_EXT_CS-		stims/animals/starfish.jpg	562795
+versionA	EXT	b6_04	b4_06	t_048	CS-	CS-_024	animal_024	SIM_EXT_a_CS-		stims/animals/chicken_simA.jpg	574262
+valence_EXT_CS+	rating/EXT_tools.jpg	CS+	4
+arousal_EXT_CS+	rating/EXT_tools.jpg	CS+	2
+valence_EXT_CS-	rating/EXT_animals.jpg	CS-	3
+arousal_EXT_CS-	rating/EXT_animals.jpg	CS-	1
