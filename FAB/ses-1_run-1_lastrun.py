@@ -1,8 +1,8 @@
 ﻿#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-This experiment was created using PsychoPy3 Experiment Builder (v2022.2.1),
-    on May 30, 2025, at 12:47
+This experiment was created using PsychoPy3 Experiment Builder (v2023.1.3),
+    on Tue Jun 10 12:33:46 2025
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -14,8 +14,11 @@ If you publish work using this script the most relevant publication is:
 # --- Import packages ---
 from psychopy import locale_setup
 from psychopy import prefs
+from psychopy import plugins
+plugins.activatePlugins()
 prefs.hardware['audioLib'] = 'ptb'
 from psychopy import sound, gui, visual, core, data, event, logging, clock, colors, layout
+from psychopy.tools import environmenttools
 from psychopy.constants import (NOT_STARTED, STARTED, PLAYING, PAUSED,
                                 STOPPED, FINISHED, PRESSED, RELEASED, FOREVER)
 
@@ -213,7 +216,7 @@ def getmarker(mouse_d, first, mouseRec, slider_shaped, slider_rt, exp_rating, ma
 _thisDir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(_thisDir)
 # Store info about the experiment session
-psychopyVersion = '2022.2.1'
+psychopyVersion = '2023.1.3'
 expName = 'conditioning'  # from the Builder filename that created this script
 expInfo = {
     '': '',
@@ -228,7 +231,7 @@ filename = _thisDir + os.sep + f'data/{bidsID}/{bidsID}_ses-1_task-{expName}_{ex
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='C:\\Users\\dunsmoorlab\\Desktop\\Experiments\\FAB\\ses-1_run-1_lastrun.py',
+    originPath='/Users/sydneylambert/Desktop/pig/FAB/ses-1_run-1_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -245,6 +248,7 @@ win = visual.Window(
     size=[1920, 1080], fullscr=True, screen=0, 
     winType='pyglet', allowStencil=False,
     monitor='testMonitor', color=[0,0,0], colorSpace='rgb',
+    backgroundImage='', backgroundFit='none',
     blendMode='avg', useFBO=True, 
     units='height')
 win.mouseVisible = False
@@ -402,7 +406,7 @@ textr_cond = visual.TextStim(win=win, name='textr_cond',
 img_cond = visual.ImageStim(
     win=win,
     name='img_cond', 
-    image='sin', mask=None, anchor='center',
+    image='default.png', mask=None, anchor='center',
     ori=0.0, pos=[0,0], size=(0.45, 0.45),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
@@ -491,6 +495,7 @@ _timeToFirstFrame = win.getFutureFlipTime(clock="now")
 frameN = -1
 
 # --- Run Routine "setup" ---
+routineForceEnded = not continueRoutine
 while continueRoutine:
     # get current time
     t = routineTimer.getTime()
@@ -502,9 +507,12 @@ while continueRoutine:
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
         core.quit()
+        if eyetracker:
+            eyetracker.setConnectionState(False)
     
     # check if all components have finished
     if not continueRoutine:  # a component has requested a forced-end of Routine
+        routineForceEnded = True
         break
     continueRoutine = False  # will revert to True if at least one component still running
     for thisComponent in setupComponents:
@@ -563,6 +571,7 @@ for thisTrial in trials:
     frameN = -1
     
     # --- Run Routine "inst_acq1" ---
+    routineForceEnded = not continueRoutine
     while continueRoutine:
         # get current time
         t = routineTimer.getTime()
@@ -572,6 +581,8 @@ for thisTrial in trials:
         # update/draw components on each frame
         
         # *inst1* updates
+        
+        # if inst1 is starting this frame...
         if inst1.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
             # keep track of start time/frame for later
             inst1.frameNStart = frameN  # exact frame index
@@ -580,10 +591,19 @@ for thisTrial in trials:
             win.timeOnFlip(inst1, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
             thisExp.timestampOnFlip(win, 'inst1.started')
+            # update status
+            inst1.status = STARTED
             inst1.setAutoDraw(True)
+        
+        # if inst1 is active this frame...
+        if inst1.status == STARTED:
+            # update params
+            pass
         
         # *inst1_response* updates
         waitOnFlip = False
+        
+        # if inst1_response is starting this frame...
         if inst1_response.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
             inst1_response.frameNStart = frameN  # exact frame index
@@ -592,6 +612,7 @@ for thisTrial in trials:
             win.timeOnFlip(inst1_response, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
             thisExp.timestampOnFlip(win, 'inst1_response.started')
+            # update status
             inst1_response.status = STARTED
             # keyboard checking is just starting
             waitOnFlip = True
@@ -603,15 +624,19 @@ for thisTrial in trials:
             if len(_inst1_response_allKeys):
                 inst1_response.keys = _inst1_response_allKeys[-1].name  # just the last key pressed
                 inst1_response.rt = _inst1_response_allKeys[-1].rt
+                inst1_response.duration = _inst1_response_allKeys[-1].duration
                 # a response ends the routine
                 continueRoutine = False
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
             core.quit()
+            if eyetracker:
+                eyetracker.setConnectionState(False)
         
         # check if all components have finished
         if not continueRoutine:  # a component has requested a forced-end of Routine
+            routineForceEnded = True
             break
         continueRoutine = False  # will revert to True if at least one component still running
         for thisComponent in inst_acq1Components:
@@ -633,6 +658,7 @@ for thisTrial in trials:
     trials.addData('inst1_response.keys',inst1_response.keys)
     if inst1_response.keys != None:  # we had a response
         trials.addData('inst1_response.rt', inst1_response.rt)
+        trials.addData('inst1_response.duration', inst1_response.duration)
     # the Routine "inst_acq1" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -657,6 +683,7 @@ for thisTrial in trials:
     frameN = -1
     
     # --- Run Routine "inst_acq2" ---
+    routineForceEnded = not continueRoutine
     while continueRoutine:
         # get current time
         t = routineTimer.getTime()
@@ -666,6 +693,8 @@ for thisTrial in trials:
         # update/draw components on each frame
         
         # *inst2* updates
+        
+        # if inst2 is starting this frame...
         if inst2.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
             # keep track of start time/frame for later
             inst2.frameNStart = frameN  # exact frame index
@@ -674,10 +703,19 @@ for thisTrial in trials:
             win.timeOnFlip(inst2, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
             thisExp.timestampOnFlip(win, 'inst2.started')
+            # update status
+            inst2.status = STARTED
             inst2.setAutoDraw(True)
+        
+        # if inst2 is active this frame...
+        if inst2.status == STARTED:
+            # update params
+            pass
         
         # *inst2_response* updates
         waitOnFlip = False
+        
+        # if inst2_response is starting this frame...
         if inst2_response.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
             inst2_response.frameNStart = frameN  # exact frame index
@@ -686,6 +724,7 @@ for thisTrial in trials:
             win.timeOnFlip(inst2_response, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
             thisExp.timestampOnFlip(win, 'inst2_response.started')
+            # update status
             inst2_response.status = STARTED
             # keyboard checking is just starting
             waitOnFlip = True
@@ -697,15 +736,19 @@ for thisTrial in trials:
             if len(_inst2_response_allKeys):
                 inst2_response.keys = _inst2_response_allKeys[-1].name  # just the last key pressed
                 inst2_response.rt = _inst2_response_allKeys[-1].rt
+                inst2_response.duration = _inst2_response_allKeys[-1].duration
                 # a response ends the routine
                 continueRoutine = False
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
             core.quit()
+            if eyetracker:
+                eyetracker.setConnectionState(False)
         
         # check if all components have finished
         if not continueRoutine:  # a component has requested a forced-end of Routine
+            routineForceEnded = True
             break
         continueRoutine = False  # will revert to True if at least one component still running
         for thisComponent in inst_acq2Components:
@@ -727,6 +770,7 @@ for thisTrial in trials:
     trials.addData('inst2_response.keys',inst2_response.keys)
     if inst2_response.keys != None:  # we had a response
         trials.addData('inst2_response.rt', inst2_response.rt)
+        trials.addData('inst2_response.duration', inst2_response.duration)
     # the Routine "inst_acq2" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -751,6 +795,7 @@ for thisTrial in trials:
     frameN = -1
     
     # --- Run Routine "inst_acq3" ---
+    routineForceEnded = not continueRoutine
     while continueRoutine:
         # get current time
         t = routineTimer.getTime()
@@ -760,6 +805,8 @@ for thisTrial in trials:
         # update/draw components on each frame
         
         # *inst1_2* updates
+        
+        # if inst1_2 is starting this frame...
         if inst1_2.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
             # keep track of start time/frame for later
             inst1_2.frameNStart = frameN  # exact frame index
@@ -768,10 +815,19 @@ for thisTrial in trials:
             win.timeOnFlip(inst1_2, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
             thisExp.timestampOnFlip(win, 'inst1_2.started')
+            # update status
+            inst1_2.status = STARTED
             inst1_2.setAutoDraw(True)
+        
+        # if inst1_2 is active this frame...
+        if inst1_2.status == STARTED:
+            # update params
+            pass
         
         # *inst1_response_2* updates
         waitOnFlip = False
+        
+        # if inst1_response_2 is starting this frame...
         if inst1_response_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
             inst1_response_2.frameNStart = frameN  # exact frame index
@@ -780,6 +836,7 @@ for thisTrial in trials:
             win.timeOnFlip(inst1_response_2, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
             thisExp.timestampOnFlip(win, 'inst1_response_2.started')
+            # update status
             inst1_response_2.status = STARTED
             # keyboard checking is just starting
             waitOnFlip = True
@@ -791,15 +848,19 @@ for thisTrial in trials:
             if len(_inst1_response_2_allKeys):
                 inst1_response_2.keys = _inst1_response_2_allKeys[-1].name  # just the last key pressed
                 inst1_response_2.rt = _inst1_response_2_allKeys[-1].rt
+                inst1_response_2.duration = _inst1_response_2_allKeys[-1].duration
                 # a response ends the routine
                 continueRoutine = False
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
             core.quit()
+            if eyetracker:
+                eyetracker.setConnectionState(False)
         
         # check if all components have finished
         if not continueRoutine:  # a component has requested a forced-end of Routine
+            routineForceEnded = True
             break
         continueRoutine = False  # will revert to True if at least one component still running
         for thisComponent in inst_acq3Components:
@@ -821,6 +882,7 @@ for thisTrial in trials:
     trials.addData('inst1_response_2.keys',inst1_response_2.keys)
     if inst1_response_2.keys != None:  # we had a response
         trials.addData('inst1_response_2.rt', inst1_response_2.rt)
+        trials.addData('inst1_response_2.duration', inst1_response_2.duration)
     # the Routine "inst_acq3" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -866,6 +928,7 @@ for thisTrial in trials:
     frameN = -1
     
     # --- Run Routine "sliderdemo" ---
+    routineForceEnded = not continueRoutine
     while continueRoutine:
         # get current time
         t = routineTimer.getTime()
@@ -879,6 +942,8 @@ for thisTrial in trials:
         marker_position, mouseRec, first, slider_rt, exp_rating, exp_rating_all, exp_rt_all = getmarker(mouse_cond, first, mouseRec, shape_cond, slider_rt, exp_rating, marker_position, exp_rating_all, exp_rt_all)
         
         # *sliderright* updates
+        
+        # if sliderright is starting this frame...
         if sliderright.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
             sliderright.frameNStart = frameN  # exact frame index
@@ -887,9 +952,18 @@ for thisTrial in trials:
             win.timeOnFlip(sliderright, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
             thisExp.timestampOnFlip(win, 'sliderright.started')
+            # update status
+            sliderright.status = STARTED
             sliderright.setAutoDraw(True)
         
+        # if sliderright is active this frame...
+        if sliderright.status == STARTED:
+            # update params
+            pass
+        
         # *sliderleft* updates
+        
+        # if sliderleft is starting this frame...
         if sliderleft.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
             sliderleft.frameNStart = frameN  # exact frame index
@@ -898,9 +972,18 @@ for thisTrial in trials:
             win.timeOnFlip(sliderleft, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
             thisExp.timestampOnFlip(win, 'sliderleft.started')
+            # update status
+            sliderleft.status = STARTED
             sliderleft.setAutoDraw(True)
         
+        # if sliderleft is active this frame...
+        if sliderleft.status == STARTED:
+            # update params
+            pass
+        
         # *instdemo* updates
+        
+        # if instdemo is starting this frame...
         if instdemo.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
             # keep track of start time/frame for later
             instdemo.frameNStart = frameN  # exact frame index
@@ -909,9 +992,18 @@ for thisTrial in trials:
             win.timeOnFlip(instdemo, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
             thisExp.timestampOnFlip(win, 'instdemo.started')
+            # update status
+            instdemo.status = STARTED
             instdemo.setAutoDraw(True)
         
+        # if instdemo is active this frame...
+        if instdemo.status == STARTED:
+            # update params
+            pass
+        
         # *shape_demo* updates
+        
+        # if shape_demo is starting this frame...
         if shape_demo.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
             shape_demo.frameNStart = frameN  # exact frame index
@@ -920,9 +1012,18 @@ for thisTrial in trials:
             win.timeOnFlip(shape_demo, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
             thisExp.timestampOnFlip(win, 'shape_demo.started')
+            # update status
+            shape_demo.status = STARTED
             shape_demo.setAutoDraw(True)
         
+        # if shape_demo is active this frame...
+        if shape_demo.status == STARTED:
+            # update params
+            pass
+        
         # *slider0l_d* updates
+        
+        # if slider0l_d is starting this frame...
         if slider0l_d.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
             slider0l_d.frameNStart = frameN  # exact frame index
@@ -931,9 +1032,18 @@ for thisTrial in trials:
             win.timeOnFlip(slider0l_d, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
             thisExp.timestampOnFlip(win, 'slider0l_d.started')
+            # update status
+            slider0l_d.status = STARTED
             slider0l_d.setAutoDraw(True)
         
+        # if slider0l_d is active this frame...
+        if slider0l_d.status == STARTED:
+            # update params
+            pass
+        
         # *expect0_d* updates
+        
+        # if expect0_d is starting this frame...
         if expect0_d.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
             expect0_d.frameNStart = frameN  # exact frame index
@@ -942,9 +1052,18 @@ for thisTrial in trials:
             win.timeOnFlip(expect0_d, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
             thisExp.timestampOnFlip(win, 'expect0_d.started')
+            # update status
+            expect0_d.status = STARTED
             expect0_d.setAutoDraw(True)
         
+        # if expect0_d is active this frame...
+        if expect0_d.status == STARTED:
+            # update params
+            pass
+        
         # *slider0r_d* updates
+        
+        # if slider0r_d is starting this frame...
         if slider0r_d.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
             slider0r_d.frameNStart = frameN  # exact frame index
@@ -953,9 +1072,18 @@ for thisTrial in trials:
             win.timeOnFlip(slider0r_d, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
             thisExp.timestampOnFlip(win, 'slider0r_d.started')
+            # update status
+            slider0r_d.status = STARTED
             slider0r_d.setAutoDraw(True)
         
+        # if slider0r_d is active this frame...
+        if slider0r_d.status == STARTED:
+            # update params
+            pass
+        
         # *markerdemo* updates
+        
+        # if markerdemo is starting this frame...
         if markerdemo.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
             markerdemo.frameNStart = frameN  # exact frame index
@@ -964,10 +1092,17 @@ for thisTrial in trials:
             win.timeOnFlip(markerdemo, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
             thisExp.timestampOnFlip(win, 'markerdemo.started')
+            # update status
+            markerdemo.status = STARTED
             markerdemo.setAutoDraw(True)
-        if markerdemo.status == STARTED:  # only update if drawing
+        
+        # if markerdemo is active this frame...
+        if markerdemo.status == STARTED:
+            # update params
             markerdemo.setPos(marker_position, log=False)
         # *mouse_d* updates
+        
+        # if mouse_d is starting this frame...
         if mouse_d.status == NOT_STARTED and t >= 0.0-frameTolerance:
             # keep track of start time/frame for later
             mouse_d.frameNStart = frameN  # exact frame index
@@ -976,12 +1111,15 @@ for thisTrial in trials:
             win.timeOnFlip(mouse_d, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
             thisExp.addData('mouse_d.started', t)
+            # update status
             mouse_d.status = STARTED
             mouse_d.mouseClock.reset()
             prevButtonState = [0, 0, 0]  # if now button is down we will treat as 'new' click
         
         # *resp_demo* updates
         waitOnFlip = False
+        
+        # if resp_demo is starting this frame...
         if resp_demo.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
             resp_demo.frameNStart = frameN  # exact frame index
@@ -990,6 +1128,7 @@ for thisTrial in trials:
             win.timeOnFlip(resp_demo, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
             thisExp.timestampOnFlip(win, 'resp_demo.started')
+            # update status
             resp_demo.status = STARTED
             # keyboard checking is just starting
             waitOnFlip = True
@@ -1001,15 +1140,19 @@ for thisTrial in trials:
             if len(_resp_demo_allKeys):
                 resp_demo.keys = _resp_demo_allKeys[-1].name  # just the last key pressed
                 resp_demo.rt = _resp_demo_allKeys[-1].rt
+                resp_demo.duration = _resp_demo_allKeys[-1].duration
                 # a response ends the routine
                 continueRoutine = False
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
             core.quit()
+            if eyetracker:
+                eyetracker.setConnectionState(False)
         
         # check if all components have finished
         if not continueRoutine:  # a component has requested a forced-end of Routine
+            routineForceEnded = True
             break
         continueRoutine = False  # will revert to True if at least one component still running
         for thisComponent in sliderdemoComponents:
@@ -1036,6 +1179,7 @@ for thisTrial in trials:
     trials.addData('resp_demo.keys',resp_demo.keys)
     if resp_demo.keys != None:  # we had a response
         trials.addData('resp_demo.rt', resp_demo.rt)
+        trials.addData('resp_demo.duration', resp_demo.duration)
     # the Routine "sliderdemo" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -1060,6 +1204,7 @@ for thisTrial in trials:
     frameN = -1
     
     # --- Run Routine "inst_acq4" ---
+    routineForceEnded = not continueRoutine
     while continueRoutine:
         # get current time
         t = routineTimer.getTime()
@@ -1069,6 +1214,8 @@ for thisTrial in trials:
         # update/draw components on each frame
         
         # *inst4* updates
+        
+        # if inst4 is starting this frame...
         if inst4.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
             # keep track of start time/frame for later
             inst4.frameNStart = frameN  # exact frame index
@@ -1077,10 +1224,19 @@ for thisTrial in trials:
             win.timeOnFlip(inst4, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
             thisExp.timestampOnFlip(win, 'inst4.started')
+            # update status
+            inst4.status = STARTED
             inst4.setAutoDraw(True)
+        
+        # if inst4 is active this frame...
+        if inst4.status == STARTED:
+            # update params
+            pass
         
         # *inst4_response* updates
         waitOnFlip = False
+        
+        # if inst4_response is starting this frame...
         if inst4_response.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
             inst4_response.frameNStart = frameN  # exact frame index
@@ -1089,6 +1245,7 @@ for thisTrial in trials:
             win.timeOnFlip(inst4_response, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
             thisExp.timestampOnFlip(win, 'inst4_response.started')
+            # update status
             inst4_response.status = STARTED
             # keyboard checking is just starting
             waitOnFlip = True
@@ -1100,15 +1257,19 @@ for thisTrial in trials:
             if len(_inst4_response_allKeys):
                 inst4_response.keys = _inst4_response_allKeys[-1].name  # just the last key pressed
                 inst4_response.rt = _inst4_response_allKeys[-1].rt
+                inst4_response.duration = _inst4_response_allKeys[-1].duration
                 # a response ends the routine
                 continueRoutine = False
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
             core.quit()
+            if eyetracker:
+                eyetracker.setConnectionState(False)
         
         # check if all components have finished
         if not continueRoutine:  # a component has requested a forced-end of Routine
+            routineForceEnded = True
             break
         continueRoutine = False  # will revert to True if at least one component still running
         for thisComponent in inst_acq4Components:
@@ -1130,6 +1291,7 @@ for thisTrial in trials:
     trials.addData('inst4_response.keys',inst4_response.keys)
     if inst4_response.keys != None:  # we had a response
         trials.addData('inst4_response.rt', inst4_response.rt)
+        trials.addData('inst4_response.duration', inst4_response.duration)
     # the Routine "inst_acq4" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -1154,6 +1316,7 @@ for thisTrial in trials:
     frameN = -1
     
     # --- Run Routine "inst_acq5" ---
+    routineForceEnded = not continueRoutine
     while continueRoutine:
         # get current time
         t = routineTimer.getTime()
@@ -1163,6 +1326,8 @@ for thisTrial in trials:
         # update/draw components on each frame
         
         # *inst5* updates
+        
+        # if inst5 is starting this frame...
         if inst5.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
             # keep track of start time/frame for later
             inst5.frameNStart = frameN  # exact frame index
@@ -1171,10 +1336,19 @@ for thisTrial in trials:
             win.timeOnFlip(inst5, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
             thisExp.timestampOnFlip(win, 'inst5.started')
+            # update status
+            inst5.status = STARTED
             inst5.setAutoDraw(True)
+        
+        # if inst5 is active this frame...
+        if inst5.status == STARTED:
+            # update params
+            pass
         
         # *inst5_response* updates
         waitOnFlip = False
+        
+        # if inst5_response is starting this frame...
         if inst5_response.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
             inst5_response.frameNStart = frameN  # exact frame index
@@ -1183,6 +1357,7 @@ for thisTrial in trials:
             win.timeOnFlip(inst5_response, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
             thisExp.timestampOnFlip(win, 'inst5_response.started')
+            # update status
             inst5_response.status = STARTED
             # keyboard checking is just starting
             waitOnFlip = True
@@ -1194,15 +1369,19 @@ for thisTrial in trials:
             if len(_inst5_response_allKeys):
                 inst5_response.keys = _inst5_response_allKeys[-1].name  # just the last key pressed
                 inst5_response.rt = _inst5_response_allKeys[-1].rt
+                inst5_response.duration = _inst5_response_allKeys[-1].duration
                 # a response ends the routine
                 continueRoutine = False
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
             core.quit()
+            if eyetracker:
+                eyetracker.setConnectionState(False)
         
         # check if all components have finished
         if not continueRoutine:  # a component has requested a forced-end of Routine
+            routineForceEnded = True
             break
         continueRoutine = False  # will revert to True if at least one component still running
         for thisComponent in inst_acq5Components:
@@ -1224,6 +1403,7 @@ for thisTrial in trials:
     trials.addData('inst5_response.keys',inst5_response.keys)
     if inst5_response.keys != None:  # we had a response
         trials.addData('inst5_response.rt', inst5_response.rt)
+        trials.addData('inst5_response.duration', inst5_response.duration)
     # the Routine "inst_acq5" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     thisExp.nextEntry()
@@ -1249,6 +1429,7 @@ _timeToFirstFrame = win.getFutureFlipTime(clock="now")
 frameN = -1
 
 # --- Run Routine "fixation_cross" ---
+routineForceEnded = not continueRoutine
 while continueRoutine and routineTimer.getTime() < 2.0:
     # get current time
     t = routineTimer.getTime()
@@ -1258,6 +1439,8 @@ while continueRoutine and routineTimer.getTime() < 2.0:
     # update/draw components on each frame
     
     # *cross_start* updates
+    
+    # if cross_start is starting this frame...
     if cross_start.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
         cross_start.frameNStart = frameN  # exact frame index
@@ -1266,7 +1449,16 @@ while continueRoutine and routineTimer.getTime() < 2.0:
         win.timeOnFlip(cross_start, 'tStartRefresh')  # time at next scr refresh
         # add timestamp to datafile
         thisExp.timestampOnFlip(win, 'cross_start.started')
+        # update status
+        cross_start.status = STARTED
         cross_start.setAutoDraw(True)
+    
+    # if cross_start is active this frame...
+    if cross_start.status == STARTED:
+        # update params
+        pass
+    
+    # if cross_start is stopping this frame...
     if cross_start.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
         if tThisFlipGlobal > cross_start.tStartRefresh + 2-frameTolerance:
@@ -1275,14 +1467,19 @@ while continueRoutine and routineTimer.getTime() < 2.0:
             cross_start.frameNStop = frameN  # exact frame index
             # add timestamp to datafile
             thisExp.timestampOnFlip(win, 'cross_start.stopped')
+            # update status
+            cross_start.status = FINISHED
             cross_start.setAutoDraw(False)
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
         core.quit()
+        if eyetracker:
+            eyetracker.setConnectionState(False)
     
     # check if all components have finished
     if not continueRoutine:  # a component has requested a forced-end of Routine
+        routineForceEnded = True
         break
     continueRoutine = False  # will revert to True if at least one component still running
     for thisComponent in fixation_crossComponents:
@@ -1300,8 +1497,11 @@ for thisComponent in fixation_crossComponents:
         thisComponent.setAutoDraw(False)
 # Run 'End Routine' code from reset_clock
 globalClock.reset()
-# using non-slip timing so subtract the expected duration of this Routine
-routineTimer.addTime(-2.000000)
+# using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
+if routineForceEnded:
+    routineTimer.reset()
+else:
+    routineTimer.addTime(-2.000000)
 
 # set up handler to look after randomisation of conditions etc
 conditioning_trials = data.TrialHandler(nReps=1.0, method='sequential', 
@@ -1382,6 +1582,7 @@ for thisConditioning_trial in conditioning_trials:
     frameN = -1
     
     # --- Run Routine "conditioning" ---
+    routineForceEnded = not continueRoutine
     while continueRoutine and routineTimer.getTime() < 5.0:
         # get current time
         t = routineTimer.getTime()
@@ -1401,6 +1602,8 @@ for thisConditioning_trial in conditioning_trials:
         
         
         # *textr_cond* updates
+        
+        # if textr_cond is starting this frame...
         if textr_cond.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
             textr_cond.frameNStart = frameN  # exact frame index
@@ -1409,7 +1612,16 @@ for thisConditioning_trial in conditioning_trials:
             win.timeOnFlip(textr_cond, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
             thisExp.timestampOnFlip(win, 'textr_cond.started')
+            # update status
+            textr_cond.status = STARTED
             textr_cond.setAutoDraw(True)
+        
+        # if textr_cond is active this frame...
+        if textr_cond.status == STARTED:
+            # update params
+            pass
+        
+        # if textr_cond is stopping this frame...
         if textr_cond.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
             if tThisFlipGlobal > textr_cond.tStartRefresh + 5-frameTolerance:
@@ -1418,9 +1630,13 @@ for thisConditioning_trial in conditioning_trials:
                 textr_cond.frameNStop = frameN  # exact frame index
                 # add timestamp to datafile
                 thisExp.timestampOnFlip(win, 'textr_cond.stopped')
+                # update status
+                textr_cond.status = FINISHED
                 textr_cond.setAutoDraw(False)
         
         # *img_cond* updates
+        
+        # if img_cond is starting this frame...
         if img_cond.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
             img_cond.frameNStart = frameN  # exact frame index
@@ -1429,7 +1645,16 @@ for thisConditioning_trial in conditioning_trials:
             win.timeOnFlip(img_cond, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
             thisExp.timestampOnFlip(win, 'img_cond.started')
+            # update status
+            img_cond.status = STARTED
             img_cond.setAutoDraw(True)
+        
+        # if img_cond is active this frame...
+        if img_cond.status == STARTED:
+            # update params
+            pass
+        
+        # if img_cond is stopping this frame...
         if img_cond.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
             if tThisFlipGlobal > img_cond.tStartRefresh + 5-frameTolerance:
@@ -1438,9 +1663,13 @@ for thisConditioning_trial in conditioning_trials:
                 img_cond.frameNStop = frameN  # exact frame index
                 # add timestamp to datafile
                 thisExp.timestampOnFlip(win, 'img_cond.stopped')
+                # update status
+                img_cond.status = FINISHED
                 img_cond.setAutoDraw(False)
         
         # *textl_cond* updates
+        
+        # if textl_cond is starting this frame...
         if textl_cond.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
             textl_cond.frameNStart = frameN  # exact frame index
@@ -1449,7 +1678,16 @@ for thisConditioning_trial in conditioning_trials:
             win.timeOnFlip(textl_cond, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
             thisExp.timestampOnFlip(win, 'textl_cond.started')
+            # update status
+            textl_cond.status = STARTED
             textl_cond.setAutoDraw(True)
+        
+        # if textl_cond is active this frame...
+        if textl_cond.status == STARTED:
+            # update params
+            pass
+        
+        # if textl_cond is stopping this frame...
         if textl_cond.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
             if tThisFlipGlobal > textl_cond.tStartRefresh + 5-frameTolerance:
@@ -1458,9 +1696,13 @@ for thisConditioning_trial in conditioning_trials:
                 textl_cond.frameNStop = frameN  # exact frame index
                 # add timestamp to datafile
                 thisExp.timestampOnFlip(win, 'textl_cond.stopped')
+                # update status
+                textl_cond.status = FINISHED
                 textl_cond.setAutoDraw(False)
         
         # *shape_cond* updates
+        
+        # if shape_cond is starting this frame...
         if shape_cond.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
             shape_cond.frameNStart = frameN  # exact frame index
@@ -1469,7 +1711,16 @@ for thisConditioning_trial in conditioning_trials:
             win.timeOnFlip(shape_cond, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
             thisExp.timestampOnFlip(win, 'shape_cond.started')
+            # update status
+            shape_cond.status = STARTED
             shape_cond.setAutoDraw(True)
+        
+        # if shape_cond is active this frame...
+        if shape_cond.status == STARTED:
+            # update params
+            pass
+        
+        # if shape_cond is stopping this frame...
         if shape_cond.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
             if tThisFlipGlobal > shape_cond.tStartRefresh + 5-frameTolerance:
@@ -1478,9 +1729,13 @@ for thisConditioning_trial in conditioning_trials:
                 shape_cond.frameNStop = frameN  # exact frame index
                 # add timestamp to datafile
                 thisExp.timestampOnFlip(win, 'shape_cond.stopped')
+                # update status
+                shape_cond.status = FINISHED
                 shape_cond.setAutoDraw(False)
         
         # *sliderl_cond* updates
+        
+        # if sliderl_cond is starting this frame...
         if sliderl_cond.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
             sliderl_cond.frameNStart = frameN  # exact frame index
@@ -1489,7 +1744,16 @@ for thisConditioning_trial in conditioning_trials:
             win.timeOnFlip(sliderl_cond, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
             thisExp.timestampOnFlip(win, 'sliderl_cond.started')
+            # update status
+            sliderl_cond.status = STARTED
             sliderl_cond.setAutoDraw(True)
+        
+        # if sliderl_cond is active this frame...
+        if sliderl_cond.status == STARTED:
+            # update params
+            pass
+        
+        # if sliderl_cond is stopping this frame...
         if sliderl_cond.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
             if tThisFlipGlobal > sliderl_cond.tStartRefresh + 5-frameTolerance:
@@ -1498,9 +1762,13 @@ for thisConditioning_trial in conditioning_trials:
                 sliderl_cond.frameNStop = frameN  # exact frame index
                 # add timestamp to datafile
                 thisExp.timestampOnFlip(win, 'sliderl_cond.stopped')
+                # update status
+                sliderl_cond.status = FINISHED
                 sliderl_cond.setAutoDraw(False)
         
         # *expect_cond* updates
+        
+        # if expect_cond is starting this frame...
         if expect_cond.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
             expect_cond.frameNStart = frameN  # exact frame index
@@ -1509,7 +1777,16 @@ for thisConditioning_trial in conditioning_trials:
             win.timeOnFlip(expect_cond, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
             thisExp.timestampOnFlip(win, 'expect_cond.started')
+            # update status
+            expect_cond.status = STARTED
             expect_cond.setAutoDraw(True)
+        
+        # if expect_cond is active this frame...
+        if expect_cond.status == STARTED:
+            # update params
+            pass
+        
+        # if expect_cond is stopping this frame...
         if expect_cond.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
             if tThisFlipGlobal > expect_cond.tStartRefresh + 5-frameTolerance:
@@ -1518,9 +1795,13 @@ for thisConditioning_trial in conditioning_trials:
                 expect_cond.frameNStop = frameN  # exact frame index
                 # add timestamp to datafile
                 thisExp.timestampOnFlip(win, 'expect_cond.stopped')
+                # update status
+                expect_cond.status = FINISHED
                 expect_cond.setAutoDraw(False)
         
         # *sliderr_cond* updates
+        
+        # if sliderr_cond is starting this frame...
         if sliderr_cond.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
             sliderr_cond.frameNStart = frameN  # exact frame index
@@ -1529,7 +1810,16 @@ for thisConditioning_trial in conditioning_trials:
             win.timeOnFlip(sliderr_cond, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
             thisExp.timestampOnFlip(win, 'sliderr_cond.started')
+            # update status
+            sliderr_cond.status = STARTED
             sliderr_cond.setAutoDraw(True)
+        
+        # if sliderr_cond is active this frame...
+        if sliderr_cond.status == STARTED:
+            # update params
+            pass
+        
+        # if sliderr_cond is stopping this frame...
         if sliderr_cond.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
             if tThisFlipGlobal > sliderr_cond.tStartRefresh + 5-frameTolerance:
@@ -1538,9 +1828,13 @@ for thisConditioning_trial in conditioning_trials:
                 sliderr_cond.frameNStop = frameN  # exact frame index
                 # add timestamp to datafile
                 thisExp.timestampOnFlip(win, 'sliderr_cond.stopped')
+                # update status
+                sliderr_cond.status = FINISHED
                 sliderr_cond.setAutoDraw(False)
         
         # *marker_cond* updates
+        
+        # if marker_cond is starting this frame...
         if marker_cond.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
             marker_cond.frameNStart = frameN  # exact frame index
@@ -1549,7 +1843,16 @@ for thisConditioning_trial in conditioning_trials:
             win.timeOnFlip(marker_cond, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
             thisExp.timestampOnFlip(win, 'marker_cond.started')
+            # update status
+            marker_cond.status = STARTED
             marker_cond.setAutoDraw(True)
+        
+        # if marker_cond is active this frame...
+        if marker_cond.status == STARTED:
+            # update params
+            marker_cond.setPos(marker_position, log=False)
+        
+        # if marker_cond is stopping this frame...
         if marker_cond.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
             if tThisFlipGlobal > marker_cond.tStartRefresh + 5-frameTolerance:
@@ -1558,10 +1861,12 @@ for thisConditioning_trial in conditioning_trials:
                 marker_cond.frameNStop = frameN  # exact frame index
                 # add timestamp to datafile
                 thisExp.timestampOnFlip(win, 'marker_cond.stopped')
+                # update status
+                marker_cond.status = FINISHED
                 marker_cond.setAutoDraw(False)
-        if marker_cond.status == STARTED:  # only update if drawing
-            marker_cond.setPos(marker_position, log=False)
         # *mouse_cond* updates
+        
+        # if mouse_cond is starting this frame...
         if mouse_cond.status == NOT_STARTED and t >= 0.0-frameTolerance:
             # keep track of start time/frame for later
             mouse_cond.frameNStart = frameN  # exact frame index
@@ -1570,9 +1875,12 @@ for thisConditioning_trial in conditioning_trials:
             win.timeOnFlip(mouse_cond, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
             thisExp.addData('mouse_cond.started', t)
+            # update status
             mouse_cond.status = STARTED
             mouse_cond.mouseClock.reset()
             prevButtonState = [0, 0, 0]  # if now button is down we will treat as 'new' click
+        
+        # if mouse_cond is stopping this frame...
         if mouse_cond.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
             if tThisFlipGlobal > mouse_cond.tStartRefresh + 5-frameTolerance:
@@ -1581,6 +1889,7 @@ for thisConditioning_trial in conditioning_trials:
                 mouse_cond.frameNStop = frameN  # exact frame index
                 # add timestamp to datafile
                 thisExp.addData('mouse_cond.stopped', t)
+                # update status
                 mouse_cond.status = FINISHED
         # Run 'Each Frame' code from FPS_control
         if FPS == 1:
@@ -1595,9 +1904,12 @@ for thisConditioning_trial in conditioning_trials:
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
             core.quit()
+            if eyetracker:
+                eyetracker.setConnectionState(False)
         
         # check if all components have finished
         if not continueRoutine:  # a component has requested a forced-end of Routine
+            routineForceEnded = True
             break
         continueRoutine = False  # will revert to True if at least one component still running
         for thisComponent in conditioningComponents:
@@ -1633,8 +1945,11 @@ for thisConditioning_trial in conditioning_trials:
     
     
     # store data for conditioning_trials (TrialHandler)
-    # using non-slip timing so subtract the expected duration of this Routine
-    routineTimer.addTime(-5.000000)
+    # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
+    if routineForceEnded:
+        routineTimer.reset()
+    else:
+        routineTimer.addTime(-5.000000)
     
     # --- Prepare to start Routine "iti" ---
     continueRoutine = True
@@ -1657,6 +1972,7 @@ for thisConditioning_trial in conditioning_trials:
     frameN = -1
     
     # --- Run Routine "iti" ---
+    routineForceEnded = not continueRoutine
     while continueRoutine:
         # get current time
         t = routineTimer.getTime()
@@ -1666,6 +1982,8 @@ for thisConditioning_trial in conditioning_trials:
         # update/draw components on each frame
         
         # *cross_2* updates
+        
+        # if cross_2 is starting this frame...
         if cross_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
             cross_2.frameNStart = frameN  # exact frame index
@@ -1674,7 +1992,16 @@ for thisConditioning_trial in conditioning_trials:
             win.timeOnFlip(cross_2, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
             thisExp.timestampOnFlip(win, 'cross_2.started')
+            # update status
+            cross_2.status = STARTED
             cross_2.setAutoDraw(True)
+        
+        # if cross_2 is active this frame...
+        if cross_2.status == STARTED:
+            # update params
+            pass
+        
+        # if cross_2 is stopping this frame...
         if cross_2.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
             if tThisFlipGlobal > cross_2.tStartRefresh + iti-frameTolerance:
@@ -1683,14 +2010,19 @@ for thisConditioning_trial in conditioning_trials:
                 cross_2.frameNStop = frameN  # exact frame index
                 # add timestamp to datafile
                 thisExp.timestampOnFlip(win, 'cross_2.stopped')
+                # update status
+                cross_2.status = FINISHED
                 cross_2.setAutoDraw(False)
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
             core.quit()
+            if eyetracker:
+                eyetracker.setConnectionState(False)
         
         # check if all components have finished
         if not continueRoutine:  # a component has requested a forced-end of Routine
+            routineForceEnded = True
             break
         continueRoutine = False  # will revert to True if at least one component still running
         for thisComponent in itiComponents:
@@ -1739,6 +2071,7 @@ _timeToFirstFrame = win.getFutureFlipTime(clock="now")
 frameN = -1
 
 # --- Run Routine "breaktime" ---
+routineForceEnded = not continueRoutine
 while continueRoutine:
     # get current time
     t = routineTimer.getTime()
@@ -1748,6 +2081,8 @@ while continueRoutine:
     # update/draw components on each frame
     
     # *inst_break* updates
+    
+    # if inst_break is starting this frame...
     if inst_break.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
         # keep track of start time/frame for later
         inst_break.frameNStart = frameN  # exact frame index
@@ -1756,10 +2091,19 @@ while continueRoutine:
         win.timeOnFlip(inst_break, 'tStartRefresh')  # time at next scr refresh
         # add timestamp to datafile
         thisExp.timestampOnFlip(win, 'inst_break.started')
+        # update status
+        inst_break.status = STARTED
         inst_break.setAutoDraw(True)
+    
+    # if inst_break is active this frame...
+    if inst_break.status == STARTED:
+        # update params
+        pass
     
     # *inst1_response_5* updates
     waitOnFlip = False
+    
+    # if inst1_response_5 is starting this frame...
     if inst1_response_5.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
         inst1_response_5.frameNStart = frameN  # exact frame index
@@ -1768,6 +2112,7 @@ while continueRoutine:
         win.timeOnFlip(inst1_response_5, 'tStartRefresh')  # time at next scr refresh
         # add timestamp to datafile
         thisExp.timestampOnFlip(win, 'inst1_response_5.started')
+        # update status
         inst1_response_5.status = STARTED
         # keyboard checking is just starting
         waitOnFlip = True
@@ -1779,15 +2124,19 @@ while continueRoutine:
         if len(_inst1_response_5_allKeys):
             inst1_response_5.keys = _inst1_response_5_allKeys[-1].name  # just the last key pressed
             inst1_response_5.rt = _inst1_response_5_allKeys[-1].rt
+            inst1_response_5.duration = _inst1_response_5_allKeys[-1].duration
             # a response ends the routine
             continueRoutine = False
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
         core.quit()
+        if eyetracker:
+            eyetracker.setConnectionState(False)
     
     # check if all components have finished
     if not continueRoutine:  # a component has requested a forced-end of Routine
+        routineForceEnded = True
         break
     continueRoutine = False  # will revert to True if at least one component still running
     for thisComponent in breaktimeComponents:
@@ -1809,6 +2158,7 @@ if inst1_response_5.keys in ['', [], None]:  # No response was made
 thisExp.addData('inst1_response_5.keys',inst1_response_5.keys)
 if inst1_response_5.keys != None:  # we had a response
     thisExp.addData('inst1_response_5.rt', inst1_response_5.rt)
+    thisExp.addData('inst1_response_5.duration', inst1_response_5.duration)
 thisExp.nextEntry()
 # the Routine "breaktime" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()

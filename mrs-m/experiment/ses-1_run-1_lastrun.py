@@ -1,8 +1,8 @@
-#!/usr/bin/env python
+﻿#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.1.3),
-    on Mon Jun  9 10:18:02 2025
+    on Tue Jun 10 12:42:17 2025
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -49,7 +49,6 @@ dlg = gui.Dlg(title = 'PYG subject initialization')
 dlg.addField('participant')
 dlg.addField('CS_order', choices=['A','T'])
 dlg.addField('phase_order_input', choices=[1,2,3,4,5,6])
-dlg.addField('extcc', choices=['ext', 'cc'])
 dlg.addField('room', choices =['VR', 'behavior']) #added 6/14
 dlg.addField('Init parallel port?', choices=['yes','no (testing)'])
 
@@ -58,18 +57,24 @@ user_input = dlg.show()
 if dlg.OK == False:
     core.quit()  # user pressed cancel
     
-bidsID = 'sub-MM{0:0=3d}'.format(int(user_input[0]))
+bidsID = 'sub-PYG{0:0=3d}'.format(int(user_input[0]))
 cs_order = user_input[1]
 phase_order_input = user_input[2]
-extcc_input = user_input[3]
-room_input = user_input[4] #added 6/14
+room_input = user_input[3] #added 6/14
 
 
 #PARALLEL PORT CODE
 
 #BIO = True if user_input[4] == 'yes' else False
-BIO = True if user_input[5] == 'yes' and user_input[4] == 'VR' else False #added 6/14
-BIO2 = True if user_input[5] == 'yes' and user_input[4] == 'behavior' else False #added 6/14
+testing_mode = True  # Set to False when running real experiments
+
+if not testing_mode:
+    BIO = True if user_input[5] == 'yes' and user_input[4] == 'VR' else False
+    BIO2 = True if user_input[5] == 'yes' and user_input[4] == 'behavior' else False
+else:
+    BIO = False
+    BIO2 = False
+    logging.warn("Running in testing mode: BIO and BIO2 disabled.")
 
 if BIO:
     pport = ParallelPort(address='0xEFF8') #added 6/14
@@ -127,11 +132,8 @@ soutypval_stims = stims.sample(frac=1).reset_index(drop=True) #shuffle within co
 #read in the different task templates for each phase, and name them after each phase (using list comprehension)
 day1_dfs = {phase: pd.read_csv(f'../task_templates/{phase}_template.csv').set_index(['trial_type', 'trial']) for phase in day1_phases}
 
-if extcc_input == 'cc':
-    itis = [4,5,6]
-else:
-    itis = [5,6,7]
 
+itis = [5,6,7]
 #for each phase (count them) in day 1 phases (base, fear, extcc):
 for p, phase in enumerate(day1_phases):
     #and for each of CS+ and CS-:
@@ -152,45 +154,21 @@ for p, phase in enumerate(day1_phases):
    
 #FILL IN EXTINCTION CC STIMS 
 
-cc_stims = pd.read_csv('cc_stims.csv') 
-day1_dfs['extcc'] = day1_dfs['extcc'].set_index('cc')
+
 
 #note that once it is the index, pandas will not recognize it as a column anymore!
 
-if extcc_input == 'cc':
-    day1_dfs['extcc'].loc[1, 'cc_stimulus'] = cc_stims.values
-    day1_dfs['extcc'].loc[0, 'cc_stimulus'] = 'stims/crosshair.png'
-    day1_dfs['extcc'].loc[1, 'group'] = 'CS+CC'
-    day1_dfs['extcc'].loc[0, 'group'] = 'CS-CC'
-else:
-    day1_dfs['extcc'].loc[[0,1], 'cc_stimulus'] = 'stims/crosshair.png'
-    day1_dfs['extcc'].loc[1, 'group'] = 'CS+EXT'
-    day1_dfs['extcc'].loc[0, 'group'] = 'CS-EXT'
     
 #ADD GROUP FOR BASE 7/14/22
 
 day1_dfs['base'] = day1_dfs['base'].set_index('trial_type')
 
-if extcc_input == 'CC':
-    day1_dfs['base'].loc['CS+', 'group'] = 'CS+CC'
-    day1_dfs['base'].loc['CS-', 'group'] = 'CS-CC'
-
-else:
-  day1_dfs['extcc'] = day1_dfs['extcc'].reset_index()
-day1_dfs['extcc'].loc[day1_dfs['extcc']['stim'] == 'CS+', 'group'] = 'CS+EXT'
 
 #ADD GROUP FOR FEAR 7/14/22
 
 day1_dfs['fear'] = day1_dfs['fear'].set_index('trial_type')
 
-if extcc_input == 'CC':
-    day1_dfs['fear'].loc['CS+', 'group'] = 'CS+CC'
-    day1_dfs['fear'].loc['CS-', 'group'] = 'CS-CC'
 
-else:
-    day1_dfs['fear'].loc['CS+', 'group'] = 'CS+EXT'
-    day1_dfs['fear'].loc['CS-', 'group'] = 'CS-EXT'
-    
 #RENEWAL
  
 renewal_stims = pd.read_csv('renewal_stims.csv')
@@ -205,13 +183,7 @@ renewal_df.loc['new', 'iti_duration'] = '5'  #assigns the first row named "new" 
 
 #ADD GROUP FOR RENEWAL 7/14/22
 
-if extcc_input == 'CC':
-    renewal_df.loc['CS+', 'group'] = 'CS+CC'
-    renewal_df.loc['CS-', 'group'] = 'CS-CC'
 
-else:
-    renewal_df.loc['CS+', 'group'] = 'CS+EXT'
-    renewal_df.loc['CS-', 'group'] = 'CS-EXT'
 
 #SET ITIs
 itis = [5,6,7]
@@ -243,13 +215,6 @@ for con in ['CS+','CS-']:
 
 #ADD GROUP FOR MEM 7/14/22
 
-if extcc_input == 'CC':
-    mem_df.loc['CS+', 'group'] = 'CS+CC'
-    mem_df.loc['CS-', 'group'] = 'CS-CC'
-
-else:
-    mem_df.loc['CS+', 'group'] = 'CS+EXT'
-    mem_df.loc['CS-', 'group'] = 'CS-EXT'
 
 #SOUTYP
 
@@ -262,13 +227,7 @@ for p, phase in enumerate(day1_phases):
 
 #ADD GROUP FOR SOUTYP 7/14/22
 
-if extcc_input == 'CC':
-    soutyp_df.loc['CS+', 'group'] = 'CS+CC'
-    soutyp_df.loc['CS-', 'group'] = 'CS-CC'
 
-else:
-    soutyp_df.loc['CS+', 'group'] = 'CS+EXT'
-    soutyp_df.loc['CS-', 'group'] = 'CS-EXT'
     
 #EXPORT DATA TO CSVs                                                        
 os.chdir(data_dir)
@@ -321,7 +280,7 @@ frameTolerance = 0.001  # how close to onset before 'same' frame
 
 # --- Setup the Window ---
 win = visual.Window(
-    size=[2560, 1440], fullscr=True, screen=0, 
+    size=[1512, 982], fullscr=True, screen=0, 
     winType='pyglet', allowStencil=False,
     monitor='testMonitor', color=[-0.1765, -0.1765, -0.1765], colorSpace='rgb',
     backgroundImage='', backgroundFit='none',
@@ -552,8 +511,6 @@ while continueRoutine:
         inst1_resp.tStart = t  # local t and not account for scr refresh
         inst1_resp.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(inst1_resp, 'tStartRefresh')  # time at next scr refresh
-        # add timestamp to datafile
-        thisExp.timestampOnFlip(win, 'inst1_resp.started')
         # update status
         inst1_resp.status = STARTED
         # keyboard checking is just starting
@@ -567,8 +524,6 @@ while continueRoutine:
             # keep track of stop time/frame for later
             inst1_resp.tStop = t  # not accounting for scr refresh
             inst1_resp.frameNStop = frameN  # exact frame index
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'inst1_resp.stopped')
             # update status
             inst1_resp.status = FINISHED
             inst1_resp.status = FINISHED
@@ -591,8 +546,6 @@ while continueRoutine:
         inst1.tStart = t  # local t and not account for scr refresh
         inst1.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(inst1, 'tStartRefresh')  # time at next scr refresh
-        # add timestamp to datafile
-        thisExp.timestampOnFlip(win, 'inst1.started')
         # update status
         inst1.status = STARTED
         inst1.setAutoDraw(True)
@@ -608,8 +561,6 @@ while continueRoutine:
             # keep track of stop time/frame for later
             inst1.tStop = t  # not accounting for scr refresh
             inst1.frameNStop = frameN  # exact frame index
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'inst1.stopped')
             # update status
             inst1.status = FINISHED
             inst1.setAutoDraw(False)
@@ -688,8 +639,6 @@ while continueRoutine:
         inst2.tStart = t  # local t and not account for scr refresh
         inst2.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(inst2, 'tStartRefresh')  # time at next scr refresh
-        # add timestamp to datafile
-        thisExp.timestampOnFlip(win, 'inst2.started')
         # update status
         inst2.status = STARTED
         inst2.setAutoDraw(True)
@@ -705,8 +654,6 @@ while continueRoutine:
             # keep track of stop time/frame for later
             inst2.tStop = t  # not accounting for scr refresh
             inst2.frameNStop = frameN  # exact frame index
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'inst2.stopped')
             # update status
             inst2.status = FINISHED
             inst2.setAutoDraw(False)
@@ -825,8 +772,6 @@ while continueRoutine:
         inst3.tStart = t  # local t and not account for scr refresh
         inst3.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(inst3, 'tStartRefresh')  # time at next scr refresh
-        # add timestamp to datafile
-        thisExp.timestampOnFlip(win, 'inst3.started')
         # update status
         inst3.status = STARTED
         inst3.setAutoDraw(True)
@@ -842,8 +787,6 @@ while continueRoutine:
             # keep track of stop time/frame for later
             inst3.tStop = t  # not accounting for scr refresh
             inst3.frameNStop = frameN  # exact frame index
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'inst3.stopped')
             # update status
             inst3.status = FINISHED
             inst3.setAutoDraw(False)
@@ -963,8 +906,6 @@ while continueRoutine:
         ex_iti_resp.tStart = t  # local t and not account for scr refresh
         ex_iti_resp.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(ex_iti_resp, 'tStartRefresh')  # time at next scr refresh
-        # add timestamp to datafile
-        thisExp.timestampOnFlip(win, 'ex_iti_resp.started')
         # update status
         ex_iti_resp.status = STARTED
         # keyboard checking is just starting
@@ -978,8 +919,6 @@ while continueRoutine:
             # keep track of stop time/frame for later
             ex_iti_resp.tStop = t  # not accounting for scr refresh
             ex_iti_resp.frameNStop = frameN  # exact frame index
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'ex_iti_resp.stopped')
             # update status
             ex_iti_resp.status = FINISHED
             ex_iti_resp.status = FINISHED
@@ -1002,8 +941,6 @@ while continueRoutine:
         ex_animal_iti.tStart = t  # local t and not account for scr refresh
         ex_animal_iti.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(ex_animal_iti, 'tStartRefresh')  # time at next scr refresh
-        # add timestamp to datafile
-        thisExp.timestampOnFlip(win, 'ex_animal_iti.started')
         # update status
         ex_animal_iti.status = STARTED
         ex_animal_iti.setAutoDraw(True)
@@ -1019,8 +956,6 @@ while continueRoutine:
             # keep track of stop time/frame for later
             ex_animal_iti.tStop = t  # not accounting for scr refresh
             ex_animal_iti.frameNStop = frameN  # exact frame index
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'ex_animal_iti.stopped')
             # update status
             ex_animal_iti.status = FINISHED
             ex_animal_iti.setAutoDraw(False)
@@ -1034,8 +969,6 @@ while continueRoutine:
         ex_tool_iti.tStart = t  # local t and not account for scr refresh
         ex_tool_iti.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(ex_tool_iti, 'tStartRefresh')  # time at next scr refresh
-        # add timestamp to datafile
-        thisExp.timestampOnFlip(win, 'ex_tool_iti.started')
         # update status
         ex_tool_iti.status = STARTED
         ex_tool_iti.setAutoDraw(True)
@@ -1051,8 +984,6 @@ while continueRoutine:
             # keep track of stop time/frame for later
             ex_tool_iti.tStop = t  # not accounting for scr refresh
             ex_tool_iti.frameNStop = frameN  # exact frame index
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'ex_tool_iti.stopped')
             # update status
             ex_tool_iti.status = FINISHED
             ex_tool_iti.setAutoDraw(False)
@@ -1066,8 +997,6 @@ while continueRoutine:
         ex_crosshair.tStart = t  # local t and not account for scr refresh
         ex_crosshair.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(ex_crosshair, 'tStartRefresh')  # time at next scr refresh
-        # add timestamp to datafile
-        thisExp.timestampOnFlip(win, 'ex_crosshair.started')
         # update status
         ex_crosshair.status = STARTED
         ex_crosshair.setAutoDraw(True)
@@ -1083,8 +1012,6 @@ while continueRoutine:
             # keep track of stop time/frame for later
             ex_crosshair.tStop = t  # not accounting for scr refresh
             ex_crosshair.frameNStop = frameN  # exact frame index
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'ex_crosshair.stopped')
             # update status
             ex_crosshair.status = FINISHED
             ex_crosshair.setAutoDraw(False)
@@ -1387,8 +1314,6 @@ while continueRoutine:
         inst4.tStart = t  # local t and not account for scr refresh
         inst4.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(inst4, 'tStartRefresh')  # time at next scr refresh
-        # add timestamp to datafile
-        thisExp.timestampOnFlip(win, 'inst4.started')
         # update status
         inst4.status = STARTED
         inst4.setAutoDraw(True)
@@ -1404,8 +1329,6 @@ while continueRoutine:
             # keep track of stop time/frame for later
             inst4.tStop = t  # not accounting for scr refresh
             inst4.frameNStop = frameN  # exact frame index
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'inst4.stopped')
             # update status
             inst4.status = FINISHED
             inst4.setAutoDraw(False)
@@ -1524,8 +1447,6 @@ while continueRoutine:
         beg_exp.tStart = t  # local t and not account for scr refresh
         beg_exp.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(beg_exp, 'tStartRefresh')  # time at next scr refresh
-        # add timestamp to datafile
-        thisExp.timestampOnFlip(win, 'beg_exp.started')
         # update status
         beg_exp.status = STARTED
         beg_exp.setAutoDraw(True)
@@ -1541,8 +1462,6 @@ while continueRoutine:
             # keep track of stop time/frame for later
             beg_exp.tStop = t  # not accounting for scr refresh
             beg_exp.frameNStop = frameN  # exact frame index
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'beg_exp.stopped')
             # update status
             beg_exp.status = FINISHED
             beg_exp.setAutoDraw(False)
@@ -1557,8 +1476,6 @@ while continueRoutine:
         beg_exp_resp.tStart = t  # local t and not account for scr refresh
         beg_exp_resp.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(beg_exp_resp, 'tStartRefresh')  # time at next scr refresh
-        # add timestamp to datafile
-        thisExp.timestampOnFlip(win, 'beg_exp_resp.started')
         # update status
         beg_exp_resp.status = STARTED
         # keyboard checking is just starting
@@ -1572,8 +1489,6 @@ while continueRoutine:
             # keep track of stop time/frame for later
             beg_exp_resp.tStop = t  # not accounting for scr refresh
             beg_exp_resp.frameNStop = frameN  # exact frame index
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'beg_exp_resp.stopped')
             # update status
             beg_exp_resp.status = FINISHED
             beg_exp_resp.status = FINISHED
@@ -1625,7 +1540,7 @@ routineTimer.reset()
 # set up handler to look after randomisation of conditions etc
 trials = data.TrialHandler(nReps=1.0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions(f'data/{bidsID}/{bidsID}_ses-1_task-base_events-input.csv'),
+    trialList=data.importConditions(f"data/{bidsID}/{bidsID}_ses-1_task-base_events-input.csv"),
     seed=None, name='trials')
 thisExp.addLoop(trials)  # add the loop to the experiment
 thisTrial = trials.trialList[0]  # so we can initialise stimuli with some values
@@ -1905,7 +1820,7 @@ for thisTrial in trials:
                 trials_resp.status = FINISHED
                 trials_resp.status = FINISHED
         if trials_resp.status == STARTED and not waitOnFlip:
-            theseKeys = trials_resp.getKeys(keyList=['num_1','num_2','1','2'], waitRelease=False)
+            theseKeys = trials_resp.getKeys(keyList=['num_1','num_2','1!','2@'], waitRelease=False)
             _trials_resp_allKeys.extend(theseKeys)
             if len(_trials_resp_allKeys):
                 trials_resp.keys = _trials_resp_allKeys[0].name  # just the first key pressed
@@ -2021,6 +1936,15 @@ for thisTrial in trials:
     
 # completed 1.0 repeats of 'trials'
 
+# get names of stimulus parameters
+if trials.trialList in ([], [None], None):
+    params = []
+else:
+    params = trials.trialList[0].keys()
+# save data for this loop
+trials.saveAsText(filename + 'trials.csv', delim=',',
+    stimOut=params,
+    dataOut=['n','all_mean','all_std', 'all_raw'])
 
 # --- Prepare to start Routine "in_end_experiment" ---
 continueRoutine = True
@@ -2165,7 +2089,7 @@ routineTimer.reset()
 win.flip()
 
 # these shouldn't be strictly necessary (should auto-save)
-thisExp.saveAsWideText(filename+'.csv', delim='auto')
+thisExp.saveAsWideText(filename+'.csv', delim='comma')
 thisExp.saveAsPickle(filename)
 # make sure everything is closed down
 if eyetracker:
