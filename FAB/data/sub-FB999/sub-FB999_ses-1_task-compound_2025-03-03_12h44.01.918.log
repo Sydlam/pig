@@ -1,0 +1,216 @@
+9.2457 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000018C449F1430>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x0000018C4699C910>, multiSample=False, name='window1', numSamples=2, pos=(0, 0), screen=0, size=array([1920, 1080]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+9.2458 	EXP 	window1: mouseVisible = True
+9.2459 	EXP 	window1: mouseVisible = False
+9.2459 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+9.2459 	EXP 	window1: recordFrameIntervals = False
+9.4123 	EXP 	window1: recordFrameIntervals = True
+9.5957 	EXP 	Screen (0) actual frame rate measured at 59.95Hz
+9.5957 	EXP 	window1: recordFrameIntervals = False
+11.5933 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='Ready to resume?\n', units='height', win=Window(...), wrapWidth=1)
+11.5963 	EXP 	Created cross_start = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0.0, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='cross_start', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.05, 0.05]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+11.6058 	EXP 	Created textr_comp = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='textr_comp', opacity=1.0, ori=0.0, pos=array([ 0.45, -0.4 ]), rgb=UNKNOWN, text='noise (100%)', units='height', win=Window(...), wrapWidth=1)
+11.6094 	EXP 	Created textl_comp = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='textl_comp', opacity=1.0, ori=0.0, pos=array([-0.45, -0.4 ]), rgb=UNKNOWN, text='no noise (0%)', units='height', win=Window(...), wrapWidth=1)
+11.6106 	EXP 	Created shape_comp = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-3.0, fillColor=array([0., 0., 0.]), fillColorSpace='rgb', fillRGB=array([0., 0., 0.]), interpolate=True, lineColor=array([0., 0., 0.]), lineColorSpace='rgb', lineRGB=array([0., 0., 0.]), lineWidth=1.0, name='shape_comp', opacity=1.0, ori=0.0, pos=array([ 0.  , -0.35]), size=array([1.  , 0.07]), units='height', vertices=ndarray(...), win=Window(...))
+11.6191 	EXP 	window1: mouseVisible = True
+11.6391 	EXP 	Created sliderl_comp = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=-4, fillColor=None, flip=False, font='Open Sans', granularity=None, labelColor=None, labelHeight=0.04, labelWrapWidth=None, labels=None, lineColor=None, markerColor=None, name='sliderl_comp', opacity=None, ori=0.0, pos=array([-0.275, -0.35 ]), readOnly=True, self=UNKNOWN, size=array([0.45, 0.03]), startValue=None, style='slider', styleTweaks=[], ticks=array([ 0, 50]), units='height', win=Window(...))
+11.6451 	EXP 	Created img_compr = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-5.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='img_compr', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.45, 0.45]), texRes=128.0, units='height', win=Window(...))
+11.6499 	EXP 	Created img_compl = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-6.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='img_compl', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.45, 0.45]), texRes=128.0, units='height', win=Window(...))
+11.6582 	EXP 	Created expect_comp = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-7.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='expect_comp', opacity=1.0, ori=0.0, pos=array([ 0. , -0.3]), rgb=UNKNOWN, text='How much do you expect a noise?\n\n', units='height', win=Window(...), wrapWidth=1)
+11.6625 	EXP 	window1: mouseVisible = True
+11.6816 	EXP 	Created sliderr_comp = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=-8, fillColor=None, flip=False, font='Open Sans', granularity=None, labelColor=None, labelHeight=0.04, labelWrapWidth=None, labels=None, lineColor=None, markerColor=None, name='sliderr_comp', opacity=None, ori=0.0, pos=array([ 0.275, -0.35 ]), readOnly=True, self=UNKNOWN, size=array([0.45, 0.03]), startValue=None, style='slider', styleTweaks=[], ticks=array([ 50, 100]), units='height', win=Window(...))
+11.6828 	EXP 	Created marker_comp = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-9.0, fillColor=array([ 1., -1., -1.]), fillColorSpace='rgb', fillRGB=array([ 1., -1., -1.]), interpolate=True, lineColor=array([0., 0., 0.]), lineColorSpace='rgb', lineRGB=array([0., 0., 0.]), lineWidth=1.0, name='marker_comp', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.03, 0.07]), units='height', vertices=ndarray(...), win=Window(...))
+11.6829 	EXP 	window1: mouseVisible = True
+11.6850 	EXP 	Created cross_2 = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-1.0, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='cross_2', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.05, 0.05]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+11.6987 	EXP 	Created inst_break = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='inst_break', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+11.6994 	EXP 	Created sequence: random, trialTypes=1, nReps=1, seed=None
+11.6996 	EXP 	New trial (rep=0, index=0): None
+11.7031 	EXP 	sliderl_comp: autoLog = True
+11.7031 	EXP 	sliderl_comp: markerPos = None
+11.7031 	EXP 	sliderl_comp: styleTweaks = []
+11.7031 	EXP 	sliderl_comp: styleTweaks = []
+11.7031 	EXP 	sliderl_comp: styleTweaks = []
+11.7031 	EXP 	sliderl_comp: styleTweaks = []
+11.7031 	EXP 	sliderl_comp: contrast = 1.0
+11.7031 	EXP 	sliderl_comp: autoLog = True
+11.7031 	EXP 	sliderr_comp: autoLog = True
+11.7031 	EXP 	sliderr_comp: markerPos = None
+11.7031 	EXP 	sliderr_comp: styleTweaks = []
+11.7031 	EXP 	sliderr_comp: styleTweaks = []
+11.7031 	EXP 	sliderr_comp: styleTweaks = []
+11.7031 	EXP 	sliderr_comp: styleTweaks = []
+11.7031 	EXP 	sliderr_comp: contrast = 1.0
+11.7031 	EXP 	sliderr_comp: autoLog = True
+11.7031 	EXP 	text: autoDraw = True
+17.3139 	DATA 	Keypress: space
+17.3453 	EXP 	text: autoDraw = False
+17.3453 	EXP 	cross_start: autoDraw = True
+20.3489 	EXP 	Imported data/sub-FB999/sub-FB999_ses-1_task-compound_events-input.xlsx as conditions, 24 conditions, 18 params
+20.3495 	EXP 	Created sequence: sequential, trialTypes=24, nReps=1, seed=None
+20.3500 	EXP 	New trial (rep=0, index=0): {'FAB': 'A+', 'stim': 'stim2', 'FPS': 1, 'stim1': 'CS2', 'stim2': None, 'us': 1, 'iti': 6, 'cs_duration': 5, 'trial': 1, 'half': 1, 'FPS_timing': 5, 'pic_left': 'a', 'path_left': 'stimuli/orange.jpg', 'location_left': [0.0, 0.1], 'pic_right': 'd', 'path_right': 'stimuli/purple.jpg', 'location_right': [10, 0.1], 'task': 'compound'}
+20.4921 	EXP 	Sound mySound set volume 1.000
+20.4921 	EXP 	Sound mySound started
+20.5063 	EXP 	cross_start: autoDraw = False
+20.5063 	EXP 	cross_start: autoDraw = False
+20.5063 	EXP 	sliderl_comp: markerPos = None
+20.5063 	EXP 	sliderl_comp: markerPos = None
+20.5063 	EXP 	img_compr: image = 'stimuli/purple.jpg'
+20.5063 	EXP 	img_compl: image = 'stimuli/orange.jpg'
+20.5063 	EXP 	sliderr_comp: markerPos = None
+20.5063 	EXP 	sliderr_comp: markerPos = None
+20.5063 	EXP 	textr_comp: autoDraw = True
+20.5063 	EXP 	textl_comp: autoDraw = True
+20.5063 	EXP 	shape_comp: autoDraw = True
+20.5063 	EXP 	sliderl_comp: autoDraw = True
+20.5063 	EXP 	img_compr: autoDraw = True
+20.5063 	EXP 	img_compl: autoDraw = True
+20.5063 	EXP 	expect_comp: autoDraw = True
+20.5063 	EXP 	sliderr_comp: autoDraw = True
+20.5063 	EXP 	marker_comp: autoDraw = True
+25.4020 	EXP 	textr_comp: autoDraw = False
+25.4020 	EXP 	textl_comp: autoDraw = False
+25.4020 	EXP 	shape_comp: autoDraw = False
+25.4020 	EXP 	sliderl_comp: autoDraw = False
+25.4020 	EXP 	img_compr: autoDraw = False
+25.4020 	EXP 	img_compl: autoDraw = False
+25.4020 	EXP 	expect_comp: autoDraw = False
+25.4020 	EXP 	sliderr_comp: autoDraw = False
+25.4020 	EXP 	marker_comp: autoDraw = False
+25.4020 	EXP 	cross_2: autoDraw = True
+31.3984 	EXP 	New trial (rep=0, index=1): {'FAB': 'BY+', 'stim': 'compound2', 'FPS': 1, 'stim1': 'CS1', 'stim2': 'CS3', 'us': 1, 'iti': 5, 'cs_duration': 5, 'trial': 2, 'half': 1, 'FPS_timing': 5, 'pic_left': 'b', 'path_left': 'stimuli/blue.jpg', 'location_left': [-0.4, 0.1], 'pic_right': 'c', 'path_right': 'stimuli/green.jpg', 'location_right': [0.4, 0.1], 'task': 'compound'}
+31.5158 	EXP 	Sound mySound set volume 1.000
+31.5158 	EXP 	Sound mySound started
+31.5272 	EXP 	cross_2: autoDraw = False
+31.5272 	EXP 	cross_2: autoDraw = False
+31.5272 	EXP 	sliderl_comp: markerPos = None
+31.5272 	EXP 	sliderl_comp: markerPos = None
+31.5272 	EXP 	img_compr: image = 'stimuli/green.jpg'
+31.5272 	EXP 	img_compl: image = 'stimuli/blue.jpg'
+31.5272 	EXP 	sliderr_comp: markerPos = None
+31.5272 	EXP 	sliderr_comp: markerPos = None
+31.5272 	EXP 	textr_comp: autoDraw = True
+31.5272 	EXP 	textl_comp: autoDraw = True
+31.5272 	EXP 	shape_comp: autoDraw = True
+31.5272 	EXP 	sliderl_comp: autoDraw = True
+31.5272 	EXP 	img_compr: autoDraw = True
+31.5272 	EXP 	img_compl: autoDraw = True
+31.5272 	EXP 	expect_comp: autoDraw = True
+31.5272 	EXP 	sliderr_comp: autoDraw = True
+31.5272 	EXP 	marker_comp: autoDraw = True
+36.4723 	EXP 	textr_comp: autoDraw = False
+36.4723 	EXP 	textl_comp: autoDraw = False
+36.4723 	EXP 	shape_comp: autoDraw = False
+36.4723 	EXP 	sliderl_comp: autoDraw = False
+36.4723 	EXP 	img_compr: autoDraw = False
+36.4723 	EXP 	img_compl: autoDraw = False
+36.4723 	EXP 	expect_comp: autoDraw = False
+36.4723 	EXP 	sliderr_comp: autoDraw = False
+36.4723 	EXP 	marker_comp: autoDraw = False
+36.4723 	EXP 	cross_2: autoDraw = True
+41.4627 	EXP 	New trial (rep=0, index=2): {'FAB': 'B-', 'stim': 'stim1', 'FPS': 0, 'stim1': 'CS1', 'stim2': None, 'us': 0, 'iti': 5, 'cs_duration': 5, 'trial': 3, 'half': 1, 'FPS_timing': 5, 'pic_left': 'b', 'path_left': 'stimuli/blue.jpg', 'location_left': [0.0, 0.1], 'pic_right': 'b', 'path_right': 'stimuli/blue.jpg', 'location_right': [10, 0.1], 'task': 'compound'}
+41.5651 	EXP 	cross_2: autoDraw = False
+41.5651 	EXP 	cross_2: autoDraw = False
+41.5651 	EXP 	sliderl_comp: markerPos = None
+41.5651 	EXP 	sliderl_comp: markerPos = None
+41.5651 	EXP 	img_compr: image = 'stimuli/blue.jpg'
+41.5651 	EXP 	img_compl: image = 'stimuli/blue.jpg'
+41.5651 	EXP 	sliderr_comp: markerPos = None
+41.5651 	EXP 	sliderr_comp: markerPos = None
+41.5651 	EXP 	textr_comp: autoDraw = True
+41.5651 	EXP 	textl_comp: autoDraw = True
+41.5651 	EXP 	shape_comp: autoDraw = True
+41.5651 	EXP 	sliderl_comp: autoDraw = True
+41.5651 	EXP 	img_compr: autoDraw = True
+41.5651 	EXP 	img_compl: autoDraw = True
+41.5651 	EXP 	expect_comp: autoDraw = True
+41.5651 	EXP 	sliderr_comp: autoDraw = True
+41.5651 	EXP 	marker_comp: autoDraw = True
+46.4975 	EXP 	textr_comp: autoDraw = False
+46.4975 	EXP 	textl_comp: autoDraw = False
+46.4975 	EXP 	shape_comp: autoDraw = False
+46.4975 	EXP 	sliderl_comp: autoDraw = False
+46.4975 	EXP 	img_compr: autoDraw = False
+46.4975 	EXP 	img_compl: autoDraw = False
+46.4975 	EXP 	expect_comp: autoDraw = False
+46.4975 	EXP 	sliderr_comp: autoDraw = False
+46.4975 	EXP 	marker_comp: autoDraw = False
+46.4975 	EXP 	cross_2: autoDraw = True
+51.4988 	EXP 	New trial (rep=0, index=3): {'FAB': 'AX+', 'stim': 'compound1', 'FPS': 1, 'stim1': 'CS2', 'stim2': 'CS4', 'us': 1, 'iti': 6, 'cs_duration': 5, 'trial': 4, 'half': 1, 'FPS_timing': 5, 'pic_left': 'a', 'path_left': 'stimuli/orange.jpg', 'location_left': [-0.4, 0.1], 'pic_right': 'd', 'path_right': 'stimuli/purple.jpg', 'location_right': [0.4, 0.1], 'task': 'compound'}
+51.5644 	EXP 	Sound mySound set volume 1.000
+51.5645 	EXP 	Sound mySound started
+51.5761 	EXP 	cross_2: autoDraw = False
+51.5761 	EXP 	cross_2: autoDraw = False
+51.5761 	EXP 	sliderl_comp: markerPos = None
+51.5761 	EXP 	sliderl_comp: markerPos = None
+51.5761 	EXP 	img_compr: image = 'stimuli/purple.jpg'
+51.5761 	EXP 	img_compl: image = 'stimuli/orange.jpg'
+51.5761 	EXP 	sliderr_comp: markerPos = None
+51.5761 	EXP 	sliderr_comp: markerPos = None
+51.5761 	EXP 	textr_comp: autoDraw = True
+51.5761 	EXP 	textl_comp: autoDraw = True
+51.5761 	EXP 	shape_comp: autoDraw = True
+51.5761 	EXP 	sliderl_comp: autoDraw = True
+51.5761 	EXP 	img_compr: autoDraw = True
+51.5761 	EXP 	img_compl: autoDraw = True
+51.5761 	EXP 	expect_comp: autoDraw = True
+51.5761 	EXP 	sliderr_comp: autoDraw = True
+51.5761 	EXP 	marker_comp: autoDraw = True
+56.5711 	EXP 	textr_comp: autoDraw = False
+56.5711 	EXP 	textl_comp: autoDraw = False
+56.5711 	EXP 	shape_comp: autoDraw = False
+56.5711 	EXP 	sliderl_comp: autoDraw = False
+56.5711 	EXP 	img_compr: autoDraw = False
+56.5711 	EXP 	img_compl: autoDraw = False
+56.5711 	EXP 	expect_comp: autoDraw = False
+56.5711 	EXP 	sliderr_comp: autoDraw = False
+56.5711 	EXP 	marker_comp: autoDraw = False
+56.5711 	EXP 	cross_2: autoDraw = True
+62.5619 	EXP 	New trial (rep=0, index=4): {'FAB': 'A+', 'stim': 'stim2', 'FPS': 1, 'stim1': 'CS2', 'stim2': None, 'us': 1, 'iti': 6, 'cs_duration': 5, 'trial': 5, 'half': 1, 'FPS_timing': 5, 'pic_left': 'a', 'path_left': 'stimuli/orange.jpg', 'location_left': [0.0, 0.1], 'pic_right': 'd', 'path_right': 'stimuli/purple.jpg', 'location_right': [10, 0.1], 'task': 'compound'}
+62.6206 	EXP 	Sound mySound set volume 1.000
+62.6206 	EXP 	Sound mySound started
+62.6328 	EXP 	cross_2: autoDraw = False
+62.6328 	EXP 	cross_2: autoDraw = False
+62.6328 	EXP 	sliderl_comp: markerPos = None
+62.6328 	EXP 	sliderl_comp: markerPos = None
+62.6328 	EXP 	img_compr: image = 'stimuli/purple.jpg'
+62.6328 	EXP 	img_compl: image = 'stimuli/orange.jpg'
+62.6328 	EXP 	sliderr_comp: markerPos = None
+62.6328 	EXP 	sliderr_comp: markerPos = None
+62.6328 	EXP 	textr_comp: autoDraw = True
+62.6328 	EXP 	textl_comp: autoDraw = True
+62.6328 	EXP 	shape_comp: autoDraw = True
+62.6328 	EXP 	sliderl_comp: autoDraw = True
+62.6328 	EXP 	img_compr: autoDraw = True
+62.6328 	EXP 	img_compl: autoDraw = True
+62.6328 	EXP 	expect_comp: autoDraw = True
+62.6328 	EXP 	sliderr_comp: autoDraw = True
+62.6328 	EXP 	marker_comp: autoDraw = True
+67.6213 	EXP 	textr_comp: autoDraw = False
+67.6213 	EXP 	textl_comp: autoDraw = False
+67.6213 	EXP 	shape_comp: autoDraw = False
+67.6213 	EXP 	sliderl_comp: autoDraw = False
+67.6213 	EXP 	img_compr: autoDraw = False
+67.6213 	EXP 	img_compl: autoDraw = False
+67.6213 	EXP 	expect_comp: autoDraw = False
+67.6213 	EXP 	sliderr_comp: autoDraw = False
+67.6213 	EXP 	marker_comp: autoDraw = False
+67.6213 	EXP 	cross_2: autoDraw = True
+73.6123 	EXP 	New trial (rep=0, index=5): {'FAB': 'B-', 'stim': 'stim1', 'FPS': 0, 'stim1': 'CS1', 'stim2': None, 'us': 0, 'iti': 6, 'cs_duration': 5, 'trial': 6, 'half': 1, 'FPS_timing': 5, 'pic_left': 'b', 'path_left': 'stimuli/blue.jpg', 'location_left': [0.0, 0.1], 'pic_right': 'b', 'path_right': 'stimuli/blue.jpg', 'location_right': [10, 0.1], 'task': 'compound'}
+73.7368 	EXP 	cross_2: autoDraw = False
+73.7368 	EXP 	cross_2: autoDraw = False
+73.7368 	EXP 	sliderl_comp: markerPos = None
+73.7368 	EXP 	sliderl_comp: markerPos = None
+73.7368 	EXP 	img_compr: image = 'stimuli/blue.jpg'
+73.7368 	EXP 	img_compl: image = 'stimuli/blue.jpg'
+73.7368 	EXP 	sliderr_comp: markerPos = None
+73.7368 	EXP 	sliderr_comp: markerPos = None
+73.7368 	EXP 	textr_comp: autoDraw = True
+73.7368 	EXP 	textl_comp: autoDraw = True
+73.7368 	EXP 	shape_comp: autoDraw = True
+73.7368 	EXP 	sliderl_comp: autoDraw = True
+73.7368 	EXP 	img_compr: autoDraw = True
+73.7368 	EXP 	img_compl: autoDraw = True
+73.7368 	EXP 	expect_comp: autoDraw = True
+73.7368 	EXP 	sliderr_comp: autoDraw = True
+73.7368 	EXP 	marker_comp: autoDraw = True
+76.4167 	DATA 	Keypress: escape
+77.0215 	EXP 	window1: mouseVisible = True

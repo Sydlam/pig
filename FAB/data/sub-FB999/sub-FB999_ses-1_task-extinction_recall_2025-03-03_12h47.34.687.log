@@ -1,0 +1,97 @@
+8.1278 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000016C9D360460>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x0000016C9F31C910>, multiSample=False, name='window1', numSamples=2, pos=(0, 0), screen=0, size=array([1920, 1080]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+8.1279 	EXP 	window1: mouseVisible = True
+8.1280 	EXP 	window1: mouseVisible = False
+8.1280 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+8.1280 	EXP 	window1: recordFrameIntervals = False
+8.2941 	EXP 	window1: recordFrameIntervals = True
+8.4778 	EXP 	Screen (0) actual frame rate measured at 60.03Hz
+8.4778 	EXP 	window1: recordFrameIntervals = False
+10.4806 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='Ready to resume?\n', units='height', win=Window(...), wrapWidth=1)
+10.4838 	EXP 	Created cross_start = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0.0, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='cross_start', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.05, 0.05]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+10.4939 	EXP 	Created textr_recall = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='textr_recall', opacity=1.0, ori=0.0, pos=array([ 0.45, -0.4 ]), rgb=UNKNOWN, text='noise (100%)', units='height', win=Window(...), wrapWidth=1)
+10.4998 	EXP 	Created img_recall = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='img_recall', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.45, 0.45]), texRes=128.0, units='height', win=Window(...))
+10.5034 	EXP 	Created textl_recall = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='textl_recall', opacity=1.0, ori=0.0, pos=array([-0.45, -0.4 ]), rgb=UNKNOWN, text='no noise (0%)', units='height', win=Window(...), wrapWidth=1)
+10.5047 	EXP 	Created shape_recall = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-4.0, fillColor=array([0., 0., 0.]), fillColorSpace='rgb', fillRGB=array([0., 0., 0.]), interpolate=True, lineColor=array([0., 0., 0.]), lineColorSpace='rgb', lineRGB=array([0., 0., 0.]), lineWidth=1.0, name='shape_recall', opacity=1.0, ori=0.0, pos=array([ 0.  , -0.35]), size=array([1.  , 0.07]), units='height', vertices=ndarray(...), win=Window(...))
+10.5132 	EXP 	window1: mouseVisible = True
+10.5341 	EXP 	Created sliderl_recall = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=-5, fillColor=None, flip=False, font='Open Sans', granularity=None, labelColor=None, labelHeight=0.04, labelWrapWidth=None, labels=None, lineColor=None, markerColor=None, name='sliderl_recall', opacity=None, ori=0.0, pos=array([-0.275, -0.35 ]), readOnly=True, self=UNKNOWN, size=array([0.45, 0.03]), startValue=None, style='slider', styleTweaks=[], ticks=array([ 0, 50]), units='height', win=Window(...))
+10.5436 	EXP 	Created expect_recall = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-6.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='expect_recall', opacity=1.0, ori=0.0, pos=array([ 0. , -0.3]), rgb=UNKNOWN, text='How much do you expect a noise?\n\n', units='height', win=Window(...), wrapWidth=1)
+10.5479 	EXP 	window1: mouseVisible = True
+10.5679 	EXP 	Created sliderr_recall = Slider(__class__=<class 'psychopy.visual.slider.Slider'>, autoDraw=False, autoLog=True, borderColor=None, color=None, colorSpace='rgb', depth=-7, fillColor=None, flip=False, font='Open Sans', granularity=None, labelColor=None, labelHeight=0.04, labelWrapWidth=None, labels=None, lineColor=None, markerColor=None, name='sliderr_recall', opacity=None, ori=0.0, pos=array([ 0.275, -0.35 ]), readOnly=True, self=UNKNOWN, size=array([0.45, 0.03]), startValue=None, style='slider', styleTweaks=[], ticks=array([ 50, 100]), units='height', win=Window(...))
+10.5692 	EXP 	Created marker_recall = Rect(__class__=<class 'psychopy.visual.rect.Rect'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-8.0, fillColor=array([ 1., -1., -1.]), fillColorSpace='rgb', fillRGB=array([ 1., -1., -1.]), interpolate=True, lineColor=array([0., 0., 0.]), lineColorSpace='rgb', lineRGB=array([0., 0., 0.]), lineWidth=1.0, name='marker_recall', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.03, 0.07]), units='height', vertices=ndarray(...), win=Window(...))
+10.5692 	EXP 	window1: mouseVisible = True
+10.5714 	EXP 	Created cross_2 = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-1.0, fillColor=array([1, 1, 1]), fillColorSpace='rgb', fillRGB=array([1, 1, 1]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1, 1, 1]), lineWidth=1.0, name='cross_2', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([0.05, 0.05]), units='height', vertices=ndarray(...), win=Window(...), windingRule=None)
+10.5721 	EXP 	Created sequence: random, trialTypes=1, nReps=1, seed=None
+10.5723 	EXP 	New trial (rep=0, index=0): None
+10.5758 	EXP 	sliderl_recall: autoLog = True
+10.5758 	EXP 	sliderl_recall: markerPos = None
+10.5758 	EXP 	sliderl_recall: styleTweaks = []
+10.5758 	EXP 	sliderl_recall: styleTweaks = []
+10.5758 	EXP 	sliderl_recall: styleTweaks = []
+10.5758 	EXP 	sliderl_recall: styleTweaks = []
+10.5758 	EXP 	sliderl_recall: contrast = 1.0
+10.5758 	EXP 	sliderl_recall: autoLog = True
+10.5758 	EXP 	sliderr_recall: autoLog = True
+10.5758 	EXP 	sliderr_recall: markerPos = None
+10.5758 	EXP 	sliderr_recall: styleTweaks = []
+10.5758 	EXP 	sliderr_recall: styleTweaks = []
+10.5758 	EXP 	sliderr_recall: styleTweaks = []
+10.5758 	EXP 	sliderr_recall: styleTweaks = []
+10.5758 	EXP 	sliderr_recall: contrast = 1.0
+10.5758 	EXP 	sliderr_recall: autoLog = True
+10.5758 	EXP 	text: autoDraw = True
+11.1826 	DATA 	Keypress: space
+11.1955 	EXP 	text: autoDraw = False
+11.1955 	EXP 	cross_start: autoDraw = True
+14.1919 	EXP 	Imported data/sub-FB999/sub-FB999_ses-1_task-recall_events-input.xlsx as conditions, 12 conditions, 13 params
+14.1923 	EXP 	Created sequence: sequential, trialTypes=12, nReps=1, seed=None
+14.1926 	EXP 	New trial (rep=0, index=0): {'FAB': 'X', 'stim': 'CS4', 'pic': 'd', 'path': 'stimuli/purple.jpg', 'location': [0, 0.1], 'FPS': 0, 'us': 0, 'iti': 6, 'cs_duration': 5, 'trial': 1, 'half': 1, 'FPS_timing': 7.052, 'task': 'recall'}
+14.2480 	EXP 	cross_start: autoDraw = False
+14.2480 	EXP 	img_recall: image = 'stimuli/purple.jpg'
+14.2480 	EXP 	sliderl_recall: markerPos = None
+14.2480 	EXP 	sliderl_recall: markerPos = None
+14.2480 	EXP 	sliderr_recall: markerPos = None
+14.2480 	EXP 	sliderr_recall: markerPos = None
+14.2480 	EXP 	textr_recall: autoDraw = True
+14.2480 	EXP 	img_recall: autoDraw = True
+14.2480 	EXP 	textl_recall: autoDraw = True
+14.2480 	EXP 	shape_recall: autoDraw = True
+14.2480 	EXP 	sliderl_recall: autoDraw = True
+14.2480 	EXP 	expect_recall: autoDraw = True
+14.2480 	EXP 	sliderr_recall: autoDraw = True
+14.2480 	EXP 	marker_recall: autoDraw = True
+19.2104 	EXP 	textr_recall: autoDraw = False
+19.2104 	EXP 	img_recall: autoDraw = False
+19.2104 	EXP 	textl_recall: autoDraw = False
+19.2104 	EXP 	shape_recall: autoDraw = False
+19.2104 	EXP 	sliderl_recall: autoDraw = False
+19.2104 	EXP 	expect_recall: autoDraw = False
+19.2104 	EXP 	sliderr_recall: autoDraw = False
+19.2104 	EXP 	marker_recall: autoDraw = False
+19.2104 	EXP 	cross_2: autoDraw = True
+25.1946 	EXP 	New trial (rep=0, index=1): {'FAB': 'Y', 'stim': 'CS3', 'pic': 'c', 'path': 'stimuli/green.jpg', 'location': [0, 0.1], 'FPS': 0, 'us': 0, 'iti': 5, 'cs_duration': 5, 'trial': 2, 'half': 1, 'FPS_timing': 7.302, 'task': 'recall'}
+25.2746 	EXP 	cross_2: autoDraw = False
+25.2746 	EXP 	cross_2: autoDraw = False
+25.2746 	EXP 	img_recall: image = 'stimuli/green.jpg'
+25.2746 	EXP 	sliderl_recall: markerPos = None
+25.2746 	EXP 	sliderl_recall: markerPos = None
+25.2746 	EXP 	sliderr_recall: markerPos = None
+25.2746 	EXP 	sliderr_recall: markerPos = None
+25.2746 	EXP 	textr_recall: autoDraw = True
+25.2746 	EXP 	img_recall: autoDraw = True
+25.2746 	EXP 	textl_recall: autoDraw = True
+25.2746 	EXP 	shape_recall: autoDraw = True
+25.2746 	EXP 	sliderl_recall: autoDraw = True
+25.2746 	EXP 	expect_recall: autoDraw = True
+25.2746 	EXP 	sliderr_recall: autoDraw = True
+25.2746 	EXP 	marker_recall: autoDraw = True
+30.2104 	EXP 	textr_recall: autoDraw = False
+30.2104 	EXP 	img_recall: autoDraw = False
+30.2104 	EXP 	textl_recall: autoDraw = False
+30.2104 	EXP 	shape_recall: autoDraw = False
+30.2104 	EXP 	sliderl_recall: autoDraw = False
+30.2104 	EXP 	expect_recall: autoDraw = False
+30.2104 	EXP 	sliderr_recall: autoDraw = False
+30.2104 	EXP 	marker_recall: autoDraw = False
+30.2104 	EXP 	cross_2: autoDraw = True
+34.8618 	DATA 	Keypress: escape
+35.3720 	EXP 	window1: mouseVisible = True

@@ -1,0 +1,10 @@
+.DS_store
+../
+.env
+*.mp4
+data/sub-SU998
+data/calibration
+data/shock_calibration
+
+.Rproj.user
+.forfun
