@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.1.3),
-    on Tue Jun 10 12:42:17 2025
+    on Tue Jun 10 13:22:14 2025
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -28,7 +28,6 @@ from numpy.random import random, randint, normal, shuffle, choice as randchoice
 import os  # handy system and path functions
 import sys  # to get file system encoding
 
-import psychopy.iohub as io
 from psychopy.hardware import keyboard
 
 # Run 'Before Experiment' code from input_files_code
@@ -295,18 +294,10 @@ else:
     frameDur = 1.0 / 60.0  # could not measure, so guess
 # --- Setup input devices ---
 ioConfig = {}
-
-# Setup iohub keyboard
-ioConfig['Keyboard'] = dict(use_keymap='psychopy')
-
-ioSession = '1'
-if 'session' in expInfo:
-    ioSession = str(expInfo['session'])
-ioServer = io.launchHubServer(window=win, **ioConfig)
-eyetracker = None
+ioSession = ioServer = eyetracker = None
 
 # create a default keyboard (e.g. to check for escape)
-defaultKeyboard = keyboard.Keyboard(backend='iohub')
+defaultKeyboard = keyboard.Keyboard(backend='event')
 
 # --- Initialize components for Routine "in1" ---
 inst1_resp = keyboard.Keyboard()
@@ -668,8 +659,6 @@ while continueRoutine:
         inst2_resp.tStart = t  # local t and not account for scr refresh
         inst2_resp.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(inst2_resp, 'tStartRefresh')  # time at next scr refresh
-        # add timestamp to datafile
-        thisExp.timestampOnFlip(win, 'inst2_resp.started')
         # update status
         inst2_resp.status = STARTED
         # keyboard checking is just starting
@@ -683,8 +672,6 @@ while continueRoutine:
             # keep track of stop time/frame for later
             inst2_resp.tStop = t  # not accounting for scr refresh
             inst2_resp.frameNStop = frameN  # exact frame index
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'inst2_resp.stopped')
             # update status
             inst2_resp.status = FINISHED
             inst2_resp.status = FINISHED
@@ -801,8 +788,6 @@ while continueRoutine:
         inst3_resp.tStart = t  # local t and not account for scr refresh
         inst3_resp.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(inst3_resp, 'tStartRefresh')  # time at next scr refresh
-        # add timestamp to datafile
-        thisExp.timestampOnFlip(win, 'inst3_resp.started')
         # update status
         inst3_resp.status = STARTED
         # keyboard checking is just starting
@@ -816,8 +801,6 @@ while continueRoutine:
             # keep track of stop time/frame for later
             inst3_resp.tStop = t  # not accounting for scr refresh
             inst3_resp.frameNStop = frameN  # exact frame index
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'inst3_resp.stopped')
             # update status
             inst3_resp.status = FINISHED
             inst3_resp.status = FINISHED
@@ -1099,8 +1082,6 @@ while continueRoutine and routineTimer.getTime() < 5.0:
         ex_trials_resp.tStart = t  # local t and not account for scr refresh
         ex_trials_resp.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(ex_trials_resp, 'tStartRefresh')  # time at next scr refresh
-        # add timestamp to datafile
-        thisExp.timestampOnFlip(win, 'ex_trials_resp.started')
         # update status
         ex_trials_resp.status = STARTED
         # keyboard checking is just starting
@@ -1115,13 +1096,11 @@ while continueRoutine and routineTimer.getTime() < 5.0:
             # keep track of stop time/frame for later
             ex_trials_resp.tStop = t  # not accounting for scr refresh
             ex_trials_resp.frameNStop = frameN  # exact frame index
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'ex_trials_resp.stopped')
             # update status
             ex_trials_resp.status = FINISHED
             ex_trials_resp.status = FINISHED
     if ex_trials_resp.status == STARTED and not waitOnFlip:
-        theseKeys = ex_trials_resp.getKeys(keyList=['num_1','num_2','1','2'], waitRelease=False)
+        theseKeys = ex_trials_resp.getKeys(keyList=['num_1','num_2','1','2', '1!','2@'], waitRelease=False)
         _ex_trials_resp_allKeys.extend(theseKeys)
         if len(_ex_trials_resp_allKeys):
             ex_trials_resp.keys = _ex_trials_resp_allKeys[-1].name  # just the last key pressed
@@ -1137,8 +1116,6 @@ while continueRoutine and routineTimer.getTime() < 5.0:
         ex_tool.tStart = t  # local t and not account for scr refresh
         ex_tool.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(ex_tool, 'tStartRefresh')  # time at next scr refresh
-        # add timestamp to datafile
-        thisExp.timestampOnFlip(win, 'ex_tool.started')
         # update status
         ex_tool.status = STARTED
         ex_tool.setAutoDraw(True)
@@ -1155,8 +1132,6 @@ while continueRoutine and routineTimer.getTime() < 5.0:
             # keep track of stop time/frame for later
             ex_tool.tStop = t  # not accounting for scr refresh
             ex_tool.frameNStop = frameN  # exact frame index
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'ex_tool.stopped')
             # update status
             ex_tool.status = FINISHED
             ex_tool.setAutoDraw(False)
@@ -1170,8 +1145,6 @@ while continueRoutine and routineTimer.getTime() < 5.0:
         ex_animal.tStart = t  # local t and not account for scr refresh
         ex_animal.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(ex_animal, 'tStartRefresh')  # time at next scr refresh
-        # add timestamp to datafile
-        thisExp.timestampOnFlip(win, 'ex_animal.started')
         # update status
         ex_animal.status = STARTED
         ex_animal.setAutoDraw(True)
@@ -1188,16 +1161,14 @@ while continueRoutine and routineTimer.getTime() < 5.0:
             # keep track of stop time/frame for later
             ex_animal.tStop = t  # not accounting for scr refresh
             ex_animal.frameNStop = frameN  # exact frame index
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'ex_animal.stopped')
             # update status
             ex_animal.status = FINISHED
             ex_animal.setAutoDraw(False)
     # Run 'Each Frame' code from col_code_ex
     #change the color of the response if one is pressed
-    if 'num_1' in ex_trials_resp.keys:
+    if '1' in ex_trials_resp.keys:
         ex_animal_resp_color = 'darkgrey'
-    elif 'num_2' in ex_trials_resp.keys:
+    elif '2' in ex_trials_resp.keys:
         ex_tool_resp_color = 'darkgrey'
     
     # *image* updates
@@ -1209,8 +1180,6 @@ while continueRoutine and routineTimer.getTime() < 5.0:
         image.tStart = t  # local t and not account for scr refresh
         image.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(image, 'tStartRefresh')  # time at next scr refresh
-        # add timestamp to datafile
-        thisExp.timestampOnFlip(win, 'image.started')
         # update status
         image.status = STARTED
         image.setAutoDraw(True)
@@ -1227,8 +1196,6 @@ while continueRoutine and routineTimer.getTime() < 5.0:
             # keep track of stop time/frame for later
             image.tStop = t  # not accounting for scr refresh
             image.frameNStop = frameN  # exact frame index
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'image.stopped')
             # update status
             image.status = FINISHED
             image.setAutoDraw(False)
@@ -1343,8 +1310,6 @@ while continueRoutine:
         inst4_resp.tStart = t  # local t and not account for scr refresh
         inst4_resp.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(inst4_resp, 'tStartRefresh')  # time at next scr refresh
-        # add timestamp to datafile
-        thisExp.timestampOnFlip(win, 'inst4_resp.started')
         # update status
         inst4_resp.status = STARTED
         # keyboard checking is just starting
@@ -1358,8 +1323,6 @@ while continueRoutine:
             # keep track of stop time/frame for later
             inst4_resp.tStop = t  # not accounting for scr refresh
             inst4_resp.frameNStop = frameN  # exact frame index
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'inst4_resp.stopped')
             # update status
             inst4_resp.status = FINISHED
             inst4_resp.status = FINISHED
@@ -1750,9 +1713,9 @@ for thisTrial in trials:
         # update/draw components on each frame
         # Run 'Each Frame' code from cs_code
         #change the color of the response if one is pressed
-        if 'num_1' in trials_resp.keys:
+        if '1' in trials_resp.keys:
             animal_resp_color = 'darkgrey'
-        elif 'num_2' in trials_resp.keys:
+        elif '2' in trials_resp.keys:
             tool_resp_color = 'darkgrey'
         
         # *base_image* updates
@@ -1820,7 +1783,7 @@ for thisTrial in trials:
                 trials_resp.status = FINISHED
                 trials_resp.status = FINISHED
         if trials_resp.status == STARTED and not waitOnFlip:
-            theseKeys = trials_resp.getKeys(keyList=['num_1','num_2','1!','2@'], waitRelease=False)
+            theseKeys = trials_resp.getKeys(keyList=['num_1','num_2','1!','2@','1','2'], waitRelease=False)
             _trials_resp_allKeys.extend(theseKeys)
             if len(_trials_resp_allKeys):
                 trials_resp.keys = _trials_resp_allKeys[0].name  # just the first key pressed
@@ -1986,8 +1949,6 @@ while continueRoutine:
         end_exp_resp.tStart = t  # local t and not account for scr refresh
         end_exp_resp.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(end_exp_resp, 'tStartRefresh')  # time at next scr refresh
-        # add timestamp to datafile
-        thisExp.timestampOnFlip(win, 'end_exp_resp.started')
         # update status
         end_exp_resp.status = STARTED
         # keyboard checking is just starting
@@ -2001,8 +1962,6 @@ while continueRoutine:
             # keep track of stop time/frame for later
             end_exp_resp.tStop = t  # not accounting for scr refresh
             end_exp_resp.frameNStop = frameN  # exact frame index
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'end_exp_resp.stopped')
             # update status
             end_exp_resp.status = FINISHED
             end_exp_resp.status = FINISHED
@@ -2025,8 +1984,6 @@ while continueRoutine:
         end_exp.tStart = t  # local t and not account for scr refresh
         end_exp.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(end_exp, 'tStartRefresh')  # time at next scr refresh
-        # add timestamp to datafile
-        thisExp.timestampOnFlip(win, 'end_exp.started')
         # update status
         end_exp.status = STARTED
         end_exp.setAutoDraw(True)
@@ -2042,8 +1999,6 @@ while continueRoutine:
             # keep track of stop time/frame for later
             end_exp.tStop = t  # not accounting for scr refresh
             end_exp.frameNStop = frameN  # exact frame index
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'end_exp.stopped')
             # update status
             end_exp.status = FINISHED
             end_exp.setAutoDraw(False)
