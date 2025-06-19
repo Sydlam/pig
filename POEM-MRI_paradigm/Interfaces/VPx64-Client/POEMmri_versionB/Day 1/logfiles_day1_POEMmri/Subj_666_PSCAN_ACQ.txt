@@ -1,4 +1,0 @@
-valence_ACQ_CS+	rating/ACQ_tools.jpg	CS+	5
-arousal_ACQ_CS+	rating/ACQ_tools.jpg	CS+	1
-valence_ACQ_CS-	rating/ACQ_animals.jpg	CS-	1
-arousal_ACQ_CS-	rating/ACQ_animals.jpg	CS-	3

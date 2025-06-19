@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.1.3),
-    on Tue Jun 10 13:22:14 2025
+    on Wed Jun 18 10:56:45 2025
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -44,22 +44,79 @@ data_dir = os.path.join(home_dir, 'Desktop', 'pig', 'mrs-m', 'experiment', 'data
 input_dir = os.path.join(home_dir,'Desktop', 'pig', 'mrs-m', 'experiment', 'stims')
 os.chdir(input_dir)
 
-dlg = gui.Dlg(title = 'PYG subject initialization')
-dlg.addField('participant')
-dlg.addField('CS_order', choices=['A','T'])
-dlg.addField('phase_order_input', choices=[1,2,3,4,5,6])
-dlg.addField('room', choices =['VR', 'behavior']) #added 6/14
-dlg.addField('Init parallel port?', choices=['yes','no (testing)'])
+#!/usr/bin/env python
+# Script to generate participant-specific trial orders and save input files
+
+import os
+import pandas as pd
+from psychopy import gui, core
+
+# === GUI to gather participant info ===
+dlg = gui.Dlg(title='Initialize participant')
+dlg.addField('Participant ID')
+dlg.addField('Phase order (1-4)', choices=[1, 2, 3, 4])
+dlg.addField('Room', choices=['VR', 'behavior'])
+dlg.addField('Init parallel port?', choices=['yes', 'no (testing)'])
 
 user_input = dlg.show()
 
-if dlg.OK == False:
-    core.quit()  # user pressed cancel
-    
-bidsID = 'sub-PYG{0:0=3d}'.format(int(user_input[0]))
-cs_order = user_input[1]
-phase_order_input = user_input[2]
-room_input = user_input[3] #added 6/14
+if dlg.OK is False:
+    core.quit()
+
+# === Extract GUI inputs ===
+participant_id = int(user_input[0])
+order_ind = int(user_input[1])
+room_input = user_input[2]
+testing_mode = user_input[3] == 'no (testing)'
+
+# === Define paths ===
+bidsID = f"sub-PYG{participant_id:03d}"
+template_dir = os.path.join(home_dir, "Desktop","pig","mrs-m", "experiment", "task_templates", f"order {order_ind}")
+output_dir = os.path.join(home_dir, "Desktop","pig","mrs-m", "experiment","data", bidsID)
+os.makedirs(output_dir, exist_ok=True)
+
+# === Define all phase files to load and save ===
+phase_files = {
+    "base": "base.csv",
+    "acq": "acq.csv",
+    "ext": "ext.csv",
+    "recall": "recall.csv",
+    "bps1": "bps1.csv",
+    "bps2": "bps2.csv",
+    "bps3": "bps3.csv"
+}
+
+psycho_columns_to_remove = [
+    "trials.thisRepN", "trials.thisTrialN", "trials.thisN", "trials.thisIndex",
+    "cond_trials.thisRepN", "cond_trials.thisTrialN", "cond_trials.thisN", "cond_trials.thisIndex"
+]
+
+phase_dfs = {}
+
+for phase, filename in phase_files.items():
+
+  
+    if phase in ["recall", "bps1", "bps2", "bps3"]:
+        session = 2
+    else:
+        session = 1
+
+    filepath = os.path.join(template_dir, filename)
+    if not os.path.exists(filepath):
+        raise FileNotFoundError(f"Missing input file: {filepath}")
+
+    df = pd.read_csv(filepath)
+    df = df.drop(columns=[col for col in psycho_columns_to_remove if col in df.columns])
+    df.insert(0, "participant", participant_id)
+    phase_dfs[phase] = df
+
+    output_filename = f"{bidsID}_ses-{session}_task-{phase}_events-input.csv"
+    output_path = os.path.join(output_dir, output_filename)
+    df.to_csv(output_path, index=False)
+
+print(f"Participant files generated for {bidsID} in {output_dir}")
+
+
 
 
 #PARALLEL PORT CODE
@@ -106,139 +163,7 @@ def stim_marker(on_or_offset='',SHOCK=False):
       
 #CREATE INPUT FILES CODE
 
-cs_cats = {'CS+':'animals' if cs_order == 'A' else 'tools',
-           'CS-':'tools' if cs_order == 'A' else 'animals'}
-phase_order = {1:[1,2,3],
-               2:[1,3,2], 
-               3:[3,2,1], 
-               4:[3,1,2], 
-               5:[2,1,3], 
-               6:[2,3,1]}
 
-#create variables that are lists of my phases to be used for iteration later
-phases = ['base','fear','extcc','renewal_1', 'mem_1','sou_typ_val_1']
-day1_phases = ['base','fear','extcc']
-
-#CREATE DAY 1 DATAFRAMES:
-
-#create list of day 1 phases
-day1_phases = ['base','fear','extcc']
-#create dataframe of stims (the one with the 6 columns of 24 animals or tools)
-stims = pd.read_csv('day1_stims_groups.csv')
-day1_stims = stims.sample(frac=1).reset_index(drop=True) #shuffle within columns
-day2_stims = stims.sample(frac=1).reset_index(drop=True) #shuffle within columns again
-soutypval_stims = stims.sample(frac=1).reset_index(drop=True) #shuffle within columns again!
-#read in the different task templates for each phase, and name them after each phase (using list comprehension)
-day1_dfs = {phase: pd.read_csv(f'../task_templates/{phase}_template.csv').set_index(['trial_type', 'trial']) for phase in day1_phases}
-
-
-itis = [5,6,7]
-#for each phase (count them) in day 1 phases (base, fear, extcc):
-for p, phase in enumerate(day1_phases):
-    #and for each of CS+ and CS-:
-        for con in ['CS+','CS-']:
-        #find the stimulus column in each phase and for both CS+ and CS-, 
-        #and fill it with either animals or tools from the day1_stims_groups csv, 
-        #depending on the cs_cats relationship. Made sure all variables were in the code. 
-            day1_dfs[phase].loc[con,'stimulus'] = day1_stims[f'{cs_cats[con]}_{phase_order[phase_order_input][p]}'].values  
-        #shuffle the itis and create a random set of 48    
-        iti_blocks = [np.random.choice(itis, 8, replace=True) for i in range(6)]
-        #put them all together into one list
-        iti_blocks = np.concatenate(iti_blocks)
-        #put the list into the iti_duration column in each dataframe
-        #how do i select just a column.....?
-        day1_dfs[phase].loc[:, 'iti_duration'] = iti_blocks
-        #reset the indices
-        day1_dfs[phase] = day1_dfs[phase].reset_index()
-   
-#FILL IN EXTINCTION CC STIMS 
-
-
-
-#note that once it is the index, pandas will not recognize it as a column anymore!
-
-    
-#ADD GROUP FOR BASE 7/14/22
-
-day1_dfs['base'] = day1_dfs['base'].set_index('trial_type')
-
-
-#ADD GROUP FOR FEAR 7/14/22
-
-day1_dfs['fear'] = day1_dfs['fear'].set_index('trial_type')
-
-
-#RENEWAL
- 
-renewal_stims = pd.read_csv('renewal_stims.csv')
-renewal_stims = renewal_stims.sample(frac=1).reset_index(drop=True) #shuffle within columns 
-renewal_df = pd.read_csv('../task_templates/renewal_template.csv').set_index(['trial_type', 'trial'])
-
-for con in ['CS+', 'CS-']:
-    renewal_df.loc[con, 'stimulus'] = renewal_stims[f'{cs_cats[con]}'].values
-
-renewal_df.loc['new', 'stimulus'] = f'stims/tr1renewal_{cs_cats[con]}.jpg'  #assigns the first row named "new" with a novel and consistent pic of the subject's CS-...
-renewal_df.loc['new', 'iti_duration'] = '5'  #assigns the first row named "new" with an iti of 5 seconds
-
-#ADD GROUP FOR RENEWAL 7/14/22
-
-
-
-#SET ITIs
-itis = [5,6,7]
-iti_blocks = [np.random.choice(itis, 6, replace=True) for i in range(4)]
-#put them all together into one list
-iti_blocks = np.concatenate(iti_blocks)
-#put the list into the iti_duration column in each dataframe
-#how do i select just a column.....?
-renewal_df.loc[['CS+', 'CS-'], 'iti_duration'] = iti_blocks 
- 
-#RECOGNITION MEMORY
-mem_df = pd.read_csv('../task_templates/mem_template.csv').set_index(['trial_type', 'phase'])
-mem_df.reset_index(['trial_type']) #changed this to fix but 6/9
-itis_mem = [2,3]
-iti_mem_blocks = [np.random.choice(itis_mem, 20, replace=True) for i in range(12)]
-iti_mem_blocks = np.concatenate(iti_mem_blocks)
-mem_df.loc[:, 'iti_duration'] = iti_mem_blocks
-
-#add all same stims as day 1 except reshuffled, according to the same user input as on day 1.
-for p, phase in enumerate(day1_phases):
-    for con in ['CS+','CS-']:
-            mem_df.loc[(con, phase), 'stimulus'] = day2_stims[f'{cs_cats[con]}_{phase_order[phase_order_input][p]}'].values       
-       
-#load rec. mem foil stims
-foil_stims = pd.read_csv('foil_stims_list.csv').sample(frac=1).reset_index(drop=True)
-
-for con in ['CS+','CS-']:
-    mem_df.loc[(con, 'foil'), 'stimulus'] = foil_stims[f'{cs_cats[con]}'].values
-
-#ADD GROUP FOR MEM 7/14/22
-
-
-#SOUTYP
-
-soutyp_stims = stims.sample(frac=1).reset_index(drop=True) #shuffle within columns again!
-soutyp_df = pd.read_csv('../task_templates/soutyp_template.csv').set_index(['trial_type', 'phase'])
-#add all same stims as day 1 except reshuffled, according to the same user input as on day 1.
-for p, phase in enumerate(day1_phases):
-    for con in ['CS+','CS-']:
-           soutyp_df.loc[(con, phase), 'stimulus'] = soutyp_stims[f'{cs_cats[con]}_{phase_order[phase_order_input][p]}'].values       
-
-#ADD GROUP FOR SOUTYP 7/14/22
-
-
-    
-#EXPORT DATA TO CSVs                                                        
-os.chdir(data_dir)
-os.makedirs(f'{bidsID}',exist_ok=True)
-for phase in day1_phases:
-  ses = 1
-  phase_str = phase.split('_')[0]
-  day1_dfs[phase].reset_index().to_csv(f'{bidsID}/{bidsID}_ses-{ses}_task-{phase_str}_events-input.csv',index=False)
- 
-renewal_df.reset_index().to_csv(f'{bidsID}/{bidsID}_ses-2_task-renewal_events-input.csv',index=False)
-mem_df.reset_index().to_csv(f'{bidsID}/{bidsID}_ses-2_task-rec-memory_events-input.csv',index=False)
-soutyp_df.reset_index().to_csv(f'{bidsID}/{bidsID}_ses-2_task-soutyp_events-input.csv',index=False)
 # Run 'Before Experiment' code from col_code_ex
 
 
@@ -252,10 +177,9 @@ _thisDir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(_thisDir)
 # Store info about the experiment session
 psychopyVersion = '2023.1.3'
-expName = 'baseline'  # from the Builder filename that created this script
+expName = 'base'  # from the Builder filename that created this script
 expInfo = {
-    'participant': '',
-    'session': '001',
+    'session': '1',
 }
 expInfo['date'] = data.getDateStr()  # add a simple timestamp
 expInfo['expName'] = expName
@@ -580,14 +504,6 @@ while continueRoutine:
 for thisComponent in in1Components:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-# check responses
-if inst1_resp.keys in ['', [], None]:  # No response was made
-    inst1_resp.keys = None
-thisExp.addData('inst1_resp.keys',inst1_resp.keys)
-if inst1_resp.keys != None:  # we had a response
-    thisExp.addData('inst1_resp.rt', inst1_resp.rt)
-    thisExp.addData('inst1_resp.duration', inst1_resp.duration)
-thisExp.nextEntry()
 # the Routine "in1" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 
@@ -709,14 +625,6 @@ while continueRoutine:
 for thisComponent in in2Components:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-# check responses
-if inst2_resp.keys in ['', [], None]:  # No response was made
-    inst2_resp.keys = None
-thisExp.addData('inst2_resp.keys',inst2_resp.keys)
-if inst2_resp.keys != None:  # we had a response
-    thisExp.addData('inst2_resp.rt', inst2_resp.rt)
-    thisExp.addData('inst2_resp.duration', inst2_resp.duration)
-thisExp.nextEntry()
 # the Routine "in2" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 
@@ -838,14 +746,6 @@ while continueRoutine:
 for thisComponent in in3Components:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-# check responses
-if inst3_resp.keys in ['', [], None]:  # No response was made
-    inst3_resp.keys = None
-thisExp.addData('inst3_resp.keys',inst3_resp.keys)
-if inst3_resp.keys != None:  # we had a response
-    thisExp.addData('inst3_resp.rt', inst3_resp.rt)
-    thisExp.addData('inst3_resp.duration', inst3_resp.duration)
-thisExp.nextEntry()
 # the Routine "in3" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 
@@ -1023,14 +923,6 @@ while continueRoutine:
 for thisComponent in ex_itiComponents:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-# check responses
-if ex_iti_resp.keys in ['', [], None]:  # No response was made
-    ex_iti_resp.keys = None
-thisExp.addData('ex_iti_resp.keys',ex_iti_resp.keys)
-if ex_iti_resp.keys != None:  # we had a response
-    thisExp.addData('ex_iti_resp.rt', ex_iti_resp.rt)
-    thisExp.addData('ex_iti_resp.duration', ex_iti_resp.duration)
-thisExp.nextEntry()
 # the Routine "ex_iti" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 
@@ -1224,14 +1116,6 @@ while continueRoutine and routineTimer.getTime() < 5.0:
 for thisComponent in ex_trialComponents:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-# check responses
-if ex_trials_resp.keys in ['', [], None]:  # No response was made
-    ex_trials_resp.keys = None
-thisExp.addData('ex_trials_resp.keys',ex_trials_resp.keys)
-if ex_trials_resp.keys != None:  # we had a response
-    thisExp.addData('ex_trials_resp.rt', ex_trials_resp.rt)
-    thisExp.addData('ex_trials_resp.duration', ex_trials_resp.duration)
-thisExp.nextEntry()
 # Run 'End Routine' code from col_code_ex
 #send the event code
 stim_marker('offset',SHOCK=False)
@@ -1360,14 +1244,6 @@ while continueRoutine:
 for thisComponent in in4Components:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-# check responses
-if inst4_resp.keys in ['', [], None]:  # No response was made
-    inst4_resp.keys = None
-thisExp.addData('inst4_resp.keys',inst4_resp.keys)
-if inst4_resp.keys != None:  # we had a response
-    thisExp.addData('inst4_resp.rt', inst4_resp.rt)
-    thisExp.addData('inst4_resp.duration', inst4_resp.duration)
-thisExp.nextEntry()
 # the Routine "in4" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 
@@ -1489,21 +1365,13 @@ while continueRoutine:
 for thisComponent in in_begin_experimentComponents:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-# check responses
-if beg_exp_resp.keys in ['', [], None]:  # No response was made
-    beg_exp_resp.keys = None
-thisExp.addData('beg_exp_resp.keys',beg_exp_resp.keys)
-if beg_exp_resp.keys != None:  # we had a response
-    thisExp.addData('beg_exp_resp.rt', beg_exp_resp.rt)
-    thisExp.addData('beg_exp_resp.duration', beg_exp_resp.duration)
-thisExp.nextEntry()
 # the Routine "in_begin_experiment" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 
 # set up handler to look after randomisation of conditions etc
 trials = data.TrialHandler(nReps=1.0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions(f"data/{bidsID}/{bidsID}_ses-1_task-base_events-input.csv"),
+    trialList=data.importConditions(f'data/{bidsID}/{bidsID}_ses-1_task-base_events-input.csv'),
     seed=None, name='trials')
 thisExp.addLoop(trials)  # add the loop to the experiment
 thisTrial = trials.trialList[0]  # so we can initialise stimuli with some values
@@ -1556,8 +1424,6 @@ for thisTrial in trials:
             ani_iti.tStart = t  # local t and not account for scr refresh
             ani_iti.tStartRefresh = tThisFlipGlobal  # on global time
             win.timeOnFlip(ani_iti, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'ani_iti.started')
             # update status
             ani_iti.status = STARTED
             ani_iti.setAutoDraw(True)
@@ -1574,8 +1440,6 @@ for thisTrial in trials:
                 # keep track of stop time/frame for later
                 ani_iti.tStop = t  # not accounting for scr refresh
                 ani_iti.frameNStop = frameN  # exact frame index
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'ani_iti.stopped')
                 # update status
                 ani_iti.status = FINISHED
                 ani_iti.setAutoDraw(False)
@@ -1589,8 +1453,6 @@ for thisTrial in trials:
             tool_iti.tStart = t  # local t and not account for scr refresh
             tool_iti.tStartRefresh = tThisFlipGlobal  # on global time
             win.timeOnFlip(tool_iti, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'tool_iti.started')
             # update status
             tool_iti.status = STARTED
             tool_iti.setAutoDraw(True)
@@ -1607,8 +1469,6 @@ for thisTrial in trials:
                 # keep track of stop time/frame for later
                 tool_iti.tStop = t  # not accounting for scr refresh
                 tool_iti.frameNStop = frameN  # exact frame index
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'tool_iti.stopped')
                 # update status
                 tool_iti.status = FINISHED
                 tool_iti.setAutoDraw(False)
@@ -1799,8 +1659,6 @@ for thisTrial in trials:
             animal.tStart = t  # local t and not account for scr refresh
             animal.tStartRefresh = tThisFlipGlobal  # on global time
             win.timeOnFlip(animal, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'animal.started')
             # update status
             animal.status = STARTED
             animal.setAutoDraw(True)
@@ -1817,8 +1675,6 @@ for thisTrial in trials:
                 # keep track of stop time/frame for later
                 animal.tStop = t  # not accounting for scr refresh
                 animal.frameNStop = frameN  # exact frame index
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'animal.stopped')
                 # update status
                 animal.status = FINISHED
                 animal.setAutoDraw(False)
@@ -1832,8 +1688,6 @@ for thisTrial in trials:
             tool.tStart = t  # local t and not account for scr refresh
             tool.tStartRefresh = tThisFlipGlobal  # on global time
             win.timeOnFlip(tool, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'tool.started')
             # update status
             tool.status = STARTED
             tool.setAutoDraw(True)
@@ -1850,8 +1704,6 @@ for thisTrial in trials:
                 # keep track of stop time/frame for later
                 tool.tStop = t  # not accounting for scr refresh
                 tool.frameNStop = frameN  # exact frame index
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'tool.stopped')
                 # update status
                 tool.status = FINISHED
                 tool.setAutoDraw(False)
@@ -1905,6 +1757,9 @@ if trials.trialList in ([], [None], None):
 else:
     params = trials.trialList[0].keys()
 # save data for this loop
+trials.saveAsExcel(filename + '.xlsx', sheetName='trials',
+    stimOut=params,
+    dataOut=['n','all_mean','all_std', 'all_raw'])
 trials.saveAsText(filename + 'trials.csv', delim=',',
     stimOut=params,
     dataOut=['n','all_mean','all_std', 'all_raw'])

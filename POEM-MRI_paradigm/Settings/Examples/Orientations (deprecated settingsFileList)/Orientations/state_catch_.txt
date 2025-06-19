@@ -1,5 +1,0 @@
-stimulus_LoadImageFile "Orientations/CatchTrial.bmp"
-//
-END
-
-

@@ -1,4 +1,0 @@
-setROI_AllOff
-setROI_RealRect	1	 0.005	 0.005	 0.486	 1.000	Rectangle
-setROI_RealRect	2	 0.487	 0.002	 0.998	 0.998	Rectangle
-END

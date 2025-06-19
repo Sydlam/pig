@@ -1,5 +1,0 @@
-stimulus_LoadImageFile "Orientations/270.bmp"
-//
-END
-
-
