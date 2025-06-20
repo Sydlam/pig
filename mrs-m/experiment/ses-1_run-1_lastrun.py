@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.1.3),
-    on Tue Jun 10 13:22:14 2025
+    on June 11, 2025, at 14:31
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -42,7 +42,11 @@ import random
 home_dir = os.path.expanduser('~')
 data_dir = os.path.join(home_dir, 'Desktop', 'pig', 'mrs-m', 'experiment', 'data')
 input_dir = os.path.join(home_dir,'Desktop', 'pig', 'mrs-m', 'experiment', 'stims')
-os.chdir(input_dir)
+if os.path.exists(input_dir):
+    os.chdir(input_dir)
+else:
+    print(f"WARNING: Stimulus folder not found: {input_dir}")
+    print("Continuing without changing directory — some files may not load.")
 
 dlg = gui.Dlg(title = 'PYG subject initialization')
 dlg.addField('participant')
@@ -267,7 +271,7 @@ filename = _thisDir + os.sep + f'data/{bidsID}/{bidsID}_ses-1_task-{expName}_{ex
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='/Users/sydneylambert/Desktop/pig/mrs-m/experiment/ses-1_run-1_lastrun.py',
+    originPath='C:\\Users\\nehad\\Documents\\pig\\mrs-m\\experiment\\ses-1_run-1_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 logging.console.setLevel(logging.WARNING)  # this outputs to the screen, not a file
