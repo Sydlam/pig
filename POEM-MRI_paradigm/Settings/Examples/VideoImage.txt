@@ -1,8 +1,0 @@
-//
-videoMode Speed
-videoImageBrightness 0.75
-videoImageContrast   0.25
-videoAutoImage 	ON
-positiveLock 	ON
-// 
-END

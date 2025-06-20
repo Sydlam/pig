@@ -1,8 +1,0 @@
-// This sets the amount of information printed to the History window. 
-// Note: +str adds output, -str reduces output.
-//
-verbose +ttl_out
-verbose +ttl_cmd
-verbose -calibration
-// 
-END

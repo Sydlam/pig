@@ -1,0 +1,5 @@
+﻿participant,CS_type,phaseOrigin,trial,stim,mem_con,cs_duration,iti_duration,phase,category,memCon_by_phase,shocked_day1,trials.thisRepN,trials.thisTrialN,trials.thisN,trials.thisIndex,crosshair.started,crosshair.stopped,mem_image.started,mem_resp.started,mem_resp.keys,mem_resp.rt,mem_resp.duration,session,date,expName,psychopyVersion,frameRate,
+7,CSm,acq,t_001,stims/animals/herculesbeetle.jpg,old,5,2,bps1,animal,old_acq_CSm,noUS,0,0,0,0,12.053719624993391,14.055615040997509,14.055615040997509,14.055615040997509,j,0.3396514999913052,None,001,2025-06-18_13h01.25.504,bps1,2023.1.3,None,
+7,CSp,base,t_002,stims/tools/weedeater.jpg,old,5,2,bps1,tool,old_base_CSp,noUS,0,1,1,1,14.90406674996484,16.90542516601272,16.90542516601272,16.90542516601272,k,0.3223715419881046,None,001,2025-06-18_13h01.25.504,bps1,2023.1.3,None,
+7,CSp,acq,t_003,stims/tools/baseball_simB.jpg,sim,5,2,bps1,tool,sim_acq_CSp,YES_US,0,2,2,2,17.735962290957104,19.729569957999047,19.729569957999047,19.729569957999047,k,1.407838625018485,None,001,2025-06-18_13h01.25.504,bps1,2023.1.3,None,
+,,,,,,,,,,,,,,,,21.643701415974647,,,,,,,,,,,,

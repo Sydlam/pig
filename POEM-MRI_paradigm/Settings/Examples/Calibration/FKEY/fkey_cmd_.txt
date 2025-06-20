@@ -1,8 +1,0 @@
-//
-fkey_cmd 	 9 { calibration_snap }
-fkey_cmd 	10 { calibration_SelectIndex NEXT }
-fkey_cmd	12 { stimulus_LoadImageFile "Misc/ARI_Logo.bmp" }
-//
-historyReport "FKEY commands set."
-//
-END

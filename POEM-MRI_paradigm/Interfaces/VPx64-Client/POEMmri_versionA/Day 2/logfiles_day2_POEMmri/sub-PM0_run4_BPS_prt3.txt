@@ -1,3 +1,0 @@
-versionA	BPS_prt3	block01	animal	CS-	OLD	noUS	1	559	OLD_BL_CS-	stims/animals/angelfish.jpg	44218
-versionA	BPS_prt3	block01	animal	CS-	OLD	noUS	2	1482	OLD_ACQ_CS-	stims/animals/waterdragon.jpg	55995
-versionA	BPS_prt3	block01	tool	CS+	OLD	noUS	1	1124	OLD_EXT_CS+	stims/tools/jumpercables.jpg	63496

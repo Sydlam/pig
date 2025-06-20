@@ -1,4 +1,0 @@
-versionD	ACQ	b6_01	b4_01	t_001	CS+	CS+_001	animal_001	OLD_ACQ_CS+	noUS	2	stims/animals/quail.jpg	4050
-versionD	ACQ	b6_01	b4_01	t_002	CS-	CS-_001	tool_001	OLD_ACQ_CS-	noUS	2	stims/tools/extensioncord.jpg	13150
-versionD	ACQ	b6_01	b4_01	t_003	CS+	CS+_002	animal_002	SIM_ACQ_a_CS+	YES_US	2	stims/animals/griffinVulture_simA.jpg	22250
-versionD	ACQ	b6_01	b4_01	t_004	CS+	CS+_003	animal_003	SIM_ACQ_a_CS+	noUS	2	stims/animals/bat_simA.jpg	33400
