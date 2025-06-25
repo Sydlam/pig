@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.1.3),
-    on Wed Jun 18 10:56:45 2025
+    on Wed Jun 25 09:45:11 2025
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -83,7 +83,8 @@ phase_files = {
     "recall": "recall.csv",
     "bps1": "bps1.csv",
     "bps2": "bps2.csv",
-    "bps3": "bps3.csv"
+    "bps3": "bps3.csv",
+    "typsource" : "typsource.csv"
 }
 
 psycho_columns_to_remove = [
@@ -96,7 +97,7 @@ phase_dfs = {}
 for phase, filename in phase_files.items():
 
   
-    if phase in ["recall", "bps1", "bps2", "bps3"]:
+    if phase in ["recall", "bps1", "bps2", "bps3", "typsource"]:
         session = 2
     else:
         session = 1

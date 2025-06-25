@@ -1,0 +1,3 @@
+﻿participant,CS_type,CS_trial,category_trial,trial,phase,mem_cond,us,stimulus,cs_duration,iti_duration,counterbal_order,trials.thisRepN,trials.thisTrialN,trials.thisN,trials.thisIndex,crosshair.started,crosshair.stopped,base_image.started,trials_resp.started,trials_resp.keys,trials_resp.rt,trials_resp.duration,session,date,expName,psychopyVersion,frameRate,
+12,CSp,CSp_001,tool_001,t_001,base,sim,0,stims/tools/allenwrench_simA.jpg,5,6,order1,0,0,0,0,19.22047879092861,25.221044249949045,25.221044249949045,25.221044249949045,1,0.4537676670588553,None,1,2025-06-25_09h39.07.506,base,2023.1.3,None,
+,,,,,,,,,,,,,,,,30.215221332968213,,,,,,,,,,,,
