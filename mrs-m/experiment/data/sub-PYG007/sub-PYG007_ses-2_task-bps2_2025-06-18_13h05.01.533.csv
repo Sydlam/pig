@@ -1,3 +1,0 @@
-﻿participant,CS_type,phaseOrigin,trial,stim,mem_con,cs_duration,iti_duration,phase,category,memCon_by_phase,shocked_day1,trials.thisRepN,trials.thisTrialN,trials.thisN,trials.thisIndex,crosshair.started,crosshair.stopped,mem_image.started,mem_resp.started,mem_resp.keys,mem_resp.rt,mem_resp.duration,session,date,expName,psychopyVersion,frameRate,
-7,CSm,bps,t_001,stims/animals/dolphin.jpg,new,5,2,bps2,animal,NEW_BPS_CSm,noUS,0,0,0,0,8.370215124974493,10.376301124983002,10.376301124983002,10.376301124983002,h,2.401361000025645,None,001,2025-06-18_13h05.01.533,bps2,2023.1.3,None,
-,,,,,,,,,,,,,,,,13.286149292020127,,,,,,,,,,,,

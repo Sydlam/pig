@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" ?>
+<PsychoPy2experiment encoding="utf-8" version="2023.1.3">
+  <Settings>
+    <Param val="use prefs" valType="str" updates="None" name="Audio latency priority"/>
+    <Param val="use prefs" valType="str" updates="None" name="Audio lib"/>
+    <Param val="" valType="str" updates="None" name="Completed URL"/>
+    <Param val="comma" valType="str" updates="None" name="Data file delimiter"/>
+    <Param val="f'data/{bidsID}/{bidsID}_ses-1_task-{expName}_{expInfo[&quot;date&quot;]}'" valType="code" updates="None" name="Data filename"/>
+    <Param val="True" valType="bool" updates="None" name="Enable Escape"/>
+    <Param val="" valType="str" updates="None" name="End Message"/>
+    <Param val="{'session': '1'}" valType="code" updates="None" name="Experiment info"/>
+    <Param val="True" valType="bool" updates="None" name="Force stereo"/>
+    <Param val="True" valType="bool" updates="None" name="Full-screen window"/>
+    <Param val="" valType="str" updates="None" name="HTML path"/>
+    <Param val="" valType="str" updates="None" name="Incomplete URL"/>
+    <Param val="testMonitor" valType="str" updates="None" name="Monitor"/>
+    <Param val="[]" valType="list" updates="None" name="Resources"/>
+    <Param val="False" valType="bool" updates="None" name="Save csv file"/>
+    <Param val="False" valType="bool" updates="None" name="Save excel file"/>
+    <Param val="False" valType="bool" updates="None" name="Save hdf5 file"/>
+    <Param val="False" valType="bool" updates="None" name="Save log file"/>
+    <Param val="True" valType="bool" updates="None" name="Save psydat file"/>
+    <Param val="False" valType="bool" updates="None" name="Save wide csv file"/>
+    <Param val="1" valType="num" updates="None" name="Screen"/>
+    <Param val="False" valType="bool" updates="None" name="Show info dlg"/>
+    <Param val="False" valType="bool" updates="None" name="Show mouse"/>
+    <Param val="height" valType="str" updates="None" name="Units"/>
+    <Param val="" valType="str" updates="None" name="Use version"/>
+    <Param val="[1512, 982]" valType="list" updates="None" name="Window size (pixels)"/>
+    <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+    <Param val="" valType="str" updates="None" name="backgroundImg"/>
+    <Param val="avg" valType="str" updates="None" name="blendMode"/>
+    <Param val="$[-0.1765, -0.1765, -0.1765]" valType="color" updates="None" name="color"/>
+    <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+    <Param val="100.1.1.1" valType="str" updates="None" name="elAddress"/>
+    <Param val="FILTER_LEVEL_2" valType="str" updates="None" name="elDataFiltering"/>
+    <Param val="FILTER_LEVEL_OFF" valType="str" updates="None" name="elLiveFiltering"/>
+    <Param val="EYELINK 1000 DESKTOP" valType="str" updates="None" name="elModel"/>
+    <Param val="ELLIPSE_FIT" valType="str" updates="None" name="elPupilAlgorithm"/>
+    <Param val="PUPIL_AREA" valType="str" updates="None" name="elPupilMeasure"/>
+    <Param val="1000" valType="num" updates="None" name="elSampleRate"/>
+    <Param val="False" valType="bool" updates="None" name="elSimMode"/>
+    <Param val="RIGHT_EYE" valType="str" updates="None" name="elTrackEyes"/>
+    <Param val="PUPIL_CR_TRACKING" valType="str" updates="None" name="elTrackingMode"/>
+    <Param val="base" valType="str" updates="None" name="expName"/>
+    <Param val="on Sync" valType="str" updates="None" name="exportHTML"/>
+    <Param val="None" valType="str" updates="None" name="eyetracker"/>
+    <Param val="127.0.0.1" valType="str" updates="None" name="gpAddress"/>
+    <Param val="4242" valType="num" updates="None" name="gpPort"/>
+    <Param val="Pyglet" valType="str" updates="None" name="keyboardBackend"/>
+    <Param val="exp" valType="code" updates="None" name="logging level"/>
+    <Param val="('MIDDLE_BUTTON',)" valType="list" updates="None" name="mgBlink"/>
+    <Param val="CONTINUOUS" valType="str" updates="None" name="mgMove"/>
+    <Param val="0.5" valType="num" updates="None" name="mgSaccade"/>
+    <Param val="0.6" valType="num" updates="None" name="plConfidenceThreshold"/>
+    <Param val="True" valType="bool" updates="None" name="plPupilCaptureRecordingEnabled"/>
+    <Param val="" valType="str" updates="None" name="plPupilCaptureRecordingLocation"/>
+    <Param val="127.0.0.1" valType="str" updates="None" name="plPupilRemoteAddress"/>
+    <Param val="50020" valType="num" updates="None" name="plPupilRemotePort"/>
+    <Param val="1000" valType="num" updates="None" name="plPupilRemoteTimeoutMs"/>
+    <Param val="False" valType="bool" updates="None" name="plPupillometryOnly"/>
+    <Param val="psychopy_iohub_surface" valType="str" updates="None" name="plSurfaceName"/>
+    <Param val="" valType="str" updates="None" name="tbLicenseFile"/>
+    <Param val="" valType="str" updates="None" name="tbModel"/>
+    <Param val="60" valType="num" updates="None" name="tbSampleRate"/>
+    <Param val="" valType="str" updates="None" name="tbSerialNo"/>
+    <Param val="pyglet" valType="str" updates="None" name="winBackend"/>
+  </Settings>
+  <Routines>
+    <Routine name="in1">
+      <CodeComponent name="input_files_code" plugin="None">
+        <Param val="from psychopy.parallel import ParallelPort&amp;#10;from subprocess import Popen&amp;#10;import time&amp;#10;import pandas as pd &amp;#10;import os&amp;#10;import numpy as np &amp;#10;import random&amp;#10;&amp;#10;home_dir = os.path.expanduser('~')&amp;#10;data_dir = os.path.join(home_dir, 'Desktop', 'pig', 'experiment', 'data')&amp;#10;input_dir = os.path.join(home_dir,'Desktop', 'pig', 'experiment', 'stims')&amp;#10;os.chdir(input_dir)&amp;#10;&amp;#10;#!/usr/bin/env python&amp;#10;# Script to generate participant-specific trial orders and save input files&amp;#10;&amp;#10;import os&amp;#10;import pandas as pd&amp;#10;from psychopy import gui, core&amp;#10;&amp;#10;# === GUI to gather participant info ===&amp;#10;dlg = gui.Dlg(title='Initialize participant')&amp;#10;dlg.addField('Participant ID')&amp;#10;dlg.addField('Phase order (1-4)', choices=[1, 2, 3, 4])&amp;#10;dlg.addField('Room', choices=['VR', 'behavior'])&amp;#10;dlg.addField('Init parallel port?', choices=['yes', 'no (testing)'])&amp;#10;&amp;#10;user_input = dlg.show()&amp;#10;&amp;#10;if dlg.OK is False:&amp;#10;    core.quit()&amp;#10;&amp;#10;# === Extract GUI inputs ===&amp;#10;participant_id = int(user_input[0])&amp;#10;order_ind = int(user_input[1])&amp;#10;room_input = user_input[2]&amp;#10;testing_mode = user_input[3] == 'no (testing)'&amp;#10;&amp;#10;# === Define paths ===&amp;#10;bidsID = f&quot;sub-PYG{participant_id:03d}&quot;&amp;#10;template_dir = os.path.join(home_dir, &quot;Desktop&quot;,&quot;pig&quot;, &quot;experiment&quot;, &quot;task_templates&quot;, f&quot;order {order_ind}&quot;)&amp;#10;output_dir = os.path.join(home_dir, &quot;Desktop&quot;,&quot;pig&quot;, &quot;experiment&quot;,&quot;data&quot;, bidsID)&amp;#10;os.makedirs(output_dir, exist_ok=True)&amp;#10;&amp;#10;# === Define all phase files to load and save ===&amp;#10;phase_files = {&amp;#10;    &quot;acq&quot;: &quot;acq.csv&quot;,&amp;#10;    &quot;ext&quot;: &quot;ext.csv&quot;,&amp;#10;    &quot;recall&quot;: &quot;recall.csv&quot;,&amp;#10;    &quot;bps1&quot;: &quot;bps1.csv&quot;,&amp;#10;    &quot;bps2&quot;: &quot;bps2.csv&quot;,&amp;#10;}&amp;#10;&amp;#10;psycho_columns_to_remove = [&amp;#10;    &quot;trials.thisRepN&quot;, &quot;trials.thisTrialN&quot;, &quot;trials.thisN&quot;, &quot;trials.thisIndex&quot;,&amp;#10;    &quot;cond_trials.thisRepN&quot;, &quot;cond_trials.thisTrialN&quot;, &quot;cond_trials.thisN&quot;, &quot;cond_trials.thisIndex&quot;&amp;#10;]&amp;#10;&amp;#10;phase_dfs = {}&amp;#10;&amp;#10;for phase, filename in phase_files.items():&amp;#10;&amp;#10;  &amp;#10;    if phase in [&quot;recall&quot;, &quot;bps1&quot;, &quot;bps2&quot;]:&amp;#10;        session = 3&amp;#10;    else:&amp;#10;        session = 1&amp;#10;&amp;#10;    filepath = os.path.join(template_dir, filename)&amp;#10;    if not os.path.exists(filepath):&amp;#10;        raise FileNotFoundError(f&quot;Missing input file: {filepath}&quot;)&amp;#10;&amp;#10;    df = pd.read_csv(filepath)&amp;#10;    df = df.drop(columns=[col for col in psycho_columns_to_remove if col in df.columns])&amp;#10;    df.insert(0, &quot;participant&quot;, participant_id)&amp;#10;    phase_dfs[phase] = df&amp;#10;&amp;#10;    output_filename = f&quot;{bidsID}_ses-{session}_task-{phase}_events-input.csv&quot;&amp;#10;    output_path = os.path.join(output_dir, output_filename)&amp;#10;    df.to_csv(output_path, index=False)&amp;#10;&amp;#10;print(f&quot;Participant files generated for {bidsID} in {output_dir}&quot;)&amp;#10;&amp;#10;&amp;#10;&amp;#10;&amp;#10;#PARALLEL PORT CODE&amp;#10;&amp;#10;#BIO = True if user_input[4] == 'yes' else False&amp;#10;testing_mode = True  # Set to False when running real experiments&amp;#10;&amp;#10;if not testing_mode:&amp;#10;    BIO = True if user_input[5] == 'yes' and user_input[4] == 'VR' else False&amp;#10;    BIO2 = True if user_input[5] == 'yes' and user_input[4] == 'behavior' else False&amp;#10;else:&amp;#10;    BIO = False&amp;#10;    BIO2 = False&amp;#10;    logging.warn(&quot;Running in testing mode: BIO and BIO2 disabled.&quot;)&amp;#10;&amp;#10;if BIO:&amp;#10;    pport = ParallelPort(address='0xEFF8') #added 6/14&amp;#10;elif BIO2:&amp;#10;    pport = ParallelPort(address='0x3FB8') #added 6/14&amp;#10;else:&amp;#10;    class PortEmulator(object):&amp;#10;        def __init__(self, address=None):&amp;#10;            pass&amp;#10;        def setData(self, data=None):&amp;#10;            logging.warn(&quot;Sent data to non-existent PPort:{}&quot;.format(data))&amp;#10;        def setPin(self, pin, data):&amp;#10;            logging.warn(f&quot;Sent data to non-existent PPort pin: {pin}, {data}&quot;)&amp;#10;    pport = PortEmulator()&amp;#10;&amp;#10;pport.setData(0) #reset the pins&amp;#10;&amp;#10;def shock():&amp;#10;    pport.setPin(2,1)&amp;#10;    time.sleep(.005)&amp;#10;    pport.setPin(2,0)&amp;#10;&amp;#10;def stim_marker(on_or_offset='',SHOCK=False):&amp;#10;    if SHOCK:&amp;#10;        shock()&amp;#10;    if 'on' in on_or_offset:&amp;#10;        pport.setPin(4,1)&amp;#10;    elif 'off' in on_or_offset:&amp;#10;        pport.setPin(4,0)&amp;#10;      &amp;#10;#CREATE INPUT FILES CODE&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Py" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="input_files_code" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="in_end_experiment">
+      <KeyboardComponent name="end_exp_resp" plugin="None">
+        <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
+        <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
+        <Param val="end_exp_resp" valType="code" updates="None" name="name"/>
+        <Param val="press" valType="str" updates="constant" name="registerOn"/>
+        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="condition" valType="str" updates="None" name="stopType"/>
+        <Param val="(end_exp_resp.keys)=='space'" valType="code" updates="constant" name="stopVal"/>
+        <Param val="last key" valType="str" updates="constant" name="store"/>
+        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
+        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
+      </KeyboardComponent>
+      <TextComponent name="end_exp" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.04" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="end_exp" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="condition" valType="str" updates="None" name="stopType"/>
+        <Param val="(end_exp_resp.keys)=='space'" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="Experimenter press SPACE to exit the task. Files generated." valType="str" updates="constant" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+    </Routine>
+  </Routines>
+  <Flow>
+    <Routine name="in1"/>
+    <Routine name="in_end_experiment"/>
+  </Flow>
+</PsychoPy2experiment>

@@ -1,0 +1,1 @@
+This experiment was adapted from 2 sources: MRSM coded by Sophia Bibband PoEM MRI task coded in EPrime by Patrick LaingSydney Lambert has converted these conditions into the PsychoPy format.The PsychoPy version necessary is x2023.1.3
