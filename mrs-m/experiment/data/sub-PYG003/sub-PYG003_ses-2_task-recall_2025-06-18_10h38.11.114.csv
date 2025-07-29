@@ -1,5 +1,0 @@
-﻿participant,CS_type,trial,phase,cs_duration,iti_duration,categroy_trial,CS_trial,counterbal_order,stim,recall_trials.thisRepN,recall_trials.thisTrialN,recall_trials.thisN,recall_trials.thisIndex,crosshair.started,crosshair.stopped,trials_resp.started,recall_image.started,trials_resp.keys,trials_resp.rt,trials_resp.duration,trials_resp.stopped,recall_image.stopped,session,date,expName,psychopyVersion,frameRate,
-3.0,CSm,t_001,recall,1.0,1.0,tool_001,CSm_001,Order1,stims/tools/stapler.jpg,0,0,0,0,8.648813083011191,9.647093000006862,9.647093000006862,9.647093000006862,1,0.6693988750339486,None,,,2,2025-06-18_10h38.11.114,recall,2023.1.3,None,
-None,None,None,None,None,1.0,None,None,None,None,0,1,1,1,14.647556041018106,15.642300124978647,15.642300124978647,15.642300124978647,None,,,20.64151074999245,20.64151074999245,2,2025-06-18_10h38.11.114,recall,2023.1.3,None,
-None,None,None,None,None,1.0,None,None,None,None,0,2,2,2,20.64151074999245,21.63346341601573,21.63346341601573,21.63346341601573,None,,,26.63864800002193,26.63864800002193,2,2025-06-18_10h38.11.114,recall,2023.1.3,None,
-,,,,,,,,,,,,,,26.63864800002193,,,,,,,,,,,,,,

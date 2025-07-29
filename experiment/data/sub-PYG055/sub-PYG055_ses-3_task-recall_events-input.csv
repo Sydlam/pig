@@ -1,0 +1,13 @@
+participant,CS_type,trial,phase,cs_duration,iti_duration,categroy_trial,CS_trial,stim
+55,CSm,t_001,recall,5,5,tool_001,CSm_001,stims/tools/stapler.jpg
+55,CSp,t_002,recall,5,6,animal_001,CSp_001,stims/animals/snail.jpg
+55,CSm,t_003,recall,5,7,tool_002,CSm_002,stims/tools/coffeegrinder.jpg
+55,CSp,t_004,recall,5,6,animal_002,CSp_002,stims/animals/goat.jpg
+55,CSp,t_005,recall,5,6,animal_003,CSp_003,stims/animals/clownfish.jpg
+55,CSm,t_006,recall,5,7,tool_003,CSm_003,stims/tools/necktie.jpg
+55,CSp,t_007,recall,5,7,animal_004,CSp_004,stims/animals/echidna.jpg
+55,CSm,t_008,recall,5,7,tool_004,CSm_004,stims/tools/shoppingbag.jpg
+55,CSp,t_009,recall,5,5,animal_005,CSp_005,stims/animals/bowerbird.jpg
+55,CSm,t_010,recall,5,6,tool_005,CSm_005,stims/tools/ladle.jpg
+55,CSm,t_011,recall,5,5,tool_006,CSm_006,stims/tools/boxinggloves.jpg
+55,CSp,t_012,recall,5,5,animal_006,CSp_006,stims/animals/armadillo.jpg

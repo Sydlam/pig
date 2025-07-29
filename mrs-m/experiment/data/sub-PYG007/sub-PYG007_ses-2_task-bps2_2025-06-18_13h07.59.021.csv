@@ -1,5 +1,0 @@
-﻿participant,CS_type,phaseOrigin,trial,stim,mem_con,cs_duration,iti_duration,phase,category,memCon_by_phase,shocked_day1,trials.thisRepN,trials.thisTrialN,trials.thisN,trials.thisIndex,crosshair.started,crosshair.stopped,mem_image.started,mem_resp.started,mem_resp.keys,mem_resp.rt,mem_resp.duration,session,date,expName,psychopyVersion,frameRate,
-7,CSm,bps,t_001,stims/animals/dolphin.jpg,new,5,2,bps2,animal,NEW_BPS_CSm,noUS,0,0,0,0,8.732184624997899,10.734611207968555,10.734611207968555,10.734611207968555,1,0.8170155839761719,None,001,2025-06-18_13h07.59.021,bps2,2023.1.3,None,
-7,CSm,base,t_002,stims/animals/waterdragon.jpg,old,5,2,bps2,animal,OLD_BL_CSm,noUS,0,1,1,1,12.061080916959327,14.063252624997403,14.063252624997403,14.063252624997403,3,2.097803374985233,None,001,2025-06-18_13h07.59.021,bps2,2023.1.3,None,
-7,CSm,ext,t_003,stims/animals/capybara.jpg,old,5,2,bps2,animal,OLD_EXT_CSm,noUS,0,2,2,2,16.667768624960445,18.661792832950596,18.661792832950596,18.661792832950596,4,0.7494126670062542,None,001,2025-06-18_13h07.59.021,bps2,2023.1.3,None,
-,,,,,,,,,,,,,,,,19.919775999966078,21.914547958003823,21.914547958003823,21.914547958003823,,,,,,,,,
