@@ -67,52 +67,6 @@
     <Param val="pyglet" valType="str" updates="None" name="winBackend"/>
   </Settings>
   <Routines>
-    <Routine name="in2">
-      <TextComponent name="inst2" plugin="None">
-        <Param val="white" valType="color" updates="constant" name="color"/>
-        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
-        <Param val="1" valType="num" updates="constant" name="contrast"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="None" valType="str" updates="constant" name="flip"/>
-        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
-        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
-        <Param val="0.03" valType="num" updates="constant" name="letterHeight"/>
-        <Param val="inst2" valType="code" updates="None" name="name"/>
-        <Param val="" valType="num" updates="constant" name="opacity"/>
-        <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
-        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="condition" valType="str" updates="None" name="stopType"/>
-        <Param val="(inst2_resp.keys)=='space'" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="The instructions for this task are the same as where you left off on your first session. &amp;#10;&amp;#10;That is, on each trial, I want you to rate whether or not you expect to receive a shock. &amp;#10;&amp;#10;Answer “Yes” or “No” to the following question by pressing the corresponding key on the keypad: &amp;#10;&amp;#10;Do you expect to receive a shock following this picture?&amp;#10;&amp;#10;1 = Yes &amp;#10;2 = No &amp;#10;&amp;#10;Do you have any questions?&amp;#10;" valType="str" updates="constant" name="text"/>
-        <Param val="from exp settings" valType="str" updates="None" name="units"/>
-        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
-      </TextComponent>
-      <KeyboardComponent name="inst2_resp" plugin="None">
-        <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
-        <Param val="" valType="str" updates="constant" name="correctAns"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
-        <Param val="inst2_resp" valType="code" updates="None" name="name"/>
-        <Param val="press" valType="str" updates="constant" name="registerOn"/>
-        <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="condition" valType="str" updates="None" name="stopType"/>
-        <Param val="(inst2_resp.keys)=='space'" valType="code" updates="constant" name="stopVal"/>
-        <Param val="nothing" valType="str" updates="constant" name="store"/>
-        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
-        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
-      </KeyboardComponent>
-    </Routine>
     <Routine name="in1">
       <TextComponent name="inst1" plugin="None">
         <Param val="white" valType="color" updates="constant" name="color"/>
@@ -135,7 +89,7 @@
         <Param val="condition" valType="str" updates="None" name="stopType"/>
         <Param val="(inst1_resp.keys)=='space'" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="First, please make sure your cell phone is silenced. &amp;#10;&amp;#10;We will be measuring how much you are sweating from the sensors on your hand. &amp;#10;&amp;#10;These are very sensitive to movement and posture, so please sit up straight and do not shift around in your seat or move around during the experiment. &amp;#10;&amp;#10;Press SPACE to continue…&amp;#10;" valType="str" updates="constant" name="text"/>
+        <Param val="In this portion of the experiment, you will  see pictures of animals and tools. &amp;#10;&amp;#10;Following certain pictures, you will receive an electrical shock to your wrist right before the picture goes away. &amp;#10;&amp;#10;Please make a button press for each trial, even if you are just guessing. &amp;#10;" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
@@ -227,7 +181,7 @@
         <Param val="condition" valType="str" updates="None" name="stopType"/>
         <Param val="(inst4_resp.keys)=='space'" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="PLEASE MAKE A RESPONSE ON EVERY TRIAL, even if you are just guessing.  &amp;#10;&amp;#10;We are measuring how fast you press the button. &amp;#10;&amp;#10;You only need to press a button when you see a picture. &amp;#10;&amp;#10;Press SPACE to continue with the instructions...&amp;#10;" valType="str" updates="constant" name="text"/>
+        <Param val="PLEASE MAKE A RESPONSE ON EVERY TRIAL, even if you are just guessing.  &amp;#10;&amp;#10;We are measuring how fast you press the button. &amp;#10;&amp;#10;You only need to press a button when you see a picture. &amp;#10;&amp;#10;Please note your button presses do not trigger or prevent shocks, they are just to record your responses.&amp;#10;" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
@@ -1075,7 +1029,6 @@
   </Routines>
   <Flow>
     <Routine name="in1"/>
-    <Routine name="in2"/>
     <Routine name="in3"/>
     <Routine name="in_begin_experiment"/>
     <Routine name="initial_iti"/>

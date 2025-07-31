@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.1.3),
-    on Mon Jul 28 13:58:48 2025
+    on Wed Jul 30 15:08:09 2025
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -99,7 +99,7 @@ filename = _thisDir + os.sep + f'data/{bidsID}/{bidsID}_ses-2_task-{expName}_{ex
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='/Users/sydneylambert/Desktop/pig/mrs-m/experiment/ses-3_run-2_lastrun.py',
+    originPath='/Users/sydneylambert/Desktop/pig/experiment/ses-3_run-2_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 logging.console.setLevel(logging.WARNING)  # this outputs to the screen, not a file
@@ -131,35 +131,35 @@ ioSession = ioServer = eyetracker = None
 # create a default keyboard (e.g. to check for escape)
 defaultKeyboard = keyboard.Keyboard(backend='event')
 
-# --- Initialize components for Routine "in1" ---
-inst1 = visual.TextStim(win=win, name='inst1',
-    text='First, please make sure your cell phone is silenced. \n\nWe will be measuring how much you are sweating from the sensors on your hand. \n\nThese are very sensitive to movement and posture, so please sit up straight and do not shift around in your seat or move around during the experiment. \n\nPress SPACE to continue…\n',
-    font='Open Sans',
-    pos=(0, 0), height=0.03, wrapWidth=None, ori=0.0, 
-    color='white', colorSpace='rgb', opacity=None, 
-    languageStyle='LTR',
-    depth=0.0);
-inst1_resp = keyboard.Keyboard()
-
-# --- Initialize components for Routine "in2" ---
-inst2 = visual.TextStim(win=win, name='inst2',
-    text='The instructions for this task are the same as where you left off on your first session. \n\nThat is, on each trial, I want you to rate whether or not you expect to receive a shock. \n\nAnswer “Yes” or “No” to the following question by pressing the corresponding key on the keypad: \n\nDo you expect to receive a shock following this picture?\n\n1 = Yes \n2 = No \n\nDo you have any questions?\n',
-    font='Open Sans',
-    pos=(0, 0), height=0.03, wrapWidth=None, ori=0.0, 
-    color='white', colorSpace='rgb', opacity=None, 
-    languageStyle='LTR',
-    depth=0.0);
-inst2_resp = keyboard.Keyboard()
-
-# --- Initialize components for Routine "in3" ---
+# --- Initialize components for Routine "ins1" ---
 inst3 = visual.TextStim(win=win, name='inst3',
-    text='Press SPACE to begin the experiment.',
+    text='Now we are going to test your memory for the pictures that you saw on your first visit.\nPlease let us know whether you expected a memory test today: \n\n\n1 = No, I did not expect a memory test at all. \n\n2 = I am somewhat surprised by this memory test. \n\n3 = I am only a little surprised by a memory test.\n \n4 = I somewhat expected a memory test. \n\n5 = Yes, I knew there would be a memory test. \n',
     font='Open Sans',
     pos=(0, 0), height=0.03, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=0.0);
 inst3_resp = keyboard.Keyboard()
+
+# --- Initialize components for Routine "in2" ---
+inst2 = visual.TextStim(win=win, name='inst2',
+    text='For each picture, please indicate whether you saw the picture on your first visit (it is “OLD”), or whether you did NOT see the picture on your first visit (it is “NEW”). \n\nYou will rate the confidence of your decision by indicating whether the picture is: \n\n1 = Old\n2 = New\n\n\nYou will not be receiving any shocks during this portion of the experiment.',
+    font='Open Sans',
+    pos=(0, 0), height=0.03, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=0.0);
+inst5_resp = keyboard.Keyboard()
+
+# --- Initialize components for Routine "in4" ---
+inst4 = visual.TextStim(win=win, name='inst4',
+    text='PLEASE MAKE A RESPONSE ON EVERY TRIAL, even if you are just guessing.  \n\nWe are measuring how fast you press the button. \n\nYou only need to press a button when you see a picture. \n\nPress SPACE to continue with the instructions...\n',
+    font='Open Sans',
+    pos=(0, 0), height=0.03, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=0.0);
+inst4_resp = keyboard.Keyboard()
 
 # --- Initialize components for Routine "in_begin_experiment" ---
 beg_exp = visual.TextStim(win=win, name='beg_exp',
@@ -173,19 +173,33 @@ beg_exp_resp = keyboard.Keyboard()
 
 # --- Initialize components for Routine "initial_iti" ---
 iti_old = visual.TextStim(win=win, name='iti_old',
-    text='1\nOld',
+    text='1\nDefinitely Old',
     font='Open Sans',
-    pos=(-.15, -.325), height=0.03, wrapWidth=None, ori=0.0, 
+    pos=(-.30, -.325), height=0.03, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=0.0);
-iti_new = visual.TextStim(win=win, name='iti_new',
-    text='2\nNew',
+maybe_old_2 = visual.TextStim(win=win, name='maybe_old_2',
+    text='2\nMaybe Old',
     font='Open Sans',
-    pos=(.15, -.325), height=0.03, wrapWidth=None, ori=0.0, 
+    pos=(-.10,-.325), height=0.03, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=-1.0);
+maybe_new_2 = visual.TextStim(win=win, name='maybe_new_2',
+    text='3\nMaybe New',
+    font='Open Sans',
+    pos=(.10,-.325), height=0.03, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-2.0);
+iti_new = visual.TextStim(win=win, name='iti_new',
+    text='4\nDefinitely New',
+    font='Open Sans',
+    pos=(.30, -.325), height=0.03, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-3.0);
 iti_initial = visual.ImageStim(
     win=win,
     name='iti_initial', 
@@ -193,24 +207,45 @@ iti_initial = visual.ImageStim(
     ori=0.0, pos=(0, 0), size=(0.5, 0.5),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-2.0)
+    texRes=128.0, interpolate=True, depth=-4.0)
 
 # --- Initialize components for Routine "trial" ---
 trials_resp = keyboard.Keyboard()
-old = visual.TextStim(win=win, name='old',
-    text='1\nOld',
+mem_quest = visual.TextStim(win=win, name='mem_quest',
+    text='Is this picture OLD or NEW?',
     font='Open Sans',
-    pos=(-.15, -.325), height=0.03, wrapWidth=None, ori=0.0, 
+    pos=(0, .3), height=0.05, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=-1.0);
-new = visual.TextStim(win=win, name='new',
-    text='2\nNew',
+old = visual.TextStim(win=win, name='old',
+    text='1\nDefinitely Old',
     font='Open Sans',
-    pos=(.15, -.325), height=0.03, wrapWidth=None, ori=0.0, 
+    pos=(-.30, -.325), height=0.03, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=-2.0);
+maybe_old = visual.TextStim(win=win, name='maybe_old',
+    text='2\nMaybe Old',
+    font='Open Sans',
+    pos=(-.10,-.325), height=0.03, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-3.0);
+maybe_new = visual.TextStim(win=win, name='maybe_new',
+    text='3\nMaybe New',
+    font='Open Sans',
+    pos=(.10,-.325), height=0.03, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-4.0);
+new = visual.TextStim(win=win, name='new',
+    text='4\nDefinitely New',
+    font='Open Sans',
+    pos=(.30, -.325), height=0.03, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-5.0);
 recall_image = visual.ImageStim(
     win=win,
     name='recall_image', 
@@ -218,25 +253,39 @@ recall_image = visual.ImageStim(
     ori=0.0, pos=(0, 0), size=(0.5, 0.5),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-3.0)
+    texRes=128.0, interpolate=True, depth=-6.0)
 # Run 'Begin Experiment' code from cs_code
 response_made = True
 
 # --- Initialize components for Routine "iti" ---
 old_iti = visual.TextStim(win=win, name='old_iti',
-    text='1\nOld',
+    text='1\nDefinitely Old',
     font='Open Sans',
-    pos=(-.15, -.325), height=0.03, wrapWidth=None, ori=0.0, 
+    pos=(-.30, -.325), height=0.03, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=0.0);
-new_iti = visual.TextStim(win=win, name='new_iti',
-    text='2\nNew',
+maybe_old_3 = visual.TextStim(win=win, name='maybe_old_3',
+    text='2\nMaybe Old',
     font='Open Sans',
-    pos=(.15, -.325), height=0.03, wrapWidth=None, ori=0.0, 
+    pos=(-.10, -.325), height=0.03, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=-1.0);
+maybe_new_3 = visual.TextStim(win=win, name='maybe_new_3',
+    text='3\nMaybe New',
+    font='Open Sans',
+    pos=(.10, -.325), height=0.03, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-2.0);
+new_iti = visual.TextStim(win=win, name='new_iti',
+    text='4\nDefinitely New',
+    font='Open Sans',
+    pos=(.3, -.325), height=0.03, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-3.0);
 iti_trial = visual.ImageStim(
     win=win,
     name='iti_trial', 
@@ -244,30 +293,44 @@ iti_trial = visual.ImageStim(
     ori=0.0, pos=(0, 0), size=(0.5, 0.5),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-2.0)
+    texRes=128.0, interpolate=True, depth=-4.0)
 warning_text = visual.TextStim(win=win, name='warning_text',
     text='',
     font='Open Sans',
-    pos=(0, -.4), height=0.04, wrapWidth=None, ori=0.0, 
+    pos=(0, .3), height=0.04, wrapWidth=None, ori=0.0, 
     color='orange', colorSpace='rgb', opacity=1.0, 
     languageStyle='LTR',
-    depth=-4.0);
+    depth=-6.0);
 
 # --- Initialize components for Routine "final_iti" ---
 iti_old2 = visual.TextStim(win=win, name='iti_old2',
-    text='1\nOld',
+    text='1\nDefinitely Old',
     font='Open Sans',
-    pos=(-.15, -.325), height=0.03, wrapWidth=None, ori=0.0, 
+    pos=(-.30, -.325), height=0.03, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=0.0);
-iti_new2 = visual.TextStim(win=win, name='iti_new2',
-    text='2\nNew',
+maybe_old_4 = visual.TextStim(win=win, name='maybe_old_4',
+    text='2\nMaybe Old',
     font='Open Sans',
-    pos=(.15, -.325), height=0.03, wrapWidth=None, ori=0.0, 
+    pos=(-.1, -.325), height=0.03, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=-1.0);
+maybe_new_4 = visual.TextStim(win=win, name='maybe_new_4',
+    text='3\nMaybe New',
+    font='Open Sans',
+    pos=(.1, -.325), height=0.03, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-2.0);
+iti_new2 = visual.TextStim(win=win, name='iti_new2',
+    text='4\nDefinitely New',
+    font='Open Sans',
+    pos=(.3, -.325), height=0.03, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-3.0);
 iti_final = visual.ImageStim(
     win=win,
     name='iti_final', 
@@ -275,7 +338,7 @@ iti_final = visual.ImageStim(
     ori=0.0, pos=(0, 0), size=(0.5, 0.5),
     color=[1,1,1], colorSpace='rgb', opacity=None,
     flipHoriz=False, flipVert=False,
-    texRes=128.0, interpolate=True, depth=-2.0)
+    texRes=128.0, interpolate=True, depth=-4.0)
 
 # --- Initialize components for Routine "in_end_experiment" ---
 end_exp_resp = keyboard.Keyboard()
@@ -291,15 +354,15 @@ end_exp = visual.TextStim(win=win, name='end_exp',
 globalClock = core.Clock()  # to track the time since experiment started
 routineTimer = core.Clock()  # to track time remaining of each (possibly non-slip) routine 
 
-# --- Prepare to start Routine "in1" ---
+# --- Prepare to start Routine "ins1" ---
 continueRoutine = True
 # update component parameters for each repeat
-inst1_resp.keys = []
-inst1_resp.rt = []
-_inst1_resp_allKeys = []
+inst3_resp.keys = []
+inst3_resp.rt = []
+_inst3_resp_allKeys = []
 # keep track of which components have finished
-in1Components = [inst1, inst1_resp]
-for thisComponent in in1Components:
+ins1Components = [inst3, inst3_resp]
+for thisComponent in ins1Components:
     thisComponent.tStart = None
     thisComponent.tStop = None
     thisComponent.tStartRefresh = None
@@ -311,7 +374,7 @@ t = 0
 _timeToFirstFrame = win.getFutureFlipTime(clock="now")
 frameN = -1
 
-# --- Run Routine "in1" ---
+# --- Run Routine "ins1" ---
 routineForceEnded = not continueRoutine
 while continueRoutine:
     # get current time
@@ -321,67 +384,47 @@ while continueRoutine:
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
-    # *inst1* updates
+    # *inst3* updates
     
-    # if inst1 is starting this frame...
-    if inst1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+    # if inst3 is starting this frame...
+    if inst3.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        inst1.frameNStart = frameN  # exact frame index
-        inst1.tStart = t  # local t and not account for scr refresh
-        inst1.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(inst1, 'tStartRefresh')  # time at next scr refresh
+        inst3.frameNStart = frameN  # exact frame index
+        inst3.tStart = t  # local t and not account for scr refresh
+        inst3.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(inst3, 'tStartRefresh')  # time at next scr refresh
         # update status
-        inst1.status = STARTED
-        inst1.setAutoDraw(True)
+        inst3.status = STARTED
+        inst3.setAutoDraw(True)
     
-    # if inst1 is active this frame...
-    if inst1.status == STARTED:
+    # if inst3 is active this frame...
+    if inst3.status == STARTED:
         # update params
         pass
     
-    # if inst1 is stopping this frame...
-    if inst1.status == STARTED:
-        if bool((inst1_resp.keys)=='space'):
-            # keep track of stop time/frame for later
-            inst1.tStop = t  # not accounting for scr refresh
-            inst1.frameNStop = frameN  # exact frame index
-            # update status
-            inst1.status = FINISHED
-            inst1.setAutoDraw(False)
-    
-    # *inst1_resp* updates
+    # *inst3_resp* updates
     waitOnFlip = False
     
-    # if inst1_resp is starting this frame...
-    if inst1_resp.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+    # if inst3_resp is starting this frame...
+    if inst3_resp.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        inst1_resp.frameNStart = frameN  # exact frame index
-        inst1_resp.tStart = t  # local t and not account for scr refresh
-        inst1_resp.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(inst1_resp, 'tStartRefresh')  # time at next scr refresh
+        inst3_resp.frameNStart = frameN  # exact frame index
+        inst3_resp.tStart = t  # local t and not account for scr refresh
+        inst3_resp.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(inst3_resp, 'tStartRefresh')  # time at next scr refresh
         # update status
-        inst1_resp.status = STARTED
+        inst3_resp.status = STARTED
         # keyboard checking is just starting
         waitOnFlip = True
-        win.callOnFlip(inst1_resp.clock.reset)  # t=0 on next screen flip
-        win.callOnFlip(inst1_resp.clearEvents, eventType='keyboard')  # clear events on next screen flip
-    
-    # if inst1_resp is stopping this frame...
-    if inst1_resp.status == STARTED:
-        if bool((inst1_resp.keys)=='space'):
-            # keep track of stop time/frame for later
-            inst1_resp.tStop = t  # not accounting for scr refresh
-            inst1_resp.frameNStop = frameN  # exact frame index
-            # update status
-            inst1_resp.status = FINISHED
-            inst1_resp.status = FINISHED
-    if inst1_resp.status == STARTED and not waitOnFlip:
-        theseKeys = inst1_resp.getKeys(keyList=['space'], waitRelease=False)
-        _inst1_resp_allKeys.extend(theseKeys)
-        if len(_inst1_resp_allKeys):
-            inst1_resp.keys = _inst1_resp_allKeys[-1].name  # just the last key pressed
-            inst1_resp.rt = _inst1_resp_allKeys[-1].rt
-            inst1_resp.duration = _inst1_resp_allKeys[-1].duration
+        win.callOnFlip(inst3_resp.clock.reset)  # t=0 on next screen flip
+        win.callOnFlip(inst3_resp.clearEvents, eventType='keyboard')  # clear events on next screen flip
+    if inst3_resp.status == STARTED and not waitOnFlip:
+        theseKeys = inst3_resp.getKeys(keyList=['1','2','3','4','5'], waitRelease=False)
+        _inst3_resp_allKeys.extend(theseKeys)
+        if len(_inst3_resp_allKeys):
+            inst3_resp.keys = _inst3_resp_allKeys[-1].name  # just the last key pressed
+            inst3_resp.rt = _inst3_resp_allKeys[-1].rt
+            inst3_resp.duration = _inst3_resp_allKeys[-1].duration
             # a response ends the routine
             continueRoutine = False
     
@@ -396,7 +439,7 @@ while continueRoutine:
         routineForceEnded = True
         break
     continueRoutine = False  # will revert to True if at least one component still running
-    for thisComponent in in1Components:
+    for thisComponent in ins1Components:
         if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
             continueRoutine = True
             break  # at least one component has not yet finished
@@ -405,21 +448,21 @@ while continueRoutine:
     if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
         win.flip()
 
-# --- Ending Routine "in1" ---
-for thisComponent in in1Components:
+# --- Ending Routine "ins1" ---
+for thisComponent in ins1Components:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-# the Routine "in1" was not non-slip safe, so reset the non-slip timer
+# the Routine "ins1" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 
 # --- Prepare to start Routine "in2" ---
 continueRoutine = True
 # update component parameters for each repeat
-inst2_resp.keys = []
-inst2_resp.rt = []
-_inst2_resp_allKeys = []
+inst5_resp.keys = []
+inst5_resp.rt = []
+_inst5_resp_allKeys = []
 # keep track of which components have finished
-in2Components = [inst2, inst2_resp]
+in2Components = [inst2, inst5_resp]
 for thisComponent in in2Components:
     thisComponent.tStart = None
     thisComponent.tStop = None
@@ -462,7 +505,7 @@ while continueRoutine:
     
     # if inst2 is stopping this frame...
     if inst2.status == STARTED:
-        if bool((inst2_resp.keys)=='space'):
+        if bool((inst5_resp.keys)=='space'):
             # keep track of stop time/frame for later
             inst2.tStop = t  # not accounting for scr refresh
             inst2.frameNStop = frameN  # exact frame index
@@ -470,39 +513,39 @@ while continueRoutine:
             inst2.status = FINISHED
             inst2.setAutoDraw(False)
     
-    # *inst2_resp* updates
+    # *inst5_resp* updates
     waitOnFlip = False
     
-    # if inst2_resp is starting this frame...
-    if inst2_resp.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+    # if inst5_resp is starting this frame...
+    if inst5_resp.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        inst2_resp.frameNStart = frameN  # exact frame index
-        inst2_resp.tStart = t  # local t and not account for scr refresh
-        inst2_resp.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(inst2_resp, 'tStartRefresh')  # time at next scr refresh
+        inst5_resp.frameNStart = frameN  # exact frame index
+        inst5_resp.tStart = t  # local t and not account for scr refresh
+        inst5_resp.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(inst5_resp, 'tStartRefresh')  # time at next scr refresh
         # update status
-        inst2_resp.status = STARTED
+        inst5_resp.status = STARTED
         # keyboard checking is just starting
         waitOnFlip = True
-        win.callOnFlip(inst2_resp.clock.reset)  # t=0 on next screen flip
-        win.callOnFlip(inst2_resp.clearEvents, eventType='keyboard')  # clear events on next screen flip
+        win.callOnFlip(inst5_resp.clock.reset)  # t=0 on next screen flip
+        win.callOnFlip(inst5_resp.clearEvents, eventType='keyboard')  # clear events on next screen flip
     
-    # if inst2_resp is stopping this frame...
-    if inst2_resp.status == STARTED:
-        if bool((inst2_resp.keys)=='space'):
+    # if inst5_resp is stopping this frame...
+    if inst5_resp.status == STARTED:
+        if bool((inst5_resp.keys)=='space'):
             # keep track of stop time/frame for later
-            inst2_resp.tStop = t  # not accounting for scr refresh
-            inst2_resp.frameNStop = frameN  # exact frame index
+            inst5_resp.tStop = t  # not accounting for scr refresh
+            inst5_resp.frameNStop = frameN  # exact frame index
             # update status
-            inst2_resp.status = FINISHED
-            inst2_resp.status = FINISHED
-    if inst2_resp.status == STARTED and not waitOnFlip:
-        theseKeys = inst2_resp.getKeys(keyList=['space'], waitRelease=False)
-        _inst2_resp_allKeys.extend(theseKeys)
-        if len(_inst2_resp_allKeys):
-            inst2_resp.keys = _inst2_resp_allKeys[-1].name  # just the last key pressed
-            inst2_resp.rt = _inst2_resp_allKeys[-1].rt
-            inst2_resp.duration = _inst2_resp_allKeys[-1].duration
+            inst5_resp.status = FINISHED
+            inst5_resp.status = FINISHED
+    if inst5_resp.status == STARTED and not waitOnFlip:
+        theseKeys = inst5_resp.getKeys(keyList=['space'], waitRelease=False)
+        _inst5_resp_allKeys.extend(theseKeys)
+        if len(_inst5_resp_allKeys):
+            inst5_resp.keys = _inst5_resp_allKeys[-1].name  # just the last key pressed
+            inst5_resp.rt = _inst5_resp_allKeys[-1].rt
+            inst5_resp.duration = _inst5_resp_allKeys[-1].duration
             # a response ends the routine
             continueRoutine = False
     
@@ -533,15 +576,15 @@ for thisComponent in in2Components:
 # the Routine "in2" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 
-# --- Prepare to start Routine "in3" ---
+# --- Prepare to start Routine "in4" ---
 continueRoutine = True
 # update component parameters for each repeat
-inst3_resp.keys = []
-inst3_resp.rt = []
-_inst3_resp_allKeys = []
+inst4_resp.keys = []
+inst4_resp.rt = []
+_inst4_resp_allKeys = []
 # keep track of which components have finished
-in3Components = [inst3, inst3_resp]
-for thisComponent in in3Components:
+in4Components = [inst4, inst4_resp]
+for thisComponent in in4Components:
     thisComponent.tStart = None
     thisComponent.tStop = None
     thisComponent.tStartRefresh = None
@@ -553,7 +596,7 @@ t = 0
 _timeToFirstFrame = win.getFutureFlipTime(clock="now")
 frameN = -1
 
-# --- Run Routine "in3" ---
+# --- Run Routine "in4" ---
 routineForceEnded = not continueRoutine
 while continueRoutine:
     # get current time
@@ -563,67 +606,67 @@ while continueRoutine:
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
-    # *inst3* updates
+    # *inst4* updates
     
-    # if inst3 is starting this frame...
-    if inst3.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+    # if inst4 is starting this frame...
+    if inst4.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        inst3.frameNStart = frameN  # exact frame index
-        inst3.tStart = t  # local t and not account for scr refresh
-        inst3.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(inst3, 'tStartRefresh')  # time at next scr refresh
+        inst4.frameNStart = frameN  # exact frame index
+        inst4.tStart = t  # local t and not account for scr refresh
+        inst4.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(inst4, 'tStartRefresh')  # time at next scr refresh
         # update status
-        inst3.status = STARTED
-        inst3.setAutoDraw(True)
+        inst4.status = STARTED
+        inst4.setAutoDraw(True)
     
-    # if inst3 is active this frame...
-    if inst3.status == STARTED:
+    # if inst4 is active this frame...
+    if inst4.status == STARTED:
         # update params
         pass
     
-    # if inst3 is stopping this frame...
-    if inst3.status == STARTED:
-        if bool((inst3_resp.keys)=='space'):
+    # if inst4 is stopping this frame...
+    if inst4.status == STARTED:
+        if bool((inst4_resp.keys)=='space'):
             # keep track of stop time/frame for later
-            inst3.tStop = t  # not accounting for scr refresh
-            inst3.frameNStop = frameN  # exact frame index
+            inst4.tStop = t  # not accounting for scr refresh
+            inst4.frameNStop = frameN  # exact frame index
             # update status
-            inst3.status = FINISHED
-            inst3.setAutoDraw(False)
+            inst4.status = FINISHED
+            inst4.setAutoDraw(False)
     
-    # *inst3_resp* updates
+    # *inst4_resp* updates
     waitOnFlip = False
     
-    # if inst3_resp is starting this frame...
-    if inst3_resp.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+    # if inst4_resp is starting this frame...
+    if inst4_resp.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        inst3_resp.frameNStart = frameN  # exact frame index
-        inst3_resp.tStart = t  # local t and not account for scr refresh
-        inst3_resp.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(inst3_resp, 'tStartRefresh')  # time at next scr refresh
+        inst4_resp.frameNStart = frameN  # exact frame index
+        inst4_resp.tStart = t  # local t and not account for scr refresh
+        inst4_resp.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(inst4_resp, 'tStartRefresh')  # time at next scr refresh
         # update status
-        inst3_resp.status = STARTED
+        inst4_resp.status = STARTED
         # keyboard checking is just starting
         waitOnFlip = True
-        win.callOnFlip(inst3_resp.clock.reset)  # t=0 on next screen flip
-        win.callOnFlip(inst3_resp.clearEvents, eventType='keyboard')  # clear events on next screen flip
+        win.callOnFlip(inst4_resp.clock.reset)  # t=0 on next screen flip
+        win.callOnFlip(inst4_resp.clearEvents, eventType='keyboard')  # clear events on next screen flip
     
-    # if inst3_resp is stopping this frame...
-    if inst3_resp.status == STARTED:
-        if bool((inst3_resp.keys)=='space'):
+    # if inst4_resp is stopping this frame...
+    if inst4_resp.status == STARTED:
+        if bool((inst4_resp.keys)=='space'):
             # keep track of stop time/frame for later
-            inst3_resp.tStop = t  # not accounting for scr refresh
-            inst3_resp.frameNStop = frameN  # exact frame index
+            inst4_resp.tStop = t  # not accounting for scr refresh
+            inst4_resp.frameNStop = frameN  # exact frame index
             # update status
-            inst3_resp.status = FINISHED
-            inst3_resp.status = FINISHED
-    if inst3_resp.status == STARTED and not waitOnFlip:
-        theseKeys = inst3_resp.getKeys(keyList=['space'], waitRelease=False)
-        _inst3_resp_allKeys.extend(theseKeys)
-        if len(_inst3_resp_allKeys):
-            inst3_resp.keys = _inst3_resp_allKeys[-1].name  # just the last key pressed
-            inst3_resp.rt = _inst3_resp_allKeys[-1].rt
-            inst3_resp.duration = _inst3_resp_allKeys[-1].duration
+            inst4_resp.status = FINISHED
+            inst4_resp.status = FINISHED
+    if inst4_resp.status == STARTED and not waitOnFlip:
+        theseKeys = inst4_resp.getKeys(keyList=['space'], waitRelease=False)
+        _inst4_resp_allKeys.extend(theseKeys)
+        if len(_inst4_resp_allKeys):
+            inst4_resp.keys = _inst4_resp_allKeys[-1].name  # just the last key pressed
+            inst4_resp.rt = _inst4_resp_allKeys[-1].rt
+            inst4_resp.duration = _inst4_resp_allKeys[-1].duration
             # a response ends the routine
             continueRoutine = False
     
@@ -638,7 +681,7 @@ while continueRoutine:
         routineForceEnded = True
         break
     continueRoutine = False  # will revert to True if at least one component still running
-    for thisComponent in in3Components:
+    for thisComponent in in4Components:
         if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
             continueRoutine = True
             break  # at least one component has not yet finished
@@ -647,11 +690,11 @@ while continueRoutine:
     if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
         win.flip()
 
-# --- Ending Routine "in3" ---
-for thisComponent in in3Components:
+# --- Ending Routine "in4" ---
+for thisComponent in in4Components:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-# the Routine "in3" was not non-slip safe, so reset the non-slip timer
+# the Routine "in4" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 
 # --- Prepare to start Routine "in_begin_experiment" ---
@@ -779,7 +822,7 @@ routineTimer.reset()
 continueRoutine = True
 # update component parameters for each repeat
 # keep track of which components have finished
-initial_itiComponents = [iti_old, iti_new, iti_initial]
+initial_itiComponents = [iti_old, maybe_old_2, maybe_new_2, iti_new, iti_initial]
 for thisComponent in initial_itiComponents:
     thisComponent.tStart = None
     thisComponent.tStop = None
@@ -830,6 +873,64 @@ while continueRoutine and routineTimer.getTime() < 10.0:
             # update status
             iti_old.status = FINISHED
             iti_old.setAutoDraw(False)
+    
+    # *maybe_old_2* updates
+    
+    # if maybe_old_2 is starting this frame...
+    if maybe_old_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        maybe_old_2.frameNStart = frameN  # exact frame index
+        maybe_old_2.tStart = t  # local t and not account for scr refresh
+        maybe_old_2.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(maybe_old_2, 'tStartRefresh')  # time at next scr refresh
+        # update status
+        maybe_old_2.status = STARTED
+        maybe_old_2.setAutoDraw(True)
+    
+    # if maybe_old_2 is active this frame...
+    if maybe_old_2.status == STARTED:
+        # update params
+        maybe_old_2.setColor('white', colorSpace='rgb', log=False)
+    
+    # if maybe_old_2 is stopping this frame...
+    if maybe_old_2.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > maybe_old_2.tStartRefresh + 10-frameTolerance:
+            # keep track of stop time/frame for later
+            maybe_old_2.tStop = t  # not accounting for scr refresh
+            maybe_old_2.frameNStop = frameN  # exact frame index
+            # update status
+            maybe_old_2.status = FINISHED
+            maybe_old_2.setAutoDraw(False)
+    
+    # *maybe_new_2* updates
+    
+    # if maybe_new_2 is starting this frame...
+    if maybe_new_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        maybe_new_2.frameNStart = frameN  # exact frame index
+        maybe_new_2.tStart = t  # local t and not account for scr refresh
+        maybe_new_2.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(maybe_new_2, 'tStartRefresh')  # time at next scr refresh
+        # update status
+        maybe_new_2.status = STARTED
+        maybe_new_2.setAutoDraw(True)
+    
+    # if maybe_new_2 is active this frame...
+    if maybe_new_2.status == STARTED:
+        # update params
+        maybe_new_2.setColor('white', colorSpace='rgb', log=False)
+    
+    # if maybe_new_2 is stopping this frame...
+    if maybe_new_2.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > maybe_new_2.tStartRefresh + 10-frameTolerance:
+            # keep track of stop time/frame for later
+            maybe_new_2.tStop = t  # not accounting for scr refresh
+            maybe_new_2.frameNStop = frameN  # exact frame index
+            # update status
+            maybe_new_2.status = FINISHED
+            maybe_new_2.setAutoDraw(False)
     
     # *iti_new* updates
     
@@ -956,10 +1057,10 @@ for thisBps1_trial in bps1_trials:
     #set the response colors to white
     old_resp_color = 'white'
     new_resp_color = 'white'
-    
-    
+    maybe_old_resp_color = 'white'
+    maybe_new_resp_color = 'white'
     # keep track of which components have finished
-    trialComponents = [trials_resp, old, new, recall_image]
+    trialComponents = [trials_resp, mem_quest, old, maybe_old, maybe_new, new, recall_image]
     for thisComponent in trialComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -1014,12 +1115,45 @@ for thisBps1_trial in bps1_trials:
                 trials_resp.status = FINISHED
                 trials_resp.status = FINISHED
         if trials_resp.status == STARTED and not waitOnFlip:
-            theseKeys = trials_resp.getKeys(keyList=['num_1','num_2','1','2'], waitRelease=False)
+            theseKeys = trials_resp.getKeys(keyList=['num_1','num_2','1','2','3','4','num_3','num_4'], waitRelease=False)
             _trials_resp_allKeys.extend(theseKeys)
             if len(_trials_resp_allKeys):
                 trials_resp.keys = _trials_resp_allKeys[0].name  # just the first key pressed
                 trials_resp.rt = _trials_resp_allKeys[0].rt
                 trials_resp.duration = _trials_resp_allKeys[0].duration
+        
+        # *mem_quest* updates
+        
+        # if mem_quest is starting this frame...
+        if mem_quest.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            mem_quest.frameNStart = frameN  # exact frame index
+            mem_quest.tStart = t  # local t and not account for scr refresh
+            mem_quest.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(mem_quest, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'mem_quest.started')
+            # update status
+            mem_quest.status = STARTED
+            mem_quest.setAutoDraw(True)
+        
+        # if mem_quest is active this frame...
+        if mem_quest.status == STARTED:
+            # update params
+            pass
+        
+        # if mem_quest is stopping this frame...
+        if mem_quest.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > mem_quest.tStartRefresh + 5.0-frameTolerance:
+                # keep track of stop time/frame for later
+                mem_quest.tStop = t  # not accounting for scr refresh
+                mem_quest.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'mem_quest.stopped')
+                # update status
+                mem_quest.status = FINISHED
+                mem_quest.setAutoDraw(False)
         
         # *old* updates
         
@@ -1049,6 +1183,64 @@ for thisBps1_trial in bps1_trials:
                 # update status
                 old.status = FINISHED
                 old.setAutoDraw(False)
+        
+        # *maybe_old* updates
+        
+        # if maybe_old is starting this frame...
+        if maybe_old.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            maybe_old.frameNStart = frameN  # exact frame index
+            maybe_old.tStart = t  # local t and not account for scr refresh
+            maybe_old.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(maybe_old, 'tStartRefresh')  # time at next scr refresh
+            # update status
+            maybe_old.status = STARTED
+            maybe_old.setAutoDraw(True)
+        
+        # if maybe_old is active this frame...
+        if maybe_old.status == STARTED:
+            # update params
+            maybe_old.setColor(maybe_old_resp_color, colorSpace='rgb', log=False)
+        
+        # if maybe_old is stopping this frame...
+        if maybe_old.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > maybe_old.tStartRefresh + cs_duration-frameTolerance:
+                # keep track of stop time/frame for later
+                maybe_old.tStop = t  # not accounting for scr refresh
+                maybe_old.frameNStop = frameN  # exact frame index
+                # update status
+                maybe_old.status = FINISHED
+                maybe_old.setAutoDraw(False)
+        
+        # *maybe_new* updates
+        
+        # if maybe_new is starting this frame...
+        if maybe_new.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            maybe_new.frameNStart = frameN  # exact frame index
+            maybe_new.tStart = t  # local t and not account for scr refresh
+            maybe_new.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(maybe_new, 'tStartRefresh')  # time at next scr refresh
+            # update status
+            maybe_new.status = STARTED
+            maybe_new.setAutoDraw(True)
+        
+        # if maybe_new is active this frame...
+        if maybe_new.status == STARTED:
+            # update params
+            maybe_new.setColor(maybe_new_resp_color, colorSpace='rgb', log=False)
+        
+        # if maybe_new is stopping this frame...
+        if maybe_new.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > maybe_new.tStartRefresh + cs_duration-frameTolerance:
+                # keep track of stop time/frame for later
+                maybe_new.tStop = t  # not accounting for scr refresh
+                maybe_new.frameNStop = frameN  # exact frame index
+                # update status
+                maybe_new.status = FINISHED
+                maybe_new.setAutoDraw(False)
         
         # *new* updates
         
@@ -1116,11 +1308,11 @@ for thisBps1_trial in bps1_trials:
         if '1' in trials_resp.keys:
             old_resp_color = 'orange'
         elif '2' in trials_resp.keys:
+            maybe_old_resp_color = 'orange'
+        elif '3' in trials_resp.keys:
+            maybe_new_resp_color = 'orange'
+        elif '4' in trials_resp.keys:
             new_resp_color = 'orange'
-            
-        
-        
-        
         
         
         # check for quit (typically the Esc key)
@@ -1159,7 +1351,7 @@ for thisBps1_trial in bps1_trials:
     stim_marker('offset',SHOCK=False)
     
     # Store whether a valid response was made
-    if trials_resp.keys in ['1', '2']:
+    if trials_resp.keys in ['1', '2','3','4']:
         response_made = True
     else:
         response_made = False
@@ -1191,7 +1383,7 @@ for thisBps1_trial in bps1_trials:
     
     warning_text.setOpacity(warning_opacity)
     # keep track of which components have finished
-    itiComponents = [old_iti, new_iti, iti_trial, warning_text]
+    itiComponents = [old_iti, maybe_old_3, maybe_new_3, new_iti, iti_trial, warning_text]
     for thisComponent in itiComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -1242,6 +1434,64 @@ for thisBps1_trial in bps1_trials:
                 # update status
                 old_iti.status = FINISHED
                 old_iti.setAutoDraw(False)
+        
+        # *maybe_old_3* updates
+        
+        # if maybe_old_3 is starting this frame...
+        if maybe_old_3.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            maybe_old_3.frameNStart = frameN  # exact frame index
+            maybe_old_3.tStart = t  # local t and not account for scr refresh
+            maybe_old_3.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(maybe_old_3, 'tStartRefresh')  # time at next scr refresh
+            # update status
+            maybe_old_3.status = STARTED
+            maybe_old_3.setAutoDraw(True)
+        
+        # if maybe_old_3 is active this frame...
+        if maybe_old_3.status == STARTED:
+            # update params
+            pass
+        
+        # if maybe_old_3 is stopping this frame...
+        if maybe_old_3.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > maybe_old_3.tStartRefresh + iti_duration-frameTolerance:
+                # keep track of stop time/frame for later
+                maybe_old_3.tStop = t  # not accounting for scr refresh
+                maybe_old_3.frameNStop = frameN  # exact frame index
+                # update status
+                maybe_old_3.status = FINISHED
+                maybe_old_3.setAutoDraw(False)
+        
+        # *maybe_new_3* updates
+        
+        # if maybe_new_3 is starting this frame...
+        if maybe_new_3.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            maybe_new_3.frameNStart = frameN  # exact frame index
+            maybe_new_3.tStart = t  # local t and not account for scr refresh
+            maybe_new_3.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(maybe_new_3, 'tStartRefresh')  # time at next scr refresh
+            # update status
+            maybe_new_3.status = STARTED
+            maybe_new_3.setAutoDraw(True)
+        
+        # if maybe_new_3 is active this frame...
+        if maybe_new_3.status == STARTED:
+            # update params
+            pass
+        
+        # if maybe_new_3 is stopping this frame...
+        if maybe_new_3.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > maybe_new_3.tStartRefresh + iti_duration-frameTolerance:
+                # keep track of stop time/frame for later
+                maybe_new_3.tStop = t  # not accounting for scr refresh
+                maybe_new_3.frameNStop = frameN  # exact frame index
+                # update status
+                maybe_new_3.status = FINISHED
+                maybe_new_3.setAutoDraw(False)
         
         # *new_iti* updates
         
@@ -1382,7 +1632,7 @@ for thisBps1_trial in bps1_trials:
 continueRoutine = True
 # update component parameters for each repeat
 # keep track of which components have finished
-final_itiComponents = [iti_old2, iti_new2, iti_final]
+final_itiComponents = [iti_old2, maybe_old_4, maybe_new_4, iti_new2, iti_final]
 for thisComponent in final_itiComponents:
     thisComponent.tStart = None
     thisComponent.tStop = None
@@ -1433,6 +1683,64 @@ while continueRoutine and routineTimer.getTime() < 10.0:
             # update status
             iti_old2.status = FINISHED
             iti_old2.setAutoDraw(False)
+    
+    # *maybe_old_4* updates
+    
+    # if maybe_old_4 is starting this frame...
+    if maybe_old_4.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        maybe_old_4.frameNStart = frameN  # exact frame index
+        maybe_old_4.tStart = t  # local t and not account for scr refresh
+        maybe_old_4.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(maybe_old_4, 'tStartRefresh')  # time at next scr refresh
+        # update status
+        maybe_old_4.status = STARTED
+        maybe_old_4.setAutoDraw(True)
+    
+    # if maybe_old_4 is active this frame...
+    if maybe_old_4.status == STARTED:
+        # update params
+        pass
+    
+    # if maybe_old_4 is stopping this frame...
+    if maybe_old_4.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > maybe_old_4.tStartRefresh + 10-frameTolerance:
+            # keep track of stop time/frame for later
+            maybe_old_4.tStop = t  # not accounting for scr refresh
+            maybe_old_4.frameNStop = frameN  # exact frame index
+            # update status
+            maybe_old_4.status = FINISHED
+            maybe_old_4.setAutoDraw(False)
+    
+    # *maybe_new_4* updates
+    
+    # if maybe_new_4 is starting this frame...
+    if maybe_new_4.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        maybe_new_4.frameNStart = frameN  # exact frame index
+        maybe_new_4.tStart = t  # local t and not account for scr refresh
+        maybe_new_4.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(maybe_new_4, 'tStartRefresh')  # time at next scr refresh
+        # update status
+        maybe_new_4.status = STARTED
+        maybe_new_4.setAutoDraw(True)
+    
+    # if maybe_new_4 is active this frame...
+    if maybe_new_4.status == STARTED:
+        # update params
+        pass
+    
+    # if maybe_new_4 is stopping this frame...
+    if maybe_new_4.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > maybe_new_4.tStartRefresh + 10-frameTolerance:
+            # keep track of stop time/frame for later
+            maybe_new_4.tStop = t  # not accounting for scr refresh
+            maybe_new_4.frameNStop = frameN  # exact frame index
+            # update status
+            maybe_new_4.status = FINISHED
+            maybe_new_4.setAutoDraw(False)
     
     # *iti_new2* updates
     
